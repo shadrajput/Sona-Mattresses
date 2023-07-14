@@ -9,23 +9,23 @@ import Image from "next/image";
 import myLogo from "../../public/images/FeesManagerLogo.png"
 
 
-export default function Login() {
+export default function ContactUs() {
 
   const form = useRef();
 
   const Sendmail = (e) => {
     e.preventDefault();
-    emailjs.sendForm("service_w6skjso","template_468riwt",form.current,"dYZGJ37pa39lKSSRf")
-        .then(res => {
-            console.log(res, "res")
-            document.getElementById('first_name').value = ' '
-            document.getElementById('last_name').value = ' '
-            document.getElementById('email').value = ' '
-            document.getElementById('message').value = ' '
-        }).catch(err => {
-            console.log("error", err)
-        })
-}
+    emailjs.sendForm("service_w6skjso", "template_468riwt", form.current, "dYZGJ37pa39lKSSRf")
+      .then(res => {
+        console.log(res, "res")
+        document.getElementById('first_name').value = ' '
+        document.getElementById('last_name').value = ' '
+        document.getElementById('email').value = ' '
+        document.getElementById('message').value = ' '
+      }).catch(err => {
+        console.log("error", err)
+      })
+  }
 
   return (
     <>
@@ -37,24 +37,24 @@ export default function Login() {
           <Link href="/">
             <a>
               {/* <Logo className="mb-2 h-10 w-auto" /> */}
-              <Image src={myLogo} alt="fess manager logo" width="100%" height="100%"/>
+              <Image src={myLogo} alt="fess manager logo" width="100%" height="100%" />
             </a>
           </Link>
           <h2 className="mt-5 text-lg font-semibold text-gray-900">
-            Get your fess collection software.
+            Address..
           </h2>
           <p className="mt-2 text-sm text-gray-700">
-          Our fees management application aims to streamline the process of collecting and tracking fees for organizations or tuition classes. With our application, users will be able to easily set up fee structures, send invoices and payment reminders, and track payments in real-time.
+            Shade No.1 , Survey No.1303, Village-Undrel , Ta. Daskoroi, Ahmedabad - 382443 , Gujarat , India..
           </p>
 
           <h2 className="mt-5 text-lg font-semibold text-gray-900">
-            Call Now: <span className='font-medium'>9328027580</span>
+            Call Now: <span className='font-medium'>+91 8401527048</span>
           </h2>
 
         </div>
         <div className="mt-10">
           <div className="mt-6">
-            <form action="#" method="" className="space-y-7"  ref={form} onSubmit={Sendmail}>
+            <form action="#" method="" className="space-y-7" ref={form} onSubmit={Sendmail}>
               <div className="flex flex-col space-y-7 sm:flex-row sm:space-y-0 sm:space-x-6">
                 <Input
                   label="First name"
@@ -91,13 +91,17 @@ export default function Login() {
               <div className="pt-1">
                 <button
                   type="submit"
-                  value="Send" 
+                  value="Send"
                   className="w-full rounded-full border border-transparent bg-blue-600 py-2 px-4 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
                   Submit <span aria-hidden="true">&rarr;</span>
                 </button>
               </div>
             </form>
+
+            <Link href="/">
+              <h1 className='text-center py-5 cursor-pointer text-gray-400 hover:text-black'>Back</h1>
+            </Link>
           </div>
         </div>
       </AuthLayout>

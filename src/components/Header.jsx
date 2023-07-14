@@ -100,7 +100,7 @@ function MobileNavigation() {
 
 export function Header(props) {
   return (
-    <header className="py-5">
+    <header className="">
       <Container>
         <nav className="relative z-50 text-sm">
           <ul className="flex items-center">
@@ -108,48 +108,37 @@ export function Header(props) {
               <Link href="#">
                 <a>
                   <span className="sr-only">Home</span>
-                  <Image src={myLogo} alt="fess manager logo" width="100%" height="100%"/>
+                  <Image src={myLogo} alt="fess manager logo" width="100%" height="100%" />
 
                   {/* <span className='text-2xl font-bold '>  Fees</span> */}
                   {/* <span className='text-xl font-bold text-blue-600'>  Manager</span> */}
                 </a>
               </Link>
             </li>
+            <div className='w-full flex justify-end items-center'>
             <li className="ml-12 hidden md:block">
               <Link href="#features">
-                <a className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
-                  Why Sona 
+                <a className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900 uppercase">
+                  Mattrest
                 </a>
               </Link>
             </li>
             <li className="ml-6 hidden md:block">
-              <Link href="#testimonials">
-                <a className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
-                  Contact us
-                </a>
-              </Link>
-            </li>
-            <li className="ml-6 hidden md:block">
-              <Link href="#pricing">
-                <a className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
+              <Link href="/AboutUs">
+                <a className="rounded-lg py-1 px-2 text-slate-700 uppercase hover:bg-slate-100 hover:text-slate-900">
                   About Us
                 </a>
               </Link>
             </li>
-            <li className="ml-auto hidden md:block">
-              <Link href="/login">
-                <a className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
-                  {/* Sign in */}
+            <li className="ml-6 hidden md:block">
+              <Link href="/ContactUs">
+                <a className="rounded-lg py-1 uppercase px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
+                  Contact US
                 </a>
               </Link>
             </li>
-            <li className="ml-auto md:ml-8">
-              <ButtonLink href="/register" color="blue">
-                <span>
-                  Connect With<span className="hidden lg:inline"> Us</span>
-                </span>
-              </ButtonLink>
-            </li>
+
+            </div>
             <li className="ml-5 -mr-1 md:hidden">
               <MobileNavigation />
             </li>

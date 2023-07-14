@@ -1,6 +1,6 @@
 import { Container } from '@/components/Container'
 import Image from "next/image";
-import image from "../../public/MAT_SLIDE_01.jpg"
+import image from "../../public/images/MAT_SLIDE_03.jpg"
 import { BsArrowRight } from "react-icons/bs"
 
 export function Hero() {

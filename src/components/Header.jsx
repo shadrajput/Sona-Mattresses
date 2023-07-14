@@ -103,40 +103,50 @@ export function Header(props) {
     <header className="">
       <Container>
         <nav className="relative z-50 text-sm">
-          <ul className="flex items-center">
+          <ul className="flex items-center py-6">
             <li>
-              <Link href="#">
-                <a>
-                  <span className="sr-only">Home</span>
-                  <Image src={myLogo} alt="fess manager logo" width="100%" height="100%" />
-
-                  {/* <span className='text-2xl font-bold '>  Fees</span> */}
-                  {/* <span className='text-xl font-bold text-blue-600'>  Manager</span> */}
-                </a>
+              <Link href="/">
+                <div className="border-4 border-black w-52 py-2 px-4 cursor-pointer">
+                  <h1 className="text-center text-black font-semibold uppercase">Sona Mattresses</h1>
+                </div>
               </Link>
             </li>
             <div className='w-full flex justify-end items-center'>
-            <li className="ml-12 hidden md:block">
-              <Link href="#features">
-                <a className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900 uppercase">
-                  Mattrest
-                </a>
-              </Link>
-            </li>
-            <li className="ml-6 hidden md:block">
-              <Link href="/AboutUs">
-                <a className="rounded-lg py-1 px-2 text-slate-700 uppercase hover:bg-slate-100 hover:text-slate-900">
-                  About Us
-                </a>
-              </Link>
-            </li>
-            <li className="ml-6 hidden md:block">
-              <Link href="/ContactUs">
-                <a className="rounded-lg py-1 uppercase px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
-                  Contact US
-                </a>
-              </Link>
-            </li>
+              <li className="ml-12 hidden md:block">
+                <Link href="/">
+                  <a className="rounded-lg py-1 px-2 hover:text-[#ae9775] font-semibold text-[15px]">
+                    Home
+                  </a>
+                </Link>
+              </li>
+              <li className="ml-12 hidden md:block">
+                <Link href="/AboutUs">
+                  <a className="rounded-lg py-1 px-2 hover:text-[#ae9775] font-semibold text-[15px]">
+                    About us
+                  </a>
+                </Link>
+              </li>
+              <li className="ml-6 hidden md:block">
+                <Link href="">
+                  <a className="rounded-lg py-1 px-2 hover:text-[#ae9775] font-semibold text-[15px]">
+                    Product
+                  </a>
+                </Link>
+              </li>
+              <li className="ml-6 hidden md:block">
+                <Link href="/ContactUs">
+                  <a className="rounded-lg py-1 px-2 hover:text-[#ae9775] font-semibold text-[15px]">
+                    Contact 
+                  </a>
+                </Link>
+              </li>
+              <li className="ml-6 hidden md:block">
+                <Link href="/Testimonials">
+                  <a className="rounded-lg py-1 px-2 hover:text-[#ae9775] font-semibold text-[15px]">
+                    Testimonials 
+                  </a>
+                </Link>
+              </li>
 
             </div>
             <li className="ml-5 -mr-1 md:hidden">

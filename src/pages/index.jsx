@@ -6,9 +6,11 @@ import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import { AboutUs } from '@/pages/AboutUs'
-import { Testimonials } from '@/components/Testimonials'
 import Specifications from '@/components/Specifications'
 import SonaMattress from '@/components/SonaMattress'
+import Services from '@/components/Services'
+import Mattressspecific from '@/components/Mattressspecific'
+import Subscribe from '@/components/Subscribe'
 
 export default function Home() {
   return (
@@ -24,8 +26,9 @@ export default function Home() {
         <Hero />
         <Specifications/>
         <SonaMattress/>
-        <CallToAction />
-        <Testimonials />
+        <Mattressspecific/>
+        <Services/>
+        <Subscribe/>
       </main>
       <Footer />
     </>

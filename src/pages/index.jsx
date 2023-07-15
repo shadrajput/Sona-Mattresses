@@ -1,11 +1,7 @@
 import Head from 'next/head'
-
-import { CallToAction } from '@/components/CallToAction'
-// import { Faqs } from '@/components/Faqs'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
-import { AboutUs } from '@/pages/AboutUs'
 import Specifications from '@/components/Specifications'
 import SonaMattress from '@/components/SonaMattress'
 import Services from '@/components/Services'

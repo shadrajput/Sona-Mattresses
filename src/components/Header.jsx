@@ -2,12 +2,8 @@ import { Fragment } from 'react'
 import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
-
-import { ButtonLink } from '@/components/Button'
-import { Container } from '@/components/Container'
-import { Logo } from '@/components/Logo'
 import Image from "next/image";
-import myLogo from "../../public/images/FeesManagerLogo.png"
+import Logo from '../../public/images/logo.png'
 
 
 function MobileNavigation() {
@@ -102,11 +98,11 @@ export function Header(props) {
   return (
     <header className="px-24">
       <nav className="relative z-50 text-sm">
-        <ul className="flex items-center py-6">
+        <ul className="flex items-center py-2">
           <li>
             <Link href="/">
-              <div className="border-4 border-black w-52 py-2 px-4 cursor-pointer">
-                <h1 className="text-center text-black font-semibold uppercase">Sona Mattresses</h1>
+              <div className='w-48'>
+              <Image src={Logo} alt="fess manager logo" className='' />
               </div>
             </Link>
           </li>

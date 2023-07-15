@@ -1,5 +1,6 @@
 import Image from "next/image";
 import myLogo from "../../public/images/map.png"
+import Logo from "../../public/images/white-logo.png"
 import Link from 'next/link'
 import { BiChevronRight } from "react-icons/bi"
 import { FiPhoneCall } from "react-icons/fi"
@@ -17,9 +18,9 @@ export function Footer() {
         <div className="h-full w-full bg-black/40 absolute ">
         </div>
         <div className="grid grid-cols-3 gap-20 absolute left-40 right-40">
-          <div className="space-y-10">
-            <div className="border-4 border-white w-52 py-2 px-4">
-              <h1 className="text-center text-white font-semibold uppercase">Sona Mattresses</h1>
+          <div className="space-y-6 ">
+            <div className='pr-20'>
+              <Image src={Logo} alt="fess manager logo" className='' />
             </div>
             <p className="text-gray-500">Etiam consequat sem ullamcorper, euismod metus sit amet, tristique justo. Vestibulum mattis, nisi ut faucibus commodo, risus ex commodo.</p>
             <div className="flex items-center space-x-5">

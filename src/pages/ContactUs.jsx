@@ -2,12 +2,18 @@ import React, { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import Head from 'next/head'
 import Link from 'next/link'
-import { AuthLayout } from '@/components/AuthLayout'
 import { Input } from '@/components/Input'
 import { Logo } from '@/components/Logo'
 import Image from "next/image";
 import myLogo from "../../public/images/FeesManagerLogo.png"
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import Subscribe from '@/components/Subscribe';
 
+
+import { FiPhoneCall } from "react-icons/fi"
+import { CgMail } from "react-icons/cg"
+import { MdLocationPin } from "react-icons/md"
 
 export default function ContactUs() {
 
@@ -29,49 +35,80 @@ export default function ContactUs() {
 
   return (
     <>
-      <Head>
-        <title>Fees Manager - Accounting made simple for Tuition classes</title>
-      </Head>
-      <AuthLayout>
-        <div className="flex flex-col items-start justify-start">
-          <Link href="/">
-            <a>
-              {/* <Logo className="mb-2 h-10 w-auto" /> */}
-              <Image src={myLogo} alt="fess manager logo" width="100%" height="100%" />
-            </a>
-          </Link>
-          <h2 className="mt-5 text-lg font-semibold text-gray-900">
-            Address..
-          </h2>
-          <p className="mt-2 text-sm text-gray-700">
-            Shade No.1 , Survey No.1303, Village-Undrel , Ta. Daskoroi, Ahmedabad - 382443 , Gujarat , India..
-          </p>
-
-          <h2 className="mt-5 text-lg font-semibold text-gray-900">
-            Call Now: <span className='font-medium'>+91 8401527048</span>
-          </h2>
-
+      <Header />
+      <section
+        id="testimonials"
+        aria-labelledby="testimonials-title"
+        className="bg-slate-50 py-10">
+        <div className="w-full flex justify-center items-center ">
+          <div className='max-w-3xl'>
+            <p className='uppercase font-semibold text-[#ae9775] text-center'> | Contact Us</p>
+            <h2
+              id="testimonials-title"
+              className="font-display text-3xl font-semibold tracking-tight text-center text-slate-900 sm:text-4xl"
+            >
+              Connect with Us?
+            </h2>
+            <p className="mt-4 text-lg tracking-tight text-center text-slate-700">
+              Our software is so simple that people can’t help but fall in love
+              with it. Simplicity is easy when you just skip tons of
+              mission-critical features.
+            </p>
+          </div>
         </div>
-        <div className="mt-10">
-          <div className="mt-6">
+        <div className='grid grid-cols-4 gap-20 px-20 py-20'>
+          <div className='flex flex-col justify-start items-center'>
+            <MdLocationPin className='text-[#ae9775] text-6xl' />
+            <h1 className='font-semibold py-5'>Location</h1>
+            <p className='font-light text-center'>Shade No.1 , Survey No.1303, Village-Undrel , Ta. Daskoroi, Ahmedabad - 382443 , Gujarat , India..
+            </p>
+          </div>
+          <div className='flex flex-col justify-start items-center'>
+            <FiPhoneCall className='text-[#ae9775] text-6xl' />
+            <h1 className='font-semibold py-5'>Phones</h1>
+            <p className='font-light'>+91 8401527048
+            </p>
+          </div>
+          <div className='flex flex-col justify-start items-center'>
+            <CgMail className='text-[#ae9775] text-6xl' />
+            <h1 className='font-semibold py-5'>Email</h1>
+            <p className='font-light'>sonamattresses@gmail.com
+            </p>
+          </div>
+          <div className='flex flex-col justify-start items-center'>
+            <MdLocationPin className='text-[#ae9775] text-6xl' />
+            <h1 className='font-semibold py-5'>Working hours</h1>
+            <p className='font-light'>Wednesday - Sunday
+            </p>
+            <p className='font-light'>7:00 AM - 5:00 PM
+            </p>
+          </div>
+        </div>
+        <div className="mt-10 flex justify-center items-center w-full pb-20 ">
+          <div className="mt-6 w-1/3">
             <form action="#" method="" className="space-y-7" ref={form} onSubmit={Sendmail}>
-              <div className="flex flex-col space-y-7 sm:flex-row sm:space-y-0 sm:space-x-6">
-                <Input
-                  label="First name"
-                  id="first_name"
-                  name="first_name"
-                  type="text"
-                  autoComplete="given-name"
-                  required
-                />
-                <Input
-                  label="Last name"
-                  id="last_name"
-                  name="last_name"
-                  type="text"
-                  autoComplete="family-name"
-                  required
-                />
+              <div className="flex flex-col space-y-7 sm:flex-row sm:space-y-0 sm:space-x-6 w-full
+            ">
+                <div className='w-full'>
+                  <Input
+                    label="First name"
+                    id="first_name"
+                    name="first_name"
+                    type="text"
+                    autoComplete="given-name"
+                    required
+                  />
+                </div>
+                <div className='w-full'>
+                  <Input
+                    label="Last name"
+                    id="last_name"
+                    name="last_name"
+                    type="text"
+                    autoComplete="family-name"
+                    required
+                  />
+                </div>
               </div>
               <Input
                 label="Email address"
@@ -98,13 +135,11 @@ export default function ContactUs() {
                 </button>
               </div>
             </form>
-
-            <Link href="/">
-              <h1 className='text-center py-5 cursor-pointer text-gray-400 hover:text-black'>Back</h1>
-            </Link>
           </div>
         </div>
-      </AuthLayout>
+      </section>
+      <Subscribe />
+      <Footer />
     </>
   )
 }

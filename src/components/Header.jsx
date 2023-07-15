@@ -100,61 +100,59 @@ function MobileNavigation() {
 
 export function Header(props) {
   return (
-    <header className="">
-      <Container>
-        <nav className="relative z-50 text-sm">
-          <ul className="flex items-center py-6">
-            <li>
+    <header className="px-24">
+      <nav className="relative z-50 text-sm">
+        <ul className="flex items-center py-6">
+          <li>
+            <Link href="/">
+              <div className="border-4 border-black w-52 py-2 px-4 cursor-pointer">
+                <h1 className="text-center text-black font-semibold uppercase">Sona Mattresses</h1>
+              </div>
+            </Link>
+          </li>
+          <div className='w-full flex justify-end items-center'>
+            <li className="ml-12 hidden md:block">
               <Link href="/">
-                <div className="border-4 border-black w-52 py-2 px-4 cursor-pointer">
-                  <h1 className="text-center text-black font-semibold uppercase">Sona Mattresses</h1>
-                </div>
+                <a className="rounded-lg py-1 px-2 hover:text-[#ae9775] font-semibold text-[15px]">
+                  Home
+                </a>
               </Link>
             </li>
-            <div className='w-full flex justify-end items-center'>
-              <li className="ml-12 hidden md:block">
-                <Link href="/">
-                  <a className="rounded-lg py-1 px-2 hover:text-[#ae9775] font-semibold text-[15px]">
-                    Home
-                  </a>
-                </Link>
-              </li>
-              <li className="ml-12 hidden md:block">
-                <Link href="/AboutUs">
-                  <a className="rounded-lg py-1 px-2 hover:text-[#ae9775] font-semibold text-[15px]">
-                    About us
-                  </a>
-                </Link>
-              </li>
-              <li className="ml-6 hidden md:block">
-                <Link href="">
-                  <a className="rounded-lg py-1 px-2 hover:text-[#ae9775] font-semibold text-[15px]">
-                    Product
-                  </a>
-                </Link>
-              </li>
-              <li className="ml-6 hidden md:block">
-                <Link href="/ContactUs">
-                  <a className="rounded-lg py-1 px-2 hover:text-[#ae9775] font-semibold text-[15px]">
-                    Contact 
-                  </a>
-                </Link>
-              </li>
-              <li className="ml-6 hidden md:block">
-                <Link href="/Testimonials">
-                  <a className="rounded-lg py-1 px-2 hover:text-[#ae9775] font-semibold text-[15px]">
-                    Testimonials 
-                  </a>
-                </Link>
-              </li>
-
-            </div>
-            <li className="ml-5 -mr-1 md:hidden">
-              <MobileNavigation />
+            <li className="ml-12 hidden md:block">
+              <Link href="/AboutUs">
+                <a className="rounded-lg py-1 px-2 hover:text-[#ae9775] font-semibold text-[15px]">
+                  About Us
+                </a>
+              </Link>
             </li>
-          </ul>
-        </nav>
-      </Container>
+            <li className="ml-6 hidden md:block">
+              <Link href="/Product">
+                <a className="rounded-lg py-1 px-2 hover:text-[#ae9775] font-semibold text-[15px]">
+                  Product
+                </a>
+              </Link>
+            </li>
+            <li className="ml-6 hidden md:block">
+              <Link href="/ContactUs">
+                <a className="rounded-lg py-1 px-2 hover:text-[#ae9775] font-semibold text-[15px]">
+                  Contact
+                </a>
+              </Link>
+            </li>
+            <li className="ml-6 hidden md:block ">
+              <Link href="/Quotation">
+                <a className="bg-black px-4 py-3 text-white hover:bg-[#ae9775] hover:text-black font-semibold duration-300 ">
+                  Get Quotation
+                </a>
+              </Link>
+            </li>
+
+          </div>
+          <li className="ml-5 -mr-1 md:hidden">
+            <MobileNavigation />
+          </li>
+        </ul>
+      </nav>
     </header>
   )
 }

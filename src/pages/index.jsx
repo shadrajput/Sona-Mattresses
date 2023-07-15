@@ -11,6 +11,7 @@ import SonaMattress from '@/components/SonaMattress'
 import Services from '@/components/Services'
 import Mattressspecific from '@/components/Mattressspecific'
 import Subscribe from '@/components/Subscribe'
+import Testimonials from '@/components/Testimonials'
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
         <SonaMattress/>
         <Mattressspecific/>
         <Services/>
+        <Testimonials/>
         <Subscribe/>
       </main>
       <Footer />

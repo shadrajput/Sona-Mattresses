@@ -11,21 +11,21 @@ export default function Services() {
             <div className='py-10 space-y-24'>
                 <div className='grid grid-cols-3 '>
                     <div className='flex flex-col justify-center items-center'>
-                        <FiShoppingCart className='text-4xl text-[#ae9775]'/>
+                        <FiShoppingCart className='text-4xl text-[#b19777]'/>
                         <h1 className='font-bold pt-6'>
                             Free Shipping
                         </h1>
                         <p className='font-light pt-3 text-sm'>Nullam sed ultricies erat, nec euismod metus.</p>
                     </div>
                     <div className='flex flex-col justify-center items-center'>
-                        <SiAdguard className='text-4xl text-[#ae9775]'/>
+                        <SiAdguard className='text-4xl text-[#b19777]'/>
                         <h1 className='font-bold pt-6'>
                             5 Years Guarantee
                         </h1>
                         <p className='font-light pt-3 text-sm'>Vestibulum vitae diam sit amet massa imperdiet ornare.</p>
                     </div>
                     <div className='flex flex-col justify-center items-center'>
-                        <AiOutlinePercentage className='text-4xl text-[#ae9775]'/>
+                        <AiOutlinePercentage className='text-4xl text-[#b19777]'/>
                         <h1 className='font-bold pt-6'>
                             Discount System
                         </h1>
@@ -34,21 +34,21 @@ export default function Services() {
                 </div>
                 <div className='grid grid-cols-3 '>
                     <div className='flex flex-col justify-center items-center'>
-                        <BsCreditCard className='text-4xl text-[#ae9775]'/>
+                        <BsCreditCard className='text-4xl text-[#b19777]'/>
                         <h1 className='font-bold pt-6'>
                             Online Payments
                         </h1>
                         <p className='font-light pt-3 text-sm'>Integer ex diam, ornare eget eleifend a lorem.</p>
                     </div>
                     <div className='flex flex-col justify-center items-center'>
-                        <TbCertificate className='text-4xl text-[#ae9775]'/>
+                        <TbCertificate className='text-4xl text-[#b19777]'/>
                         <h1 className='font-bold pt-6'>
                             Certified Products
                         </h1>
                         <p className='font-light pt-3 text-sm'>Aliquam erat volutpat. Duis at velit lorem elit.</p>
                     </div>
                     <div className='flex flex-col justify-center items-center'>
-                        <BiMessageCheck className='text-4xl text-[#ae9775]'/>
+                        <BiMessageCheck className='text-4xl text-[#b19777]'/>
                         <h1 className='font-bold pt-6'>
                             Good Support
                         </h1>

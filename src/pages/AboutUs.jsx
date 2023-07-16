@@ -22,7 +22,7 @@ export default function AboutUs() {
         className="bg-slate-50 py-10">
         <div className="w-full flex justify-center items-center ">
           <div className='max-w-3xl'>
-            <p className='uppercase font-semibold text-[#ae9775] text-center'> | About Us</p>
+            <p className='uppercase font-semibold text-[#b19777] text-center'> | About Us</p>
             <h2
               id="testimonials-title"
               className="font-display text-3xl font-semibold tracking-tight text-center text-slate-900 sm:text-4xl"
@@ -43,14 +43,14 @@ export default function AboutUs() {
               <Image src={About1} alt="fess manager logo" className='rounded-lg w-20' />
             </div>
             <div className='space-y-5 py-5'>
-              <FaBed className='text-[#ae9775]  text-4xl' />
+              <FaBed className='text-[#b19777]  text-4xl' />
               <h1 className='text-3xl font-semibold '>Mattress for healthy sleep</h1>
               <p className='text-gray-500'>Pellentesque gravida scelerisque pretium. Quisque ut lacus quis neque lacinia lacinia. Ut eget augue nec ipsum pharetra venenatis. Nullam eget lacus sed lorem vehicula facilisis. Maecenas blandit nisi eu scelerisque tempus.</p>
             </div>
           </div>
           <div className='grid grid-cols-2 justify-center items-center w-full gap-20 py-14 '>
             <div className='space-y-5  py-5 flex flex-col justify-end items-end'>
-              <AiFillHome className='text-[#ae9775]  text-4xl ' />
+              <AiFillHome className='text-[#b19777]  text-4xl ' />
               <h1 className='text-3xl font-semibold '>Mattress beams with quality</h1>
               <p className='text-gray-500 text-right'>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla pharetra elit erat, ac rhoncus orci aliquet in. Nullam bibendum elit sed leo malesuada, a lacinia magna elementum. Curabitur vitae sem at libero.</p>
             </div>
@@ -63,7 +63,7 @@ export default function AboutUs() {
               <Image src={About3} alt="fess manager logo" className='rounded-lg' />
             </div>
             <div className='space-y-5 py-5'>
-              <MdHighQuality className='text-[#ae9775] text-4xl' />
+              <MdHighQuality className='text-[#b19777] text-4xl' />
               <h1 className='text-3xl font-semibold '>Quality assured, rest assured.</h1>
               <p className='text-gray-500'>Donec sem neque, tempor sed mi eu, congue tincidunt dolor. Proin in scelerisque arcu, vel aliquet mauris. Suspendisse potenti. Pellentesque nec nibh mi. Nam vulputate, sapien et sagittis malesuada, libero leo bibendum pendisse.</p>
             </div>

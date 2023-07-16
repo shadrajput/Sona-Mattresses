@@ -25,37 +25,37 @@ export function Footer() {
             <p className="text-gray-500">Etiam consequat sem ullamcorper, euismod metus sit amet, tristique justo. Vestibulum mattis, nisi ut faucibus commodo, risus ex commodo.</p>
             <div className="flex items-center space-x-5">
               <a href="https://www.instagram.com/sonamattresses/">
-                <AiOutlineInstagram className="text-2xl cursor-pointer text-[#ae9775] hover:text-white" />
+                <AiOutlineInstagram className="text-2xl cursor-pointer text-[#b19777] hover:text-white" />
               </a>
               <a href="https://www.facebook.com/profile.php?id=100094529056554">
-                <AiOutlineFacebook className="text-2xl cursor-pointer text-[#ae9775] hover:text-white" />
+                <AiOutlineFacebook className="text-2xl cursor-pointer text-[#b19777] hover:text-white" />
               </a>
             </div>
           </div>
           <div>
-            <h1 className="text-[25px] font-semibold text-[#ae9775]" >Explore</h1>
+            <h1 className="text-[25px] font-semibold text-[#b19777]" >Explore</h1>
             <div className="bg-[#61543f3b] h-[1px] text-[#181818] relative">
 
             </div>
-            <div className="bg-[#ae9775] h-[3px] w-32 absolute">
+            <div className="bg-[#b19777] h-[3px] w-32 absolute">
 
             </div>
 
             <nav className="pt-12 space-y-5 ">
               <li className="font-semibold flex items-center space-x-3 cursor-pointer hover:text-[#ae9775] duration-300 text-white">
-                <BiChevronRight className="text-[#ae9775] font-bold" />
+                <BiChevronRight className="text-[#b19777] font-bold" />
                 <h1>
                   AboutUs
                 </h1>
               </li>
               <li className="font-semibold flex items-center space-x-3 cursor-pointer  hover:text-[#ae9775] duration-300 text-white">
-                <BiChevronRight className="text-[#ae9775] font-bold" />
+                <BiChevronRight className="text-[#b19777] font-bold" />
                 <h1>
                   ContactUs
                 </h1>
               </li>
               <li className="font-semibold flex items-center space-x-3 cursor-pointer hover:text-[#ae9775] duration-300 text-white">
-                <BiChevronRight className="text-[#ae9775] font-bold" />
+                <BiChevronRight className="text-[#b19777] font-bold" />
                 <h1>
                   Product
                 </h1>
@@ -63,34 +63,34 @@ export function Footer() {
             </nav>
           </div>
           <div>
-            <h1 className="text-[25px] font-semibold text-[#ae9775]" >Contact With Us</h1>
+            <h1 className="text-[25px] font-semibold text-[#b19777]" >Contact With Us</h1>
             <div className="bg-[#61543f3b] h-[1px] text-[#181818] relative">
 
             </div>
-            <div className="bg-[#ae9775] h-[3px] w-32 absolute">
+            <div className="bg-[#b19777] h-[3px] w-32 absolute">
 
             </div>
 
             <nav className="pt-12 space-y-5 ">
-              <li className="font-semibold flex items-start space-x-3 cursor-pointer hover:text-[#ae9775] duration-300 text-white">
+              <li className="font-semibold flex items-start space-x-3 cursor-pointer hover:text-[#b19777] duration-300 text-white">
                 <div>
-                  <MdLocationPin className="text-[#ae9775] font-bold text-2xl" />
+                  <MdLocationPin className="text-[#b19777] font-bold text-2xl" />
                 </div>
                 <p>
                   Shade No.1 , Survey No.1303, Village-Undrel , Ta. Daskoroi, Ahmedabad - 382443 , Gujarat , India..
                 </p>
               </li>
-              <li className="font-semibold flex items-center space-x-3 cursor-pointer hover:text-[#ae9775] duration-300 text-white">
+              <li className="font-semibold flex items-center space-x-3 cursor-pointer hover:text-[#b19777] duration-300 text-white">
                 <div>
-                  <FiPhoneCall className="text-[#ae9775] font-bold text-xl" />
+                  <FiPhoneCall className="text-[#b19777] font-bold text-xl" />
                 </div>
                 <h1>
                   +91 8401527048
                 </h1>
               </li>
-              <li className="font-semibold flex items-center space-x-3 cursor-pointer  hover:text-[#ae9775] duration-300 text-white">
+              <li className="font-semibold flex items-center space-x-3 cursor-pointer  hover:text-[#b19777] duration-300 text-white">
                 <div>
-                  <CgMail className="text-[#ae9775] font-bold text-2xl" />
+                  <CgMail className="text-[#b19777] font-bold text-2xl" />
                 </div>
                 <h1>
                   sonamattresses@gmail.com

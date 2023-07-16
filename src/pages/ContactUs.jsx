@@ -42,7 +42,7 @@ export default function ContactUs() {
         className="bg-slate-50 py-10">
         <div className="w-full flex justify-center items-center ">
           <div className='max-w-3xl'>
-            <p className='uppercase font-semibold text-[#ae9775] text-center'> | Contact Us</p>
+            <p className='uppercase font-semibold text-[#b19777] text-center'> | Contact Us</p>
             <h2
               id="testimonials-title"
               className="font-display text-3xl font-semibold tracking-tight text-center text-slate-900 sm:text-4xl"
@@ -58,25 +58,25 @@ export default function ContactUs() {
         </div>
         <div className='grid grid-cols-4 gap-20 px-20 py-20'>
           <div className='flex flex-col justify-start items-center'>
-            <MdLocationPin className='text-[#ae9775] text-6xl' />
+            <MdLocationPin className='text-[#b19777] text-6xl' />
             <h1 className='font-semibold py-5'>Location</h1>
             <p className='font-light text-center'>Shade No.1 , Survey No.1303, Village-Undrel , Ta. Daskoroi, Ahmedabad - 382443 , Gujarat , India..
             </p>
           </div>
           <div className='flex flex-col justify-start items-center'>
-            <FiPhoneCall className='text-[#ae9775] text-6xl' />
+            <FiPhoneCall className='text-[#b19777] text-6xl' />
             <h1 className='font-semibold py-5'>Phones</h1>
             <p className='font-light'>+91 8401527048
             </p>
           </div>
           <div className='flex flex-col justify-start items-center'>
-            <CgMail className='text-[#ae9775] text-6xl' />
+            <CgMail className='text-[#b19777] text-6xl' />
             <h1 className='font-semibold py-5'>Email</h1>
             <p className='font-light'>sonamattresses@gmail.com
             </p>
           </div>
           <div className='flex flex-col justify-start items-center'>
-            <MdLocationPin className='text-[#ae9775] text-6xl' />
+            <MdLocationPin className='text-[#b19777] text-6xl' />
             <h1 className='font-semibold py-5'>Working hours</h1>
             <p className='font-light'>Wednesday - Sunday
             </p>

@@ -83,7 +83,7 @@ export default function Testimonials() {
         className="bg-slate-50 py-10">
         <div className="w-full flex justify-center items-center ">
           <div className='max-w-3xl'>
-            <p className='uppercase font-semibold text-[#ae9775] text-center'> | testimonials</p>
+            <p className='uppercase font-semibold text-[#b19777] text-center'> | testimonials</p>
             <h2
               id="testimonials-title"
               className="font-display text-3xl font-semibold tracking-tight text-center text-slate-900 sm:text-4xl"
@@ -119,7 +119,7 @@ export default function Testimonials() {
                             <div className="font-display text-base text-slate-900">
                               {testimonial.author.name}
                             </div>
-                            <div className="mt-1 text-sm text-[#ae9775] font-semibold">
+                            <div className="mt-1 text-sm text-[#b19777] font-semibold">
                               {testimonial.author.role}
                             </div>
                           </div>

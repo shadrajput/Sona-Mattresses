@@ -17,7 +17,7 @@ export default function Product() {
                         <Image src={mattrest} alt="fess manager logo" className='rounded-lg ' />
                     </div>
                     <div className='pr-20'>
-                        <h1 className='text-[#ae9775] font-semibold text-4xl'>Sona Mattrest</h1>
+                        <h1 className='text-[#b19777] font-semibold text-4xl'>Sona Mattrest</h1>
                         <p className='font-light py-4'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
                         <div className='flex items-center text-3xl font-semibold'>
                             <BiRupee />
@@ -27,13 +27,13 @@ export default function Product() {
                             </h1>
                         </div>
                         <div className='flex items-center text-xl font-semibold space-x-3 py-5'>
-                            <span className='text-2xl text-[#ae9775]'>Size  : </span>
-                            <span className='border border-[#ea96754d] px-3 shadow-sm rounded-lg'>4</span>
+                            <span className='text-2xl text-[#b19777]'>Size  : </span>
+                            <span className='border border-[#b19777] px-3 shadow-sm rounded-lg'>4</span>
                             <span>&</span>
-                            <span className='border border-[#ea96754d] px-3 shadow-sm rounded-lg'>5</span>
+                            <span className='border border-[#b19777] px-3 shadow-sm rounded-lg'>5</span>
                         </div>
                         <div className='flex items-center text-xl font-semibold space-x-3 py-2'>
-                            <span className='text-2xl text-[#ae9775]'>Materials  : </span>
+                            <span className='text-2xl text-[#b19777]'>Materials  : </span>
                             <span >Spring</span>
                         </div>
                         <div>
@@ -50,7 +50,7 @@ export default function Product() {
                 <div>
                     <h1 className='text-center font-semibold'>Description </h1>
                     <div className=' flex justify-center items-center py-2'>
-                        <div className='bg-[#ea9775] h-[2px] w-24'>
+                        <div className='bg-[#b19777] h-[2px] w-24'>
 
                         </div>
                     </div>

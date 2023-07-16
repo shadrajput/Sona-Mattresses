@@ -4,6 +4,7 @@ import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 import Image from "next/image";
 import Logo from '../../public/images/logo.png'
+import { useRouter } from 'next/router';
 
 
 function MobileNavigation() {
@@ -95,6 +96,27 @@ function MobileNavigation() {
 }
 
 export function Header(props) {
+  const NavLink = [
+    {
+      name: "Home",
+      link: "/"
+    },
+    {
+      name: "About Us",
+      link: "/AboutUs"
+    },
+    {
+      name: "Product",
+      link: "/Product"
+    },
+    {
+      name: "Contact Us",
+      link: "/ContactUs"
+    },
+  ]
+
+  const router = useRouter()
+
   return (
     <header className="px-24">
       <nav className="relative z-50 text-sm">
@@ -102,42 +124,49 @@ export function Header(props) {
           <li>
             <Link href="/">
               <div className='w-48'>
-              <Image src={Logo} alt="fess manager logo" className='' />
+                <Image src={Logo} alt="fess manager logo" className='' />
               </div>
             </Link>
           </li>
           <div className='w-full flex justify-end items-center'>
-            <li className="ml-12 hidden md:block">
-              <Link href="/">
-                <a className="rounded-lg py-1 px-2 hover:text-[#ae9775] font-semibold text-[15px]">
-                  Home
-                </a>
-              </Link>
-            </li>
-            <li className="ml-12 hidden md:block">
+            <div className='flex items-center space-x-7'>
+              {
+                NavLink.map(({ link, name }) => (
+                  <Link
+                    name={name}
+                    href={link}
+                  >
+                    <a className={`${router.pathname === link ? "text-[#b19777] border-x-2 px-2 border-[#b19777]" : "text-black"} font-semibold hover:text-[#b19777] text-[15px]`}>
+                      {name}
+                    </a>
+                  </Link>
+                ))
+              }
+            </div>
+            {/* <li className="ml-12 hidden md:block">
               <Link href="/AboutUs">
-                <a className="rounded-lg py-1 px-2 hover:text-[#ae9775] font-semibold text-[15px]">
+                <a className="rounded-lg py-1 px-2 hover:text-[#b19777] font-semibold text-[15px]">
                   About Us
                 </a>
               </Link>
             </li>
             <li className="ml-6 hidden md:block">
               <Link href="/Product">
-                <a className="rounded-lg py-1 px-2 hover:text-[#ae9775] font-semibold text-[15px]">
+                <a className="rounded-lg py-1 px-2 hover:text-[#b19777] font-semibold text-[15px]">
                   Product
                 </a>
               </Link>
             </li>
             <li className="ml-6 hidden md:block">
               <Link href="/ContactUs">
-                <a className="rounded-lg py-1 px-2 hover:text-[#ae9775] font-semibold text-[15px]">
+                <a className="rounded-lg py-1 px-2 hover:text-[#b19777] font-semibold text-[15px]">
                   Contact
                 </a>
               </Link>
-            </li>
+            </li> */}
             <li className="ml-6 hidden md:block ">
               <Link href="/Quotation">
-                <a className="bg-black px-4 py-3 text-white hover:bg-[#ae9775] hover:text-black font-semibold duration-300 ">
+                <a className="bg-black px-4 py-3 text-white hover:bg-[#b19777] hover:text-black font-semibold duration-300 ">
                   Get Quotation
                 </a>
               </Link>

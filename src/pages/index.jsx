@@ -8,6 +8,7 @@ import Services from '@/components/Services'
 import Mattressspecific from '@/components/Mattressspecific'
 import Subscribe from '@/components/Subscribe'
 import Testimonials from '@/components/Testimonials'
+import GoToTop from '@/components/GoToTop'
 
 export default function Home() {
   return (
@@ -18,15 +19,16 @@ export default function Home() {
           name="Mattress"
           content="Fees Manager is the only tool you need to collect and manage student fees. It's easy to use, and it's Very Cheap! With Fees Manager, you can create a class , collect payments, track balances, and send reminders. You can also export your data to QuickBooks or Excel for easy accounting." />
       </Head>
-    <Header />
+      <Header />
       <main>
         <Hero />
-        <Specifications/>
-        <SonaMattress/>
-        <Mattressspecific/>
-        <Services/>
-        <Testimonials/>
-        <Subscribe/>
+        <Specifications />
+        <SonaMattress />
+        <Mattressspecific />
+        <Services />
+        <Testimonials />
+        <Subscribe />
+        <GoToTop />
       </main>
       <Footer />
     </>

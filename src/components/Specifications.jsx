@@ -12,9 +12,11 @@ export default function Specifications() {
         <div className='bg-white px-32 py-10 '>
             <div className='py-20 border-b border-black/20 space-y-24 '>
                 <div className='grid grid-cols-3 '>
-                    <div className='flex flex-col justify-center items-center'>
-                        <Image src={mat1} alt="fess manager logo" width="80%" height="80%" className='w-full h-full' />
-                        <h1 className='font-bold pt-6'>
+                    <div className='flex flex-col justify-center items-center group'>
+                        <div className='group-hover:mb-10 duration-500'>
+                            <Image src={mat1} alt="fess manager logo" width="80%" height="80%" className='w-full h-full ' />
+                        </div>
+                        <h1 className='font-bold pt-6 group-hover:text-[#b19777]'>
                             Eco Materials
                         </h1>
                     </div>

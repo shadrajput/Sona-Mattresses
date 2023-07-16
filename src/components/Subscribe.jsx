@@ -4,7 +4,7 @@ import image from "../../public/images/bedroom-interior.jpg"
 export default function Subscribe() {
     return (
         <>
-        <div className='h-[400px] relative'>
+            <div className='h-[400px] relative'>
                 <Image src={image} alt="fess manager logo" className='' />
                 <div className="h-[400px] w-full bg-black/70 absolute top-0 ">
                 </div>
@@ -17,7 +17,9 @@ export default function Subscribe() {
                                 placeholder="Your email..."
                                 className="px-5 w-80 focus:outline-none"
                             />
-                            <button className="uppercase bg-[#b19777] py-4 px-8 text-white  font-semibold text-sm">Subscribe</button>
+                            <button className='btn3 text-sm text-white font-semibold z-50'>
+                                Subscribe
+                            </button>
                         </div>
                     </form>
                 </div>

@@ -80,9 +80,9 @@ export function Hero() {
                     <h1 className='text-[#b19777] font-bold text-[55px]'>{item.heading1}</h1>
                     <h1 className='text-black text-[55px] font-bold'>{item.heading2}</h1>
                     <p className='font-light pr-52 py-8 text-black'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, odit harum, tenetur ullam est magnam fuga.</p>
-                    <button className='flex items-center space-x-3 border px-7 py-4 border-black'>
-                      <h1 className='uppercase text-sm font-semibold text-black'> Shop Now </h1>
-                      <BsArrowRight className='text-black' />
+                    <button className='btn1 font-semibold text-[12px] hover:text-white z-50 group text-sm py-3 '>
+                      Shop Now
+                      <BsArrowRight className='text-black group-hover:text-white text-lg ml-3' />
                     </button>
                   </div>
                 )}

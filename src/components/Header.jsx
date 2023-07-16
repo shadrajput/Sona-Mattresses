@@ -123,7 +123,7 @@ export function Header(props) {
         <ul className="flex items-center py-2">
           <li>
             <Link href="/">
-              <div className='w-48'>
+              <div className='w-48 cursor-pointer'>
                 <Image src={Logo} alt="fess manager logo" className='' />
               </div>
             </Link>
@@ -143,30 +143,9 @@ export function Header(props) {
                 ))
               }
             </div>
-            {/* <li className="ml-12 hidden md:block">
-              <Link href="/AboutUs">
-                <a className="rounded-lg py-1 px-2 hover:text-[#b19777] font-semibold text-[15px]">
-                  About Us
-                </a>
-              </Link>
-            </li>
-            <li className="ml-6 hidden md:block">
-              <Link href="/Product">
-                <a className="rounded-lg py-1 px-2 hover:text-[#b19777] font-semibold text-[15px]">
-                  Product
-                </a>
-              </Link>
-            </li>
-            <li className="ml-6 hidden md:block">
-              <Link href="/ContactUs">
-                <a className="rounded-lg py-1 px-2 hover:text-[#b19777] font-semibold text-[15px]">
-                  Contact
-                </a>
-              </Link>
-            </li> */}
             <li className="ml-6 hidden md:block ">
               <Link href="/Quotation">
-                <a className="bg-black px-4 py-3 text-white hover:bg-[#b19777] hover:text-black font-semibold duration-300 ">
+                <a className="btn1 font-semibold text-[12px] hover:text-white z-50 group text-lg py-1">
                   Get Quotation
                 </a>
               </Link>

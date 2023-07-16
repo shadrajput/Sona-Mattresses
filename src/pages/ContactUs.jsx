@@ -129,7 +129,7 @@ export default function ContactUs() {
                 <button
                   type="submit"
                   value="Send"
-                  className="w-full bg-[#b19777] text-white py-3 hover:bg-black hover:text-white"
+                  className="w-full bg-[#b19777] text-white py-3 duration-300 hover:bg-black hover:text-white"
                 >
                   Submit <span aria-hidden="true">&rarr;</span>
                 </button>

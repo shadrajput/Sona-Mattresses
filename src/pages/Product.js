@@ -38,7 +38,7 @@ export default function Product() {
                         </div>
                         <div>
                             <Link href="/ContactUs">
-                                <button className='bg-black px-10 py-2 text-white my-3 text-sm'>
+                                <button className='btn3 font-semibold text-[12px] text-white z-50 group '>
                                     Shop Now
                                 </button>
                             </Link>

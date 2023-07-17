@@ -9,19 +9,10 @@ export default function (req, res) {
     html: `
       <div>
         <div>
-          <h3>Name: ${req.body.first_name} ${req.body.last_name}</h3>
+          <h3>User has subscribed for news letter</h3>
         </div>
         <p style="font-size: 16px;">
           Email: ${req.body.email}
-        </p>
-        <p style="font-size: 16px;">
-          Mobile: ${req.body.phone}
-        </p>
-        <p style="font-size: 16px;">
-          Size: ${req.body.size}
-        </p>
-        <p style="font-size: 16px;">
-          Quantity: ${req.body.quantity}
         </p>
       </div>
     `,

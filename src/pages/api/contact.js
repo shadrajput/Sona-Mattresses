@@ -4,13 +4,16 @@ import { transporter } from './utils/email'
 export default function (req, res) {
   const mailData = {
     from: process.env.SMTP_USER,
-    to: req.body.email,
+    to: process.env.SMTP_USER,
     subject: `Message From Your Website`,
     html: `
       <div>
         <div>
           <h3>Name: ${req.body.first_name} ${req.body.last_name}</h3>
         </div>
+        <p style="font-size: 16px;">
+          Email: ${req.body.email}
+        </p>
         <p style="font-size: 16px;">
           Message: ${req.body.message}
         </p>

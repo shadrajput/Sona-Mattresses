@@ -74,43 +74,6 @@ export default function ContactUs() {
 
   const form = useRef();
 
-  const Sendmail = async (e) => {
-    e.preventDefault();
-    let data = {
-      name: `${firstName} ${lastName}`,
-      email,
-      message
-    }
-
-    try {
-      setIsLoading(true)
-      fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json, text/plain, */*',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      }).then((res) => {
-        setIsLoading(false)
-        if(res.status == 200){
-          setFirstName('')
-          setLastName('')
-          setEmail('')
-          setMessage('')
-          toast.success('Thanks for reaching us')
-        }
-        else{
-          toast.error('Failed to send email')
-        }
-      })
-      
-    } catch (error) {
-      toast.error(error.message)
-      setIsLoading(false)
-    }
-  }
-
   const { values, errors, handleBlur, touched, handleChange, handleSubmit, resetForm } = useFormik({
         initialValues: initialValues,
         validationSchema: contactFormSchema,

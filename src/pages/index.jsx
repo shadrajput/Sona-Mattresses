@@ -20,7 +20,7 @@ export default function Home() {
           content="Fees Manager is the only tool you need to collect and manage student fees. It's easy to use, and it's Very Cheap! With Fees Manager, you can create a class , collect payments, track balances, and send reminders. You can also export your data to QuickBooks or Excel for easy accounting." />
       </Head>
       <Header />
-      <main>
+      {/* <main>
         <Hero />
         <Specifications />
         <SonaMattress />
@@ -30,7 +30,7 @@ export default function Home() {
         <Subscribe />
         <GoToTop />
       </main>
-      <Footer />
+      <Footer /> */}
     </>
   )
 }

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef,useState } from 'react';
 import emailjs from 'emailjs-com';
 import Head from 'next/head'
 import Link from 'next/link'
@@ -9,28 +9,54 @@ import myLogo from "../../public/images/FeesManagerLogo.png"
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import Subscribe from '@/components/Subscribe';
-
-
 import { FiPhoneCall } from "react-icons/fi"
 import { CgMail } from "react-icons/cg"
 import { MdLocationPin } from "react-icons/md"
+import { toast } from "react-toastify";
 
 export default function ContactUs() {
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
+  const [isLoading, setIsLoading] = useState(false)
 
   const form = useRef();
 
-  const Sendmail = (e) => {
+  const Sendmail = async (e) => {
     e.preventDefault();
-    emailjs.sendForm("service_w6skjso", "template_468riwt", form.current, "dYZGJ37pa39lKSSRf")
-      .then(res => {
-        console.log(res, "res")
-        document.getElementById('first_name').value = ' '
-        document.getElementById('last_name').value = ' '
-        document.getElementById('email').value = ' '
-        document.getElementById('message').value = ' '
-      }).catch(err => {
-        console.log("error", err)
+    let data = {
+      name: `${firstName} ${lastName}`,
+      email,
+      message
+    }
+
+    try {
+      setIsLoading(true)
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json, text/plain, */*',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      }).then((res) => {
+        setIsLoading(false)
+        if(res.status == 200){
+          setFirstName('')
+          setLastName('')
+          setEmail('')
+          setMessage('')
+          toast.success('Thanks for reaching us')
+        }
+        else{
+          toast.error('Failed to send email')
+        }
       })
+      
+    } catch (error) {
+      setIsLoading(false)
+    }
   }
 
   return (
@@ -95,6 +121,8 @@ export default function ContactUs() {
                     id="first_name"
                     name="first_name"
                     type="text"
+                    value={firstName}
+                    onChange={(e)=> setFirstName(e.target.value)}
                     autoComplete="given-name"
                     required
                   />
@@ -105,6 +133,8 @@ export default function ContactUs() {
                     id="last_name"
                     name="last_name"
                     type="text"
+                    value={lastName}
+                    onChange={(e)=> setLastName(e.target.value)}
                     autoComplete="family-name"
                     required
                   />
@@ -115,6 +145,8 @@ export default function ContactUs() {
                 id="email"
                 name="email"
                 type="email"
+                value={email}
+                onChange={(e)=> setEmail(e.target.value)}
                 autoComplete="email"
                 required
               />
@@ -123,15 +155,21 @@ export default function ContactUs() {
                 id="message"
                 name="message"
                 type="message"
+                value={message}
+                onChange={(e)=> setMessage(e.target.value)}
                 required
               />
               <div className="pt-1">
                 <button
                   type="submit"
                   value="Send"
-                  className="w-full bg-[#b19777] text-white py-3 duration-300 hover:bg-black hover:text-white"
+                  disabled={isLoading}
+                  className={`${isLoading ? 'opacity-60': null} w-full bg-[#b19777] text-white py-3 duration-300 hover:bg-black hover:text-white`}
                 >
-                  Submit <span aria-hidden="true">&rarr;</span>
+                  {
+                    isLoading 
+                    ? 'Loading...' 
+                    : <>Submit <span aria-hidden="true">&rarr;</span></> } 
                 </button>
               </div>
             </form>

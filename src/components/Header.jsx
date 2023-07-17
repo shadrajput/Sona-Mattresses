@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Fragment } from 'react'
 import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
@@ -8,7 +8,109 @@ import { useRouter } from 'next/router';
 import { AiOutlineMenu } from "react-icons/ai"
 
 
+function MobileNavigation() {
+  return (
+    <Popover>
+      {({ open, close }) => (
+        <>
+          <Popover.Button className="relative z-10 flex h-8 w-8 items-center justify-center [&:not(:focus-visible)]:focus:outline-none">
+            <span className="sr-only">Toggle Navigation</span>
+            <svg
+              aria-hidden="true"
+              className="h-3.5 w-3.5 overflow-visible stroke-slate-700"
+              fill="none"
+              strokeWidth={2}
+              strokeLinecap="round"
+            >
+              <path
+                d="M0 1H14M0 7H14M0 13H14"
+                className={clsx('origin-center transition', {
+                  'scale-90 opacity-0': open,
+                })}
+              />
+              <path
+                d="M2 2L12 12M12 2L2 12"
+                className={clsx('origin-center transition', {
+                  'scale-90 opacity-0': !open,
+                })}
+              />
+            </svg>
+          </Popover.Button>
+          <Transition.Root>
+            <Transition.Child
+              as={Fragment}
+              enter="duration-150 ease-out"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="duration-150 ease-in"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <Popover.Overlay className="fixed inset-0 bg-slate-300/50" />
+            </Transition.Child>
+            <Transition.Child
+              as={Fragment}
+              enter="duration-150 ease-out"
+              enterFrom="opacity-0 scale-95"
+              enterTo="opacity-100 scale-100"
+              leave="duration-100 ease-in"
+              leaveFrom="opacity-100 scale-100"
+              leaveTo="opacity-0 scale-95"
+            >
+              <Popover.Panel
+                as="ul"
+                className="absolute inset-x-0 top-full mt-4 origin-top space-y-4 rounded-2xl bg-white p-6 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
+              >
+                <li>
+                  <Link href="#features">
+                    <a className="block w-full" onClick={() => close()}>
+                      Features
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#testimonials">
+                    <a className="block w-full" onClick={() => close()}>
+                      Testimonials
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#pricing">
+                    <a className="block w-full" onClick={() => close()}>
+                      Pricing
+                    </a>
+                  </Link>
+                </li>
+                <li className="border-t border-slate-300/40 pt-4">
+                  <Link href="/login">
+                    <a className="block w-full">Sign in</a>
+                  </Link>
+                </li>
+              </Popover.Panel>
+            </Transition.Child>
+          </Transition.Root>
+        </>
+      )}
+    </Popover>
+  )
+}
+
 export function Header(props) {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const NavLink = [
     {
       name: "Home",
@@ -32,42 +134,39 @@ export function Header(props) {
   const [menu, setmenu] = useState(false);
 
   return (
-    <header className="lg:px-24">
+    <header className="px-24">
       <nav className="relative z-50 text-sm">
-        <div className='flex justify-between w-full items-center px-3 py-2'>
-          <div className=''>
+        <ul className="flex items-center py-2">
+          <li>
             <Link href="/">
-              <div className=' w-24 lg:w-48 cursor-pointer'>
+              <div className='w-48 cursor-pointer'>
                 <Image src={Logo} alt="fess manager logo" className='' />
               </div>
             </Link>
-          </div>
-          <div className="mr-2 md:hidden" onClick={() => setmenu(!menu)}>
-            <AiOutlineMenu className='text-lg' />
-          </div>
-        </div>
-        <div className={` ${menu ? "top-16 opacity-100 duration-700" : "top-[-500px] lg:opacity-100 opacity-0 duration-700"} 
-        absolute left-0  duration-700 ease-in w-full h-full  lg:flex flex-col justify-end items-center bg-black py-4`}>
-          <div className='h-full flex-col flex px-5 space-y-5'>
-            {
-              NavLink.map(({ link, name }) => (
-                <Link
-                  name={name}
-                  href={link}
-                >
-                  <a className={`${router.pathname === link ? "text-[#b19777] border-x-2 px-2 border-[#b19777]" : "text-black"} font-semibold hover:text-[#b19777] text-[15px]`}>
-                    {name}
-                  </a>
-                </Link>
-              ))
-            }
-          </div>
-          <div className="lg:ml-6  ">
-            <Link href="/Quotation">
-              <a className="btn1 font-semibold text-[12px] hover:text-white z-50 group text-lg py-1">
-                Get Quotation
-              </a>
-            </Link>
+          </li>
+          <div className='w-full flex justify-end items-center'>
+            <div className='flex items-center space-x-7'>
+              {
+                NavLink.map(({ link, name }) => (
+                  <Link
+                    name={name}
+                    href={link}
+                  >
+                    <a className={`${router.pathname === link ? "text-[#b19777] border-x-2 px-2 border-[#b19777]" : "text-black"} font-semibold hover:text-[#b19777] text-[15px]`}>
+                      {name}
+                    </a>
+                  </Link>
+                ))
+              }
+            </div>
+            <li className="ml-6 hidden md:block ">
+              <Link href="/Quotation">
+                <a className="btn1 font-semibold text-[12px] hover:text-white z-50 group text-lg py-1">
+                  Get Quotation
+                </a>
+              </Link>
+            </li>
+
           </div>
 
         </div>

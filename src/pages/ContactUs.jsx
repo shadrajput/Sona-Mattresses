@@ -66,7 +66,7 @@ export default function ContactUs() {
         id="testimonials"
         aria-labelledby="testimonials-title"
         className="bg-slate-50 py-10">
-        <div className="w-full flex justify-center items-center ">
+        <div className="w-full flex justify-center items-center px-10 ">
           <div className='max-w-3xl'>
             <p className='uppercase font-semibold text-[#b19777] text-center'> | Contact Us</p>
             <h2
@@ -82,7 +82,7 @@ export default function ContactUs() {
             </p>
           </div>
         </div>
-        <div className='grid grid-cols-4 gap-20 px-20 py-20'>
+        <div className='grid gap-10 px-10 py-10 sm:grid-cols-2 lg:grid-cols-4 md:gap-20 md:px-20 md:py-20'>
           <div className='flex flex-col justify-start items-center'>
             <MdLocationPin className='text-[#b19777] text-6xl' />
             <h1 className='font-semibold py-5'>Location</h1>
@@ -110,8 +110,8 @@ export default function ContactUs() {
             </p>
           </div>
         </div>
-        <div className="mt-10 flex justify-center items-center w-full pb-20 ">
-          <div className="mt-6 w-1/3">
+        <div className="mt-10 flex justify-center items-center w-full xl:pb-20 ">
+          <div className="mt-6 w-full px-10 xl:w-1/3">
             <form action="#" method="" className="space-y-7" ref={form} onSubmit={Sendmail}>
               <div className="flex flex-col space-y-7 sm:flex-row sm:space-y-0 sm:space-x-6 w-full
             ">
@@ -176,8 +176,8 @@ export default function ContactUs() {
           </div>
         </div>
       </section>
-      <Subscribe />
-      <Footer />
+      {/* <Subscribe />
+      <Footer /> */}
     </>
   )
 }

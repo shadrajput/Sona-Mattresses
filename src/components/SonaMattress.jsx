@@ -40,7 +40,7 @@ export default function SonaMattress() {
                 </div>
 
             </div>
-            <div className='grid grid-rows-3 justify-center items-center w-full sm:grid-cols-3 sm:grid-rows-1 2xl:hidden'>
+            <div className='grid grid-rows-3 justify-center items-center w-full sm:grid-cols-3 sm:grid-rows-1 pb-5 2xl:hidden'>
                 <div className='flex flex-col justify-center items-center w-full group'>
                     <Image src={maticon1} alt="fess manager logo" className='w-full h-full group-hover:translate-y-0 translate-y-2 duration-300' />
                     <h1 className='font-bold pt-6 sm:text-base xl:text-lg sm:ml-4 md:ml-6'>

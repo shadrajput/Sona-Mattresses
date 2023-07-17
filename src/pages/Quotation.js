@@ -11,7 +11,7 @@ export default function Quotation() {
         id="testimonials"
         aria-labelledby="testimonials-title"
         className="bg-slate-50 py-10">
-        <div className="w-full flex justify-center items-center ">
+        <div className="w-full flex justify-center items-center  px-10">
           <div className='max-w-3xl'>
             <p className='uppercase font-semibold text-[#ae9775] text-center'> | Get Quotation</p>
             <h2
@@ -27,8 +27,8 @@ export default function Quotation() {
             </p>
           </div>
         </div>
-        <div className="py-20 flex justify-center items-center w-full pb-20 ">
-          <div className="mt-6 w-1/3">
+        <div className=" md:py-20 flex justify-center items-center w-full py-10 ">
+          <div className="mt-6 w-full px-10 md:px-20 xl:w-2/3">
             <form action="#" method="" className="space-y-7">
               <div className="flex flex-col space-y-7 sm:flex-row sm:space-y-0 sm:space-x-6 w-full
             ">

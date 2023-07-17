@@ -13,41 +13,51 @@ export default function Specifications() {
             <div className='py-20 border-b border-black/20 space-y-24 '>
                 <div className='grid grid-cols-3 '>
                     <div className='flex flex-col justify-center items-center group'>
-                        <div className='group-hover:mb-10 duration-500'>
-                            <Image src={mat1} alt="fess manager logo" width="80%" height="80%" className='w-full h-full ' />
+                        <div className='group-hover:translate-y-0 duration-300 translate-y-2 mb-2'>
+                            <Image src={mat1} alt="" width="80%" height="80%" className='w-full h-full ' />
                         </div>
-                        <h1 className='font-bold pt-6 group-hover:text-[#b19777]'>
+                        <h1 className='font-bold pt-7'>
                             Eco Materials
                         </h1>
                     </div>
-                    <div className='flex flex-col justify-center items-center'>
-                        <Image src={mat2} alt="fess manager logo" width="80%" height="80%" className='w-full h-full relative' />
+                    <div className='flex flex-col justify-center items-center group'>
+                         <div className='group-hover:translate-y-0 duration-300 translate-y-2 mb-2'>
+                            <Image src={mat2} alt="" width="80%" height="80%" className='w-full h-full relative' />
+                         </div>
                         <h1 className='font-bold pt-7'>
                             Memory Layers
                         </h1>
                     </div>
-                    <div className='flex flex-col justify-center items-center'>
-                        <Image src={mat3} alt="fess manager logo" width="80%" height="80%" className='w-full h-full relative' />
+                    <div className='flex flex-col justify-center items-center group'>
+                         <div className='group-hover:translate-y-0 duration-300 translate-y-2 mb-2'>
+                            <Image src={mat3} alt="" width="80%" height="80%" className='w-full h-full relative' />
+                         </div>
                         <h1 className='font-bold pt-7'>
                             Orthopedic
                         </h1>
                     </div>
                 </div>
                 <div className='grid grid-cols-3 '>
-                    <div className='flex flex-col justify-center items-center'>
-                        <Image src={mat4} alt="fess manager logo" width="80%" height="80%" className='w-full h-full relative' />
+                    <div className='flex flex-col justify-center items-center group'>
+                        <div className='group-hover:translate-y-0 duration-300 translate-y-2 mb-2'>
+                            <Image src={mat4} alt="" width="80%" height="80%" className='w-full h-full relative' />
+                         </div>
                         <h1 className='font-bold pt-7'>
                             Perfectly Quiet
                         </h1>
                     </div>
-                    <div className='flex flex-col justify-center items-center'>
-                        <Image src={mat5} alt="fess manager logo" width="80%" height="80%" className='w-full h-full relative' />
+                    <div className='flex flex-col justify-center items-center group'>
+                        <div className='group-hover:translate-y-0 duration-300 translate-y-2 mb-2'>
+                            <Image src={mat5} alt="" width="80%" height="80%" className='w-full h-full relative' />
+                         </div>
                         <h1 className='font-bold pt-7'>
                             Double Sized
                         </h1>
                     </div>
-                    <div className='flex flex-col justify-center items-center'>
-                        <Image src={mat6} alt="fess manager logo" width="80%" height="80%" className='w-full h-full relative' />
+                    <div className='flex flex-col justify-center items-center group'>
+                        <div className='group-hover:translate-y-0 duration-300 translate-y-2 mb-2'>
+                            <Image src={mat6} alt="" width="80%" height="80%" className='w-full h-full relative' />
+                         </div>
                         <h1 className='font-bold pt-7'>
                             Cooling Top
                         </h1>

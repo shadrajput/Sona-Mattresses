@@ -54,40 +54,40 @@ export function Hero() {
   return (
     <>
       <div className="w-full h-full">
-      {data.map((item, index) => (
-        <div
-          className={`${index === currentIndex ? 'active' : ''} slide transition-all duration-500 ease-in-out`}
-          key={index}
-        >
-          {index === currentIndex && (
-            <img src={item.img} alt="Image" className="w-full h-full relative" />
-          )}
-          {index === currentIndex && (
-            <div className="absolute top-72 left-40 w-[700px]">
-              <h1 className="text-[#b19777] font-bold text-[55px]">{item.heading1}</h1>
-              <h1 className="text-black text-[55px] font-bold">{item.heading2}</h1>
-              <p className="font-light pr-52 py-8 text-black">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, odit harum, tenetur ullam est magnam fuga.
-              </p>
-              <button className="btn1 font-semibold text-[12px] hover:text-white z-50 group text-sm py-3">
-                Shop Now
-                <BsArrowRight className="text-black group-hover:text-white text-lg ml-3" />
-              </button>
-            </div>
-          )}
-        </div>
-      ))}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-            {data.map((_, index) => (
-              <div
-                key={index}
-                className={`w-2 h-2 rounded-full cursor-pointer ${
-                  index === currentIndex ? 'bg-[#B19777]' : 'bg-gray-400'
-                }`}
-                onClick={() => setCurrentIndex(index)}
-              ></div>
-            ))}
+        {data.map((item, index) => (
+          <div
+            className={`slide ${index === currentIndex ? 'active' : ''} transition-all duration-500 ease-in-out`}
+            key={index}
+          >
+            {index === currentIndex && (
+              <img src={item.img} alt="Image" className="w-full h-full relative" />
+            )}
+            {index === currentIndex && (
+              <div className="absolute top-72 left-40 w-[700px]">
+                <h1 className="text-[#b19777] font-bold text-[55px]">{item.heading1}</h1>
+                <h1 className="text-black text-[55px] font-bold">{item.heading2}</h1>
+                <p className="font-light pr-52 py-8 text-black">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, odit harum, tenetur ullam est magnam fuga.
+                </p>
+                <button className="btn1 font-semibold text-[12px] hover:text-white z-50 group text-sm py-3">
+                  Shop Now
+                  <BsArrowRight className="text-black group-hover:text-white text-lg ml-3" />
+                </button>
+              </div>
+            )}
           </div>
+        ))}
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {data.map((_, index) => (
+            <div
+              key={index}
+              className={`w-2 h-2 rounded-full cursor-pointer ${
+                index === currentIndex ? 'bg-[#B19777]' : 'bg-gray-300'
+              }`}
+              onClick={() => setCurrentIndex(index)}
+            ></div>
+          ))}
+        </div>
     </div>
     </>
   )

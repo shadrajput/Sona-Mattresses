@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { Input } from '@/components/Input'
 import { Logo } from '@/components/Logo'
 import Image from "next/image";
-import myLogo from "../../public/images/FeesManagerLogo.png"
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import Subscribe from '@/components/Subscribe';
@@ -13,6 +12,58 @@ import { FiPhoneCall } from "react-icons/fi"
 import { CgMail } from "react-icons/cg"
 import { MdLocationPin } from "react-icons/md"
 import { toast } from "react-toastify";
+import { useFormik } from 'formik';
+import * as Yup from "yup";
+
+const contactFormSchema = Yup.object({
+    first_name: Yup.string()
+    .test('trim', 'Must not contain leading or trailing spaces', (value) => {
+      if (value) {
+        return value.trim() === value; 
+      }
+      return true;
+    })
+    .min(2, "First name must be atleast 2 characters long")
+    .max(25, "First name shouldn't be more than 25 characters").matches(/^[a-zA-Z ]+$/, "Please enter only characters").required("Please enter your first name"),
+
+    last_name: Yup.string()
+    .test('trim', 'Must not contain leading or trailing spaces', (value) => {
+      if (value) {
+        return value.trim() === value; 
+      }
+      return true;
+    })
+    .min(2, "Last name must be atleast 2 characters long")
+    .max(25, "Last name shouldn't be more than 25 characters").matches(/^[a-zA-Z ]+$/, "Please enter only characters").required("Please enter your last name"),
+
+    email: Yup.string().email("Please enter valid email")
+    .test('trim', 'Must not contain leading or trailing spaces', (value) => {
+      if (value) {
+        return value.trim() === value; 
+      }
+      return true;
+    })
+    .required("Please enter your email"),
+
+    
+    message: Yup.string()
+    .test('trim', 'Must not contain leading or trailing spaces', (value) => {
+      if (value) {
+        return value.trim() === value; 
+      }
+      return true;
+    })
+    .min(2, "Message must be atleast 2 characters long")
+    .max(25, "Message shouldn't be more than 25 characters")
+    .required("Please enter your message"),
+});
+
+const initialValues = {
+    first_name: "",
+    last_name: "",
+    email: "",
+    message: "",
+};
 
 export default function ContactUs() {
   const [firstName, setFirstName] = useState("")
@@ -55,9 +106,42 @@ export default function ContactUs() {
       })
       
     } catch (error) {
+      toast.error(error.message)
       setIsLoading(false)
     }
   }
+
+  const { values, errors, handleBlur, touched, handleChange, handleSubmit, resetForm } = useFormik({
+        initialValues: initialValues,
+        validationSchema: contactFormSchema,
+        async onSubmit(data) {
+
+          try {
+            setIsLoading(true)
+            fetch('/api/contact', {
+              method: 'POST',
+              headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(data)
+            }).then((res) => {
+              setIsLoading(false)
+              if(res.status == 200){
+                resetForm()
+                toast.success('Thanks for reaching us')
+              }
+              else{
+                toast.error('Failed to send email')
+              }
+            })
+            
+          } catch (error) {
+            toast.error(error.message)
+            setIsLoading(false)
+          }
+        }
+    })
 
   return (
     <>
@@ -112,53 +196,91 @@ export default function ContactUs() {
         </div>
         <div className="mt-10 flex justify-center items-center w-full pb-20 ">
           <div className="mt-6 w-1/3">
-            <form action="#" method="" className="space-y-7" ref={form} onSubmit={Sendmail}>
+            <form action="#" method="" className="space-y-7" ref={form} onSubmit={handleSubmit}>
               <div className="flex flex-col space-y-7 sm:flex-row sm:space-y-0 sm:space-x-6 w-full
             ">
-                <div className='w-full'>
+                <div className='w-full flex flex-col'>
                   <Input
                     label="First name"
                     id="first_name"
                     name="first_name"
                     type="text"
-                    value={firstName}
-                    onChange={(e)=> setFirstName(e.target.value)}
+                    value={values.first_name}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
                     autoComplete="given-name"
                     required
                   />
+                  {
+                    errors.first_name && touched.first_name
+                    ?
+                      <small className='mt-2 form-error text-red-600 text-xs font-semibold'>{errors.first_name}</small>
+                    :
+                      null
+                  }
                 </div>
-                <div className='w-full'>
+                <div className='w-full flex flex-col'>
                   <Input
                     label="Last name"
                     id="last_name"
                     name="last_name"
                     type="text"
-                    value={lastName}
-                    onChange={(e)=> setLastName(e.target.value)}
+                    value={values.last_name}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
                     autoComplete="family-name"
                     required
                   />
+                  {
+                    errors.last_name && touched.last_name
+                    ?
+                      <small className='mt-2 form-error text-red-600 text-xs font-semibold'>{errors.last_name}</small>
+                    :
+                      null
+                  }
                 </div>
               </div>
-              <Input
-                label="Email address"
-                id="email"
-                name="email"
-                type="email"
-                value={email}
-                onChange={(e)=> setEmail(e.target.value)}
-                autoComplete="email"
-                required
-              />
-              <Input
-                label="Message"
-                id="message"
-                name="message"
-                type="message"
-                value={message}
-                onChange={(e)=> setMessage(e.target.value)}
-                required
-              />
+              <div className='flex flex-col'>
+                <Input
+                  label="Email address"
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={values.email}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  autoComplete="email"
+                  required
+                />
+                {
+                  errors.email && touched.email
+                  ?
+                    <small className='mt-2 form-error text-red-600 text-xs font-semibold'>{errors.email}</small>
+                  :
+                    null
+                }
+              </div>
+              <div className='flex flex-col'>
+                <label htmlFor="message" className="block font-medium mb-1">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={values.message}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  required
+                  className="w-full px-4 py-2 border border-gray-200 bg-[#F9FAFB] rounded-md"
+                />
+                {
+                  errors.message && touched.message
+                  ?
+                    <small className='mt-2 form-error text-red-600 text-xs font-semibold'>{errors.message}</small>
+                  :
+                    null
+                }
+              </div>
               <div className="pt-1">
                 <button
                   type="submit"

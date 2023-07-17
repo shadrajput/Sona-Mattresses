@@ -12,7 +12,13 @@ export default function (req, res) {
           <h3>Name: ${req.body.first_name} ${req.body.last_name}</h3>
         </div>
         <p style="font-size: 16px;">
-          Message: ${req.body.message}
+          Mobile: ${req.body.phone}
+        </p>
+        <p style="font-size: 16px;">
+          Size: ${req.body.size}
+        </p>
+        <p style="font-size: 16px;">
+          Quantity: ${req.body.quantity}
         </p>
       </div>
     `,

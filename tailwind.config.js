@@ -19,6 +19,11 @@ module.exports = {
       '8xl': ['6rem', { lineHeight: '1' }],
       '9xl': ['8rem', { lineHeight: '1' }],
     },
+    screens: {
+      xxs: "220px",
+      xs: "330px",
+      ...defaultTheme.screens,
+    },
     extend: {
       borderRadius: {
         '4xl': '2rem',
@@ -32,5 +37,8 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [
+    require("tailwindcss-debug-screens"),
+    require('@tailwindcss/forms')
+  ],
 }

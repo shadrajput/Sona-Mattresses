@@ -106,7 +106,6 @@ export function Header(props) {
 
     window.addEventListener('scroll', handleScroll);
 
-    // Clean up the event listener when the component unmounts
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -134,7 +133,7 @@ export function Header(props) {
   const router = useRouter()
 
   return (
-    <header className={`px-24 w-full fixed top-0 z-[999] duration-300 ${scrollPosition > 0 ? 'bg-white shadow-md' : ''} `}>
+    <header className={`px-24 w-full fixed top-0 z-[999] duration-300 ${scrollPosition > 5 ? 'bg-white shadow-md' : ''} `}>
       <nav className="relative z-50 text-sm">
         <ul className="flex items-center">
           <li>

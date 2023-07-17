@@ -26,10 +26,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #000;
   min-width: 150px;
   text-transform: uppercase;
-  margin: 10px;
   cursor: pointer;
   transition: color 0.4s linear;
   position: relative;
@@ -114,10 +112,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 150px;
   background: #b19777;
   text-transform: uppercase;
-  padding: 15px 20px;
   text-align: center;
   cursor: pointer;
   transition: color 0.4s linear;

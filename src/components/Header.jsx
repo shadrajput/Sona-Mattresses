@@ -1,4 +1,4 @@
-import { Fragment } from 'react'
+import { Fragment, useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 
 
 function MobileNavigation() {
+
   return (
     <Popover>
       {({ open, close }) => (
@@ -96,6 +97,21 @@ function MobileNavigation() {
 }
 
 export function Header(props) {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const NavLink = [
     {
       name: "Home",
@@ -118,12 +134,12 @@ export function Header(props) {
   const router = useRouter()
 
   return (
-    <header className="px-24">
+    <header className={`px-24 w-full fixed top-0 z-[999] duration-300 ${scrollPosition > 0 ? 'bg-white shadow-md' : ''} `}>
       <nav className="relative z-50 text-sm">
-        <ul className="flex items-center py-2">
+        <ul className="flex items-center">
           <li>
             <Link href="/">
-              <div className='w-48 cursor-pointer'>
+              <div className='w-40 cursor-pointer'>
                 <Image src={Logo} alt="fess manager logo" className='' />
               </div>
             </Link>
@@ -134,6 +150,7 @@ export function Header(props) {
                 NavLink.map(({ link, name }) => (
                   <Link
                     name={name}
+                    key={name}
                     href={link}
                   >
                     <a className={`${router.pathname === link ? "text-[#b19777] border-x-2 px-2 border-[#b19777]" : "text-black"} font-semibold hover:text-[#b19777] text-[15px]`}>

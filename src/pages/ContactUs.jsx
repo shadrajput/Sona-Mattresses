@@ -65,7 +65,7 @@ export default function ContactUs() {
       <section
         id="testimonials"
         aria-labelledby="testimonials-title"
-        className="bg-slate-50 py-10">
+        className="bg-slate-50 pb-10 pt-24">
         <div className="w-full flex justify-center items-center ">
           <div className='max-w-3xl'>
             <p className='uppercase font-semibold text-[#b19777] text-center'> | Contact Us</p>

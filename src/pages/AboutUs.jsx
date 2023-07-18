@@ -19,7 +19,7 @@ export default function AboutUs() {
       <section
         id="testimonials"
         aria-labelledby="testimonials-title"
-        className="bg-slate-50 py-5 xl:py-10">
+        className="bg-slate-50 pb-5 xl:pb-10 pt-28">
         <div className="w-full flex justify-center items-center px-7 ">
           <div className='max-w-3xl'>
             <p className='uppercase font-semibold text-[#b19777] text-center'> | About Us</p>

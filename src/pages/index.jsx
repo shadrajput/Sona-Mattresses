@@ -18,23 +18,23 @@ export default function Home() {
       <Head>
         <title>Sona Mattresses</title>
         <meta
-          name="Mattress"
-          content="Fees Manager is the only tool you need to collect and manage student fees. It's easy to use, and it's Very Cheap! With Fees Manager, you can create a class , collect payments, track balances, and send reminders. You can also export your data to QuickBooks or Excel for easy accounting." />
+          name="Sona Mattresses"
+          content="Discover the ultimate sleep experience at Sona Mattresses - your destination for unparalleled comfort and quality. Our premium mattresses are meticulously crafted to ensure a rejuvenating night's rest, promoting optimal health and well-being. Explore our wide range of luxurious options, tailored to suit your unique sleep needs. Elevate your sleep with Sona Mattresses and wake up feeling refreshed, revitalized, and ready to conquer the day." />
       </Head>
-      <ToastContainer
-        position="top-right"
-        className="z-[999999]"
-        autoClose={1000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
       <Header />
       <main>
+        <ToastContainer
+          position="top-right"
+          className="z-[999999]"
+          autoClose={1000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
         <Hero />
         <Specifications />
         <SonaMattress />

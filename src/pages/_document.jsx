@@ -10,6 +10,7 @@ export default function Document(props) {
       lang="en"
     >
       <Head>
+        <title>Sona Mattresses</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

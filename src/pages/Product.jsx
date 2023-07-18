@@ -11,7 +11,7 @@ export default function Product() {
     return (
         <>
             <Header />
-            <div className='flex justify-center items-center'>
+            <div className='flex justify-center items-center pt-16'>
                 <div className='grid grid-rows-1 gap-10 px-10 py-10 md:grid-cols-2 md:py-20 md:px-20 lg::gap-20 '>
                     <div className='w-full'>
                         <Image src={mattrest} alt="fess manager logo" className='rounded-lg ' />

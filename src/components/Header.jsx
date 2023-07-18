@@ -64,26 +64,27 @@ export function Header(props) {
   const [menu, setmenu] = useState(false);
 
   return (
-    <header className={color ? 'header header-bg bg-[#b19777]' : "header bg-white"}>
-      <div className="flex flex-col md:flex-row items-center justify-center px-20 py-2">
-        <div className='flex items-center justify-between xl:justify-start w-full md:w-32 xl:w-full xl:h-full'>
-          <div className=' w-full flex justify-start items-center h-full'>
-            <Link href="/">
-              <div className='w-24 sm:w-32 lg:w-40 cursor-pointer'>
-                <Image src={Logo} alt="fess manager logo" className='' />
-              </div>
-            </Link>
+    <header className={` lg:z-20 2xl:px-24 w-full fixed top-0 z-[999] duration-300 ${scrollPosition > 0 ? 'bg-white shadow-md' : ''} `}>
+      <nav className="relative z-50 text-sm">
+        <div className="flex flex-col md:flex-row items-center  py-2  ">
+          <div className='flex items-center justify-between w-full md:w-32'>
+            <div>
+              <Link href="/">
+                <div className='w-24 sm:w-32 lg:w-40 cursor-pointer'>
+                  <Image src={Logo} alt="fess manager logo" className='' />
+                </div>
+              </Link>
+            </div>
+            <div className='mr-3 md:hidden' onClick={() => setmenu(!menu)}>
+              {
+                menu ?
+                  <RxCross2 className='text-xl xs:text-2xl' />
+                  :
+                  <HiMenu className='text-xl xs:text-2xl' />
+              }
+            </div>
           </div>
-          <div className='mr-3 md:hidden' onClick={() => setmenu(!menu)}>
-            {
-              menu ?
-                <RxCross2 className='text-xl xs:text-2xl' />
-                :
-                <HiMenu className='text-xl xs:text-2xl' />
-            }
-          </div>
-        </div>
-        <div className={` ${menu ? "top-16 opacity-100 sm:top-[80px]" : "top-[-500px] opacity-0 md:opacity-100 "}  
+          <div className={` ${menu ? "top-16 opacity-100 sm:top-[80px]" : "top-[-500px] opacity-0 md:opacity-100"} bg-black md:bg-transparent 
           md:static w-full pt-5 md:pt-0 absolute duration-500 md:flex md:items-center md:mr-16 lg:mr-16`}>
           <div className='flex flex-col h-full items-start space-y-5 text-left w-full px-5 || md:space-x-7 md:flex-row 
             md:items-center md:space-y-0 md:justify-end'>

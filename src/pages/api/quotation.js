@@ -15,7 +15,13 @@ export default function (req, res) {
           Email: ${req.body.email}
         </p>
         <p style="font-size: 16px;">
-          Message: ${req.body.message}
+          Mobile: ${req.body.phone}
+        </p>
+        <p style="font-size: 16px;">
+          Size: ${req.body.size}
+        </p>
+        <p style="font-size: 16px;">
+          Quantity: ${req.body.quantity}
         </p>
       </div>
     `,

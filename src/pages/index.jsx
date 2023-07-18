@@ -21,20 +21,20 @@ export default function Home() {
           name="Mattress"
           content="Best mattress manufacturer in Ahmedabad" />
       </Head>
-      <ToastContainer
-        position="top-right"
-        className="z-[999999]"
-        autoClose={1000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
       <Header />
       <main>
+        <ToastContainer
+          position="top-right"
+          className="z-[999999]"
+          autoClose={1000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
         <Hero />
         <Specifications />
         <SonaMattress />

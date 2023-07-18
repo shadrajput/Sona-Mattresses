@@ -13,17 +13,27 @@ import { AiOutlineFacebook } from "react-icons/ai"
 export function Footer() {
   return (
     <>
-      <div className='py-10 bg-[#181818] h-[500px] flex justify-center items-center px-40 relative'>
+      <div className='py-10 bg-[#181818] h-[450px] xl:h-[500px] flex justify-center items-center xl:px-40 relative'>
         <Image src={myLogo} alt="fess manager logo" className='w-full h-full ' />
         <div className="h-full w-full bg-black/40 absolute ">
         </div>
-        <div className="grid grid-cols-3 gap-20 absolute left-40 right-40">
-          <div className="space-y-6 ">
-            <div className='pr-20'>
-              <Image src={Logo} alt="fess manager logo" className='' />
+        <div className="grid grid-rows-1 lg:w-[500px] xl:w-full xl:grid-cols-3 gap-20 absolute top-12 sm:top-20 xl:px-20 ">
+          <div className="space-y-6 xl:px-12">
+            <div className='w-full flex justify-center items-center'>
+              <div className="w-52">
+                <Image src={Logo} alt="fess manager logo" className='' />
+              </div>
             </div>
-            <p className="text-gray-500">Etiam consequat sem ullamcorper, euismod metus sit amet, tristique justo. Vestibulum mattis, nisi ut faucibus commodo, risus ex commodo.</p>
-            <div className="flex items-center space-x-5">
+            <p className="text-gray-400 text-center lg:text-start">Etiam consequat sem ullamcorper, euismod metus sit amet, tristique justo. Vestibulum mattis, nisi ut faucibus commodo, risus ex commodo.</p>
+            <div className="flex items-center justify-center lg:items-start w-full space-x-5 xl:hidden">
+              <div>
+                <FiPhoneCall className="text-[#b19777] font-bold text-2xl" />
+              </div>
+              <h1 className="text-white text-2xl font-semibold lg:text-start">
+                +91 8401527048
+              </h1>
+            </div>
+            <div className="flex items-center justify-center space-x-5 pt-5">
               <a href="https://www.instagram.com/sonamattresses/">
                 <AiOutlineInstagram className="text-2xl cursor-pointer text-[#b19777] hover:text-white" />
               </a>
@@ -32,7 +42,7 @@ export function Footer() {
               </a>
             </div>
           </div>
-          <div>
+          <div className="hidden xl:block">
             <h1 className="text-[25px] font-semibold text-[#b19777]" >Explore</h1>
             <div className="bg-[#61543f3b] h-[1px] text-[#181818] relative">
 
@@ -62,7 +72,7 @@ export function Footer() {
               </li>
             </nav>
           </div>
-          <div>
+          <div className="hidden xl:block">
             <h1 className="text-[25px] font-semibold text-[#b19777]" >Contact With Us</h1>
             <div className="bg-[#61543f3b] h-[1px] text-[#181818] relative">
 

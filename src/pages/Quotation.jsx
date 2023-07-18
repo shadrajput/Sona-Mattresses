@@ -115,7 +115,7 @@ export default function Quotation() {
       <section
         id="testimonials"
         aria-labelledby="testimonials-title"
-        className="bg-slate-50 pb-10 pt-24">
+        className="bg-slate-50 pb-10 pt-28 px-5 sm:px-10">
         <div className="w-full flex justify-center items-center ">
           <div className='max-w-3xl'>
             <p className='uppercase font-semibold text-[#ae9775] text-center'> | Get Quotation</p>
@@ -125,7 +125,7 @@ export default function Quotation() {
             >
               Connect With Us?
             </h2>
-            <p className="mt-4 text-lg tracking-tight text-center text-slate-700">
+            <p className="mt-4 md:text-lg tracking-tight text-center text-slate-700">
               Our software is so simple that people can’t help but fall in love
               with it. Simplicity is easy when you just skip tons of
               mission-critical features.
@@ -133,7 +133,7 @@ export default function Quotation() {
           </div>
         </div>
         <div className="py-20 flex justify-center items-center w-full pb-20 ">
-          <div className="mt-6 w-1/3">
+          <div className="mt-6 w-full sm:w-4/5 md:w-3/5 xl:w-2/4">
             <form action="#" method="" className="space-y-7" onSubmit={handleSubmit}>
               <div className="flex flex-col space-y-7 sm:flex-row sm:space-y-0 sm:space-x-6 w-full
             ">

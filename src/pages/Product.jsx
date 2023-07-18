@@ -11,12 +11,12 @@ export default function Product() {
     return (
         <>
             <Header />
-            <div className='flex justify-center items-center pt-20'>
-                <div className='grid grid-cols-2 py-20 px-20 gap-20 '>
-                    <div className=''>
+            <div className='flex justify-center items-center pt-16'>
+                <div className='grid grid-rows-1 gap-10 px-10 py-10 md:grid-cols-2 md:py-20 md:px-20 lg::gap-20 '>
+                    <div className='w-full'>
                         <Image src={mattrest} alt="fess manager logo" className='rounded-lg ' />
                     </div>
-                    <div className='pr-20'>
+                    <div className='lg:pr-20'>
                         <h1 className='text-[#b19777] font-semibold text-4xl'>Sona Mattrest</h1>
                         <p className='font-light py-4'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
                         <div className='flex items-center text-3xl font-semibold'>
@@ -46,7 +46,7 @@ export default function Product() {
                     </div>
                 </div>
             </div>
-            <div className='px-40 pt-10'>
+            <div className='lg:px-40 lg:pt-10 flex flex-col justify-center w-full items-center px-10 '>
                 <div>
                     <h1 className='text-center font-semibold'>Description </h1>
                     <div className=' flex justify-center items-center py-2'>
@@ -55,11 +55,11 @@ export default function Product() {
                         </div>
                     </div>
                 </div>
-                <p className='font-light text-sm'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                <p className='font-light text-sm text-center py-2'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
             </div>
-            <div className='px-40 py-20'>
+            <div className=' py-10 px-10 lg:px-40 lg:py-20'>
                 <h1 className='text-center font-semibold text-4xl'>Images </h1>
-                <div className='grid grid-cols-3 py-10 gap-20'>
+                <div className='grid grid-rows-1 sm:grid-cols-3 py-10 gap-20'>
                     <div>
                         <Image src={mattrest} alt="fess manager logo" className='rounded-lg ' />
 

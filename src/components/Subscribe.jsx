@@ -50,26 +50,28 @@ export default function Subscribe() {
 
     return (
         <>
-            <div className='h-[400px] relative'>
-                <Image src={image} alt="fess manager logo" className='' />
-                <div className="h-[400px] w-full bg-black/70 absolute top-0 ">
+             <div className='relative'>
+                <div className="h-96 lg:w-full flex 2xl:h-[350px]">
+                    <Image src='/images/Home-image-4.webp' alt="image 1" className='w-1/2' layout='fill' />
+                    <Image src='/images/bedroom-interior.jpg' alt="image 2" className='w-1/2' layout='fill' />
                 </div>
-                <div className="flex flex-col justify-center items-center absolute top-[28%] left-[35%]">
-                    <h1 className="text-[#b19777] font-semibold text-2xl">Subscribe for Members</h1>
-                    <h1 className="text-white text-2xl font-semibold py-3">to Receive Latest News and Special Offers</h1>
-                    <form action="">
-                        <div className="flex mt-5">
-                            <input 
-                                type="text"
-                                value={email}
+                <div className="h-full w-full bg-black/70 absolute top-0 ">
+                </div>
+                <div className="flex flex-col justify-center items-center absolute left-2 top-12 sm:left-20 sm:top-20 md:left-[20%] lg:left-72 lg:top-20 xl:top-[12%] xl:left-[32%] ">
+                    <h1 className="text-[#b19777] font-semibold text-2xl sm:mb-5">Subscribe for Members</h1>
+                    <h1 className="text-white text-2xl text-center font-semibold xl:py-3">To Receive Latest News and Special Offers</h1>
+                    <form action="" className="">
+                        <div className="flex mt-5 flex-col w-full">
+                            <input type="text"
                                 placeholder="Your email..."
-                                className="px-5 w-80 focus:outline-none"
+                                className="px-5 py-3 w-full md:py-2 lg:py-3 md:w-80 2xl:w-96 2xl:py-4 focus:outline-none"
+                                value={email}
                                 onChange={handleEmailChange}
                             />
                             <button 
                             disabled={isLoading}
                             onClick={handleSubscribe}
-                            className={`${isLoading ? 'opacity-60' : ''} btn3 text-sm text-white font-semibold z-50`}>
+                            className={`${isLoading ? 'opacity-60' : ''} btn3 px-3 py-3 mt-5 text-sm text-white font-semibold z-50`}>
                                 {isLoading ? 'Loading...' : 'Subscribe'}
                             </button>
                         </div>

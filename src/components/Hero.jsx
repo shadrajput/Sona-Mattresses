@@ -56,12 +56,12 @@ export function Hero() {
 
       <div className='w-full h-full relative'>
         {
-          data?.map((item, index) => {
+          data.map((item, index) => {
             return (
               <div className={index === currentIndex ? 'slide active ' : 'slide '}
                 key={index}>
                 {index === currentIndex && (
-                  <img src={item.img} alt="fess manager logo" className='w-full h-full relative' />
+                  <img src={item.img} alt="image" className='w-full h-full relative object-cover' style={{minHeight: '250px'}} />
                 )}
                 {index == currentIndex && (
                   <div className='absolute top-32 left-3 xs:top-28 sm:top-40 sm:left-10 md:top-48 lg:top-60 lg:left-16 2xl:top-72 2xl:left-40 2xl:w-[800px]'>

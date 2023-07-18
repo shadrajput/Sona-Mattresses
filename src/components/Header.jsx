@@ -10,19 +10,6 @@ import { RxCross2 } from "react-icons/rx"
 
 
 export function Header(props) {
-  // const [scrollPosition, setScrollPosition] = useState(0);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setScrollPosition(window.scrollY);
-  //   };
-
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
 
   const [color, setcolor] = useState(false)
 

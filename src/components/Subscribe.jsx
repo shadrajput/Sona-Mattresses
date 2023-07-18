@@ -7,7 +7,6 @@ export default function Subscribe() {
         <>
             <div className='relative'>
                 <div className="h-96 lg:w-full flex 2xl:h-[350px]">
-                    <Image src={image} alt="fess manager logo" className='w-1/2' />
                     <Image src={image2} alt="fess manager logo" className='w-1/2' />
                 </div>
                 <div className="h-full w-full bg-black/70 absolute top-0 ">

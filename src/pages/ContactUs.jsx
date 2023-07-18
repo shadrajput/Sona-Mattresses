@@ -261,8 +261,8 @@ export default function ContactUs() {
           </div>
         </div>
       </section>
-      {/* <Subscribe />
-      <Footer /> */}
+      <Subscribe />
+      <Footer />
     </>
   )
 }

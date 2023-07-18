@@ -51,12 +51,12 @@ export function Header(props) {
   const [menu, setmenu] = useState(false);
 
   return (
-    <header className={color ? 'header header-bg bg-[#b19777]' : "header bg-white"}>
+    <header className={color ? 'header header-bg bg-white' : "header"}>
       <div className="flex flex-col md:flex-row items-center justify-center px-20 py-2">
         <div className='flex items-center justify-between xl:justify-start w-full md:w-32 xl:w-full xl:h-full'>
           <div className=' w-full flex justify-start items-center h-full'>
             <Link href="/">
-              <div className='w-24 sm:w-32 lg:w-40 cursor-pointer'>
+              <div className='w-24 sm:w-32 lg:w-[170px] cursor-pointer'>
                 <Image src={Logo} alt="fess manager logo" className='' />
               </div>
             </Link>

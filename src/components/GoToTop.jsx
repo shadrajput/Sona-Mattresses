@@ -1,5 +1,5 @@
 import React from "react"
-import { BiUpArrow } from "react-icons/bi";
+import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 
 
 const GoToTop = () => {
@@ -28,9 +28,8 @@ const GoToTop = () => {
 
             {isVisible && (
                 <div className='flex justify-end' onClick={gototop}>
-                    <div className='flex flex-col text-center cursor-pointer hover:text-black hover:border-black duration-500 text-sm z-50 justify-center fixed bottom-5 mr-5 uppercase font-semibold border border-[#b19777] text-[#b19777] w-[70px] h-[70px]' >
-                        <span>Go</span>
-                        <span>Top</span>
+                    <div className='flex flex-col justify-center items-center cursor-pointer hover:text-black hover:border-black duration-500 text-sm z-50 justify-center fixed bottom-5 mr-5 uppercase font-semibold border border-[#b19777] text-[#b19777] w-[40px] h-[40px]' >
+                        <MdOutlineKeyboardArrowUp className="w-8 h-8"/>
                     </div>
                 </div>
             )}

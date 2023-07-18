@@ -18,8 +18,8 @@ export default function Home() {
       <Head>
         <title>Sona Mattresses</title>
         <meta
-          name="Sona Mattresses"
-          content="Discover the ultimate sleep experience at Sona Mattresses - your destination for unparalleled comfort and quality. Our premium mattresses are meticulously crafted to ensure a rejuvenating night's rest, promoting optimal health and well-being. Explore our wide range of luxurious options, tailored to suit your unique sleep needs. Elevate your sleep with Sona Mattresses and wake up feeling refreshed, revitalized, and ready to conquer the day." />
+          name="Mattress"
+          content="Best mattress manufacturer in Ahmedabad" />
       </Head>
       <Header />
       <main>

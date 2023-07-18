@@ -75,6 +75,7 @@ export function Header(props) {
                 NavLink.map(({ link, name }) => (
                   <Link
                     name={name}
+                    key={name}
                     href={link}
                   >
                     <a className={`${router.pathname === link ? "text-[#b19777] border-x-2 px-2 border-[#b19777]" : " text-white md:text-black"} font-semibold hover:text-[#b19777] text-[15px]`}>
@@ -94,7 +95,6 @@ export function Header(props) {
 
           </div>
         </div>
-
       </nav>
     </header>
   )

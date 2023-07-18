@@ -10,6 +10,7 @@ export default function Document(props) {
       lang="en"
     >
       <Head>
+        <title>Sona Mattresses</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -25,7 +26,7 @@ export default function Document(props) {
           href="/favicon.png"
         />
       </Head>
-      <body className="flex h-full flex-col">
+      <body className="flex h-full flex-col" id="root">
         <Main />
         <NextScript />
       </body>

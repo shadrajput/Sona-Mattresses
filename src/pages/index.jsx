@@ -9,6 +9,8 @@ import Mattressspecific from '@/components/Mattressspecific'
 import Subscribe from '@/components/Subscribe'
 import Testimonials from '@/components/Testimonials'
 import GoToTop from '@/components/GoToTop'
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Home() {
   return (
@@ -17,10 +19,22 @@ export default function Home() {
         <title>Sona Mattresses</title>
         <meta
           name="Mattress"
-          content="Fees Manager is the only tool you need to collect and manage student fees. It's easy to use, and it's Very Cheap! With Fees Manager, you can create a class , collect payments, track balances, and send reminders. You can also export your data to QuickBooks or Excel for easy accounting." />
+          content="Best mattress manufacturer in Ahmedabad" />
       </Head>
       <Header />
       <main>
+        <ToastContainer
+          position="top-right"
+          className="z-[999999]"
+          autoClose={1000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
         <Hero />
         <Specifications />
         <SonaMattress />

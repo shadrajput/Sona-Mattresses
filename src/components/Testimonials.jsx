@@ -80,7 +80,7 @@ export default function Testimonials() {
       <section
         id="testimonials"
         aria-labelledby="testimonials-title"
-        className="bg-slate-50 py-10">
+        className="bg-slate-50 py-10 px-10">
         <div className="w-full flex justify-center items-center ">
           <div className='max-w-3xl'>
             <p className='uppercase font-semibold text-[#b19777] text-center'> | testimonials</p>
@@ -97,7 +97,7 @@ export default function Testimonials() {
             </p>
           </div>
         </div>
-        <div className='px-24 pb-20'>
+        <div className='xl:px-24 xl:pb-20'>
           <ul className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:gap-8 lg:mt-20 lg:max-w-none lg:grid-cols-3">
             {testimonials.map((column, columnIndex) => (
               <li key={columnIndex}>

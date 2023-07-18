@@ -19,8 +19,8 @@ export default function AboutUs() {
       <section
         id="testimonials"
         aria-labelledby="testimonials-title"
-        className="bg-slate-50 py-10">
-        <div className="w-full flex justify-center items-center ">
+        className="bg-slate-50 pb-5 xl:pb-10 pt-28">
+        <div className="w-full flex justify-center items-center px-7 ">
           <div className='max-w-3xl'>
             <p className='uppercase font-semibold text-[#b19777] text-center'> | About Us</p>
             <h2
@@ -36,42 +36,41 @@ export default function AboutUs() {
             </p>
           </div>
         </div>
-        <div className='px-40'>
-
-          <div className='grid grid-cols-2 justify-center items-center w-full gap-20 py-14 '>
+        <div className='xl:px-40'>
+          <div className='grid grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 md:gap-10 mt-10 justify-center items-center w-full sm:gap-5  xl:gap-16 px-10 xl:py-14'>
             <div className=''>
               <Image src={About1} alt="fess manager logo" className='rounded-lg w-20' />
             </div>
-            <div className='space-y-5 py-5'>
+            <div className='space-y-3 lg:space-y-5 lg:py-5'>
               <FaBed className='text-[#b19777]  text-4xl' />
-              <h1 className='text-3xl font-semibold '>Mattress for healthy sleep</h1>
-              <p className='text-gray-500'>Pellentesque gravida scelerisque pretium. Quisque ut lacus quis neque lacinia lacinia. Ut eget augue nec ipsum pharetra venenatis. Nullam eget lacus sed lorem vehicula facilisis. Maecenas blandit nisi eu scelerisque tempus.</p>
+              <h1 className=' md:text-2xl lg:text-3xl font-semibold '>Mattress for healthy sleep</h1>
+              <p className='text-gray-500 md:text-sm lg:text-base'>Pellentesque gravida scelerisque pretium. Quisque ut lacus quis neque lacinia lacinia. Ut eget augue nec ipsum pharetra venenatis.</p>
             </div>
           </div>
-          <div className='grid grid-cols-2 justify-center items-center w-full gap-20 py-14 '>
-            <div className='space-y-5  py-5 flex flex-col justify-end items-end'>
-              <AiFillHome className='text-[#b19777]  text-4xl ' />
-              <h1 className='text-3xl font-semibold '>Mattress beams with quality</h1>
-              <p className='text-gray-500 text-right'>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla pharetra elit erat, ac rhoncus orci aliquet in. Nullam bibendum elit sed leo malesuada, a lacinia magna elementum. Curabitur vitae sem at libero.</p>
+          <div className='grid grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 md:gap-10 mt-10 justify-center items-center w-full sm:gap-5  xl:gap-16 px-10 xl:py-14'>
+            <div className='sm:order-2'>
+              <Image src={About2} alt="fess manager logo" className='rounded-lg w-20' />
             </div>
-            <div className=''>
-              <Image src={About2} alt="fess manager logo" className='rounded-lg' />
+            <div className='space-y-3 lg:space-y-5 lg:py-5 sm:order-1 flex flex-col justify-end items-end'>
+              <AiFillHome className='text-[#b19777]  text-4xl' />
+              <h1 className=' md:text-2xl lg:text-3xl font-semibold '>Mattress beams with quality</h1>
+              <p className='text-gray-500 md:text-sm lg:text-base text-end'>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla pharetra elit erat, ac rhoncus orci aliquet in.</p>
             </div>
           </div>
-          <div className='grid grid-cols-2 justify-center items-center w-full gap-20 py-14 '>
+          <div className='grid grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 md:gap-10 mt-10 justify-center items-center w-full sm:gap-5  xl:gap-16 px-10 xl:py-14'>
             <div className=''>
-              <Image src={About3} alt="fess manager logo" className='rounded-lg' />
+              <Image src={About3} alt="fess manager logo" className='rounded-lg w-20' />
             </div>
-            <div className='space-y-5 py-5'>
-              <MdHighQuality className='text-[#b19777] text-4xl' />
-              <h1 className='text-3xl font-semibold '>Quality assured, rest assured.</h1>
-              <p className='text-gray-500'>Donec sem neque, tempor sed mi eu, congue tincidunt dolor. Proin in scelerisque arcu, vel aliquet mauris. Suspendisse potenti. Pellentesque nec nibh mi. Nam vulputate, sapien et sagittis malesuada, libero leo bibendum pendisse.</p>
+            <div className='space-y-3 lg:space-y-5 lg:py-5'>
+              <MdHighQuality className='text-[#b19777]  text-4xl' />
+              <h1 className=' md:text-2xl lg:text-3xl font-semibold '>Quality assured, rest assured.</h1>
+              <p className='text-gray-500 md:text-sm lg:text-base'>Donec sem neque, tempor sed mi eu, congue tincidunt dolor. Proin in scelerisque arcu, vel aliquet mauris. Suspendisse potenti. Pellentesque nec nibh mi.</p>
             </div>
           </div>
         </div>
       </section>
-      <Subscribe />
-      <Footer />
+      {/* <Subscribe />
+      <Footer /> */}
     </>
   )
 }

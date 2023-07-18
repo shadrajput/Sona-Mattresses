@@ -6,6 +6,18 @@
   min-height: 100%;
 }
 
+/* Navbar */
+
+.header {
+  position: fixed;
+  height: 95px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: .3s ease-in;
+  overflow: hidden;
+}
 
 /* Dashboard */
 
@@ -61,7 +73,7 @@
   transform: scalex(0);
 }
 
-.btn1:hover::before{
+.btn1:hover::before {
   transition-duration: 1s;
   transform: scalex(1);
 }
@@ -105,7 +117,7 @@
   transform: scalex(0);
 }
 
-.btn2:hover::before{
+.btn2:hover::before {
   transition-duration: 1s;
   transform: scalex(1);
 }
@@ -148,7 +160,7 @@
   transform: scaley(0);
 }
 
-.btn3:hover::before{
+.btn3:hover::before {
   transition-duration: 1s;
   transform: scaley(1);
 }

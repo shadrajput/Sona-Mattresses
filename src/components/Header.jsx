@@ -10,19 +10,36 @@ import { RxCross2 } from "react-icons/rx"
 
 
 export function Header(props) {
-  const [scrollPosition, setScrollPosition] = useState(0);
+  // const [scrollPosition, setScrollPosition] = useState(0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollPosition(window.scrollY);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrollPosition(window.scrollY);
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
+  //   window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
+
+  const [color, setcolor] = useState(false)
+
+  const changecolor = () => {
+    if (window.scrollY >= 90) {
+      setcolor(true)
+    } else {
+      setcolor(false)
+    }
+  }
+
+  window.addEventListener("scroll", changecolor)
+
+  const [click, setClick] = useState(false)
+  const handleClick = () => setClick(!click)
+
+  const closeMenu = () => setClick(false)
 
   const NavLink = [
     {
@@ -69,33 +86,31 @@ export function Header(props) {
           </div>
           <div className={` ${menu ? "top-16 opacity-100 sm:top-[80px]" : "top-[-500px] opacity-0 md:opacity-100"} bg-black md:bg-transparent 
           md:static w-full pt-5 md:pt-0 absolute duration-500 md:flex md:items-center md:mr-16 lg:mr-16`}>
-            <div className='flex flex-col h-full items-start space-y-5 text-left w-full px-5 || md:space-x-7 md:flex-row 
+          <div className='flex flex-col h-full items-start space-y-5 text-left w-full px-5 || md:space-x-7 md:flex-row 
             md:items-center md:space-y-0 md:justify-end'>
-              {
-                NavLink.map(({ link, name }) => (
-                  <Link
-                    name={name}
-                    href={link}
-                  >
-                    <a className={`${router.pathname === link ? "text-[#b19777] border-x-2 px-2 border-[#b19777]" : " text-white md:text-black"} font-semibold hover:text-[#b19777] text-[15px]`}>
-                      {name}
-                    </a>
-                  </Link>
-                ))
-              }
-            </div>
-            <div className="w-full md:w-32 px-5 my-5 ">
-              <Link href="/Quotation">
-                <a className="btn1 font-semibold w-full text-[12px] text-white md:text-black border border-white md:border-black hover:text-white z-50 group text-lg py-1">
-                  Get Quotation
-                </a>
-              </Link>
-            </div>
-
+            {
+              NavLink.map(({ link, name }) => (
+                <Link
+                  name={name}
+                  href={link}
+                >
+                  <a className={`${router.pathname === link ? "text-[#b19777] border-x-2 px-2 border-[#b19777]" : " text-white md:text-black"} font-semibold hover:text-[#b19777] text-[15px]`}>
+                    {name}
+                  </a>
+                </Link>
+              ))
+            }
           </div>
-        </div>
+          <div className="w-full md:w-32 px-5 my-5 ">
+            <Link href="/Quotation">
+              <a className="btn1 font-semibold w-full text-[12px] text-white md:text-black border border-white md:border-black hover:text-white z-50 group text-lg py-1">
+                Get Quotation
+              </a>
+            </Link>
+          </div>
 
-      </nav>
+        </div>
+      </div>
     </header>
   )
 }

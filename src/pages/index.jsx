@@ -19,7 +19,7 @@ export default function Home() {
         <title>Sona Mattresses</title>
         <meta
           name="Mattress"
-          content="Fees Manager is the only tool you need to collect and manage student fees. It's easy to use, and it's Very Cheap! With Fees Manager, you can create a class , collect payments, track balances, and send reminders. You can also export your data to QuickBooks or Excel for easy accounting." />
+          content="Best mattress manufacturer in Ahmedabad" />
       </Head>
       <ToastContainer
         position="top-right"

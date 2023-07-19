@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion"
 export default function Mattressspecific() {
     return (
         <div className="h-full w-full relative">
-            <Image src={image} alt="fess manager logo" className='' />
+            <Image src={image} alt="image" className='' />
             <div className="absolute top-5 2xl:top-[30%] xl:left-[10%] xl:w-[550px] left-7 right-24 sm:right-52 md:right-60 md:top-10 lg:left-16 lg:top-24">
                 <motion.p
                     initial={{ opacity: 0 }}
@@ -17,7 +17,7 @@ export default function Mattressspecific() {
                 <p className="py-5 hidden font-light sm:block sm:text-xs md:text-[14px] sm:pr-10 md:mr-20">
                     Mauris at odio eu felis maximus mattis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus in venenatis magna, sit amet ullamcorper nunc.
                 </p>
-                <button className='btn2 font-semibold text-[12px] text-white hover:text-black z-50 group '>
+                <button className='btn2 font-semibold text-[12px] text-white hover:text-black z-10 group '>
                     Shop Now
                     <BsArrowRight className='group-hover:text-black text-white text-lg ml-3' />
                 </button>

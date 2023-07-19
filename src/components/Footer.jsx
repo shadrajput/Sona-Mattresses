@@ -19,7 +19,7 @@ export function Footer() {
         </div>
         <div className="grid grid-rows-1 lg:w-[500px] xl:w-full xl:grid-cols-3 gap-20 absolute top-12 sm:top-20 xl:px-20 ">
           <div className="space-y-6 xl:px-12">
-            <div className='w-full flex justify-center items-center'>
+            <div className='w-full flex justify-start items-center'>
               <div className="w-52">
                 <Image src={Logo} alt="fess manager logo" className='' />
               </div>
@@ -33,7 +33,7 @@ export function Footer() {
                 +91 8401527048
               </h1>
             </div>
-            <div className="flex items-center justify-center space-x-5 pt-5">
+            <div className="flex items-center justify-start space-x-5 pt-5">
               <a href="https://www.instagram.com/sonamattresses/">
                 <AiOutlineInstagram className="text-2xl cursor-pointer text-[#b19777] hover:text-white" />
               </a>

@@ -10,7 +10,6 @@ import { RxCross2 } from "react-icons/rx"
 
 
 export function Header(props) {
-
   const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
@@ -24,7 +23,6 @@ export function Header(props) {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
 
   const NavLink = [
     {
@@ -51,11 +49,11 @@ export function Header(props) {
   return (
     <header className={` lg:z-20 2xl:px-24 w-full fixed top-0 z-[999] duration-300 ${scrollPosition > 0 ? 'bg-white shadow-md' : ''} `}>
       <nav className="relative z-50 text-sm">
-        <div className="flex flex-col md:flex-row items-center  py-2  ">
+        <div className="flex flex-col md:flex-row items-center">
           <div className='flex items-center justify-between w-full md:w-32'>
             <div>
               <Link href="/">
-                <div className='w-24 sm:w-32 lg:w-40 cursor-pointer'>
+                <div className='w-24 sm:w-32 lg:w-36 cursor-pointer'>
                   <Image src={Logo} alt="fess manager logo" className='' />
                 </div>
               </Link>
@@ -77,6 +75,7 @@ export function Header(props) {
                 NavLink.map(({ link, name }) => (
                   <Link
                     name={name}
+                    key={name}
                     href={link}
                   >
                     <a className={`${router.pathname === link ? "text-[#b19777] border-x-2 px-2 border-[#b19777]" : " text-white md:text-black"} font-semibold hover:text-[#b19777] text-[15px]`}>
@@ -86,7 +85,7 @@ export function Header(props) {
                 ))
               }
             </div>
-            <div className="w-full md:w-32 px-5 my-5 ">
+            <div className="w-full md:w-32 px-5 my-5 md:my-3 ">
               <Link href="/Quotation">
                 <a className="btn1 font-semibold w-full text-[12px] text-white md:text-black border border-white md:border-black hover:text-white z-50 group text-lg py-1">
                   Get Quotation

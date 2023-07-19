@@ -69,8 +69,8 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
-      {/* <Subscribe />
-      <Footer /> */}
+      <Subscribe />
+      <Footer />
     </>
   )
 }

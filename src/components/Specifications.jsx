@@ -9,7 +9,7 @@ const mat6 = "/Icons/mat_06.png"
 
 export default function Specifications() {
     return (
-        <div className='bg-white xl:px-32 py-10 '>
+        <div className='bg-white xl:px-32 '>
             <div className='xl:py-20 border-b border-black/20 space-y-10 lg:space-y-20 mx-10 pb-5  '>
                 <div className='grid w-full  grid-cols-2 sm:grid-cols-3 sm:grid-rows-1 gap-5 md:gap-10'>
                     <div className='flex flex-col w-full justify-center items-center group'>

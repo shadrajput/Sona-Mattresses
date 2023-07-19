@@ -89,7 +89,7 @@ export function Hero() {
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: 0 }}
                       transition={{ duration: .5, delay: .9 }}
-                      className='btn1 font-semibold text-[12px] hover:text-white border border-black z-50 group text-sm py-1 my-2 sm:py-2 xl:py-3 '>
+                      className='btn1 font-semibold text-[12px] hover:text-white border border-black z-10 group text-sm py-1 my-2 sm:py-2 xl:py-3 '>
                       Shop Now
                       <BsArrowRight className='text-black group-hover:text-white text-lg ml-3' />
                     </motion.button>

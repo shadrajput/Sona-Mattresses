@@ -47,7 +47,7 @@ export function Header(props) {
   const [menu, setmenu] = useState(false);
 
   return (
-    <header className={` lg:z-20 2xl:px-24 w-full fixed top-0 z-[999] duration-300 ${scrollPosition > 0 ? 'bg-white shadow-md' : ''} `}>
+    <header className={` lg:z-20 2xl:px-24 w-full fixed top-0 z-[999] py-1.5 duration-300 ${scrollPosition > 0 ? 'bg-white shadow-md' : ''} `}>
       <nav className="relative z-50 text-sm">
         <div className="flex flex-col md:flex-row items-center">
           <div className='flex items-center justify-between w-full md:w-32'>

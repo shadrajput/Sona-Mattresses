@@ -17,7 +17,7 @@ export default function Mattressspecific() {
                 <p className="py-5 hidden font-light sm:block sm:text-xs md:text-[14px] sm:pr-10 md:mr-20">
                     Mauris at odio eu felis maximus mattis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus in venenatis magna, sit amet ullamcorper nunc.
                 </p>
-                <button className='btn2 font-semibold text-[12px] text-white hover:text-black z-50 group '>
+                <button className='btn2 font-semibold text-[12px] text-white hover:text-black z-10 group '>
                     Shop Now
                     <BsArrowRight className='group-hover:text-black text-white text-lg ml-3' />
                 </button>

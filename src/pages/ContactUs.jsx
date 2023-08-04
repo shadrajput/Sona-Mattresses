@@ -110,7 +110,7 @@ export default function ContactUs() {
     <>
       <Header />
       <section
-        id="testimonials"
+        id="contact"
         aria-labelledby="testimonials-title"
         className="bg-slate-50 pb-10 pt-28">
         <div className="w-full flex justify-center items-center ">

@@ -9,6 +9,7 @@ import Mattressspecific from '@/components/Mattressspecific'
 import Subscribe from '@/components/Subscribe'
 import Testimonials from '@/components/Testimonials'
 import GoToTop from '@/components/GoToTop'
+import AllProduct from '@/components/AllProduct'
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <AllProduct/>
         <Specifications />
         <SonaMattress />
         <Mattressspecific />

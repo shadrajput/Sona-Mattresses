@@ -1,14 +1,12 @@
 import React from 'react'
-import { Header } from '../components/Header'
-import Subscribe from '../components/Subscribe'
-import { Footer } from '../components/Footer'
-import { BsArrowRight } from 'react-icons/bs'
+import { Header } from '../../../components/Header'
+import Subscribe from '../../../components/Subscribe'
+import { Footer } from '../../../components/Footer'
 import Image from "next/image";
-import mattrest from "../../public/images/mat_05.jpg"
-import { BiRupee } from "react-icons/bi"
+import mattrest from "../../../../public/images/mat_05.jpg"
 import Link from 'next/link'
 
-export default function Product() {
+export default function ProductDetails() {
 
     const [custom, setcustom] = React.useState(false)
 
@@ -40,28 +38,8 @@ export default function Product() {
                         <div>
                             <div className='flex items-center space-x-14 py-4'>
                                 <div className='flex flex-col w-full'>
-                                    <label htmlFor="" className='text-[14px] text-[#b19777] font-light'>Size</label>
-                                    <select name="" id="" className='py-[2px] text-sm w-full mt-2 border-slate-400 rounded-sm text-slate-500'>
-                                        <option value="Regular">Regular</option>
-                                        <option value="Single">Single</option>
-                                        <option value="Double">Double</option>
-                                        <option value="King">King</option>
-                                        <option value="Queen">Queen</option>
-                                    </select>
-                                </div>
-                                <div className='flex flex-col w-full'>
-                                    <label htmlFor="" className='text-[14px] text-[#b19777] font-light'>Dimension</label>
-                                    <select name="" id="" className='py-[2px] text-sm w-full mt-2 border-slate-400 rounded-sm text-slate-500'>
-                                        <option value="Regular">Regular</option>
-                                        <option value="Single">Single</option>
-                                        <option value="Double">Double</option>
-                                        <option value="King">King</option>
-                                        <option value="Queen">Queen</option>
-                                    </select>
-                                </div>
-                                <div className='flex-col flex w-full'>
-                                    <label htmlFor="" className='text-[14px] text-[#b19777] font-light'>Height</label>
-                                    <select name="" id="" className='py-[2px] text-sm w-full mt-2 border-slate-400 rounded-sm text-slate-500'>
+                                    <label htmlFor="" className='text-[14px] text-[#b19777]'>Size</label>
+                                    <select name="" id="" className='py-[2px] text-sm w-1/2 mt-2 border-slate-400 rounded-sm text-slate-500'>
                                         <option value="Regular">Regular</option>
                                         <option value="Single">Single</option>
                                         <option value="Double">Double</option>
@@ -72,11 +50,13 @@ export default function Product() {
                             </div>
                             <div className='flex items-center py-3 space-x-2 '>
                                 <div className=''>
-                                    <input type="checkbox"
-                                        value="checked"
-                                        className='cursor-pointer rounded-sm text-xs h-[13px] focus:outline-none w-[13px]'
-                                        onChange={handleChange}
-                                    />
+                                    <Link href="/ContactUs">
+                                        <input type="checkbox"
+                                            value="checked"
+                                            className='cursor-pointer rounded-sm text-xs h-[13px] focus:outline-none w-[13px]'
+                                            onChange={handleChange}
+                                        />
+                                    </Link>
                                 </div>
                                 <div>
                                     <h1 className='font-semibold text-sm uppercase text-[#b19777]'>Custom size</h1>

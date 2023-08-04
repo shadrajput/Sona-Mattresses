@@ -1,53 +1,12 @@
 import React from 'react'
-import { Header } from '../components/Header'
-import Subscribe from '../components/Subscribe'
-import { Footer } from '../components/Footer'
+import { Header } from '../../../components/Header'
+import Subscribe from '../../../components/Subscribe'
+import { Footer } from '../../../components/Footer'
 import { BsArrowRight } from 'react-icons/bs'
-import Image from "next/image";
-import mattrest from "../../public/images/mat_05.jpg"
-import { BiRupee } from "react-icons/bi"
 import Link from 'next/link'
+import {AllProduct} from "../../../components/AllProduct"
 
-export default function Product() {
-
-    const Product = [
-        {
-            id: "1",
-            name: "Pocket Spring Mattress",
-            img: "/images/mat_01",
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, eveniet! Nostrum consequatur veniam blanditiis optio nesciunt dolore...",
-        },
-        {
-            id: "2",
-            name: "PU Foam Mattress",
-            img: "/images/pu foam.jpg",
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, eveniet! Nostrum consequatur veniam blanditiis optio nesciunt dolore...",
-        },
-        {
-            id: "3",
-            name: "PU & Super Soft Foam Mattress",
-            img: "/images/pu foam.jpg",
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, eveniet! Nostrum consequatur veniam blanditiis optio nesciunt dolore...",
-        },
-        {
-            id: "4",
-            name: "Bonded Mattress",
-            img: "/images/mat_01",
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, eveniet! Nostrum consequatur veniam blanditiis optio nesciunt dolore...",
-        },
-        {
-            id: "5",
-            name: "Bonded Latex Mattress",
-            img: "/images/mat_01",
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, eveniet! Nostrum consequatur veniam blanditiis optio nesciunt dolore...",
-        },
-        {
-            id: "6",
-            name: "HR Soft Memory Foam Mattress",
-            img: "/images/mat_01",
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, eveniet! Nostrum consequatur veniam blanditiis optio nesciunt dolore...",
-        },
-    ]
+export default function ProductList() {
 
     return (
         <>
@@ -65,32 +24,13 @@ export default function Product() {
                             All Products
                         </h2>
                         <p className="mt-4 text-lg tracking-tight text-center text-slate-700">
-                            Our software is so simple that people can’t help but fall in love
+                            Our All Product is simple that people can’t help but fall in love
                             with it. Simplicity is easy when you just skip tons of
                             mission-critical features.
                         </p>
                     </div>
                 </div>
-                <div className='py-14 flex flex-wrap items-center justify-center  gap-14 px-32'>
-                    <div className='flex flex-col w-[30%] py-10 px-10 hover:shadow-xl duration-300 cursor-pointer'>
-                        <div className=''>
-                            <Image src={item.img} alt="fess manager logo" className='' />
-                        </div>
-                        <div className='flex flex-col justify-center items-center pt-5'>
-                            <h1 className='text-xl font-semibold text-[#b19777] pb-5'>Pocket Spring Mattress</h1>
-                            <p className='text-center text-sm font-light text-slate-700'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, eveniet! Nostrum consequatur veniam blanditiis optio nesciunt dolore...</p>
-                            <div className='w-full flex justify-center pt-5 items-center'>
-                                <Link href="/Product/ProductDetails">
-                                    <button
-                                        className='btn1 font-semibold text-[11px] hover:text-white border border-black z-10 group text-sm py-1 my-2 sm:py-2 xl:py-3 '>
-                                        View More
-                                        <BsArrowRight className='text-sm ml-2' />
-                                    </button>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <AllProduct/>
             </section>
 
             {/* <div className='flex justify-center items-center pt-16'>

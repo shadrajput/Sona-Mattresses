@@ -1,4 +1,4 @@
-import { FiShoppingCart } from "react-icons/fi"
+import { AiFillSetting } from "react-icons/ai"
 import { SiAdguard } from "react-icons/si"
 import { AiOutlinePercentage } from "react-icons/ai"
 import { BsCreditCard } from "react-icons/bs"
@@ -7,15 +7,15 @@ import { BiMessageCheck } from "react-icons/bi"
 
 export default function Services() {
     return (
-        <div className='bg-white xl:px-32 xl:py-10'>
-            <div className='py-10 space-y-10 xl:space-y-14'>
+        <div className='bg-white xl:px-32 xl:py-14'>
+            <div className='py-10 space-y-10 xl:space-y-20'>
                 <div className='grid grid-rows-3 sm:grid-cols-3 sm:grid-rows-1 px-10 gap-10  '>
                     <div className='flex flex-col justify-center items-center group'>
                         <div className="group-hover:translate-y-0 duration-300 translate-y-2 mb-2">
-                            <FiShoppingCart className='text-4xl text-[#b19777] relative' />
+                            <AiFillSetting className='text-4xl text-[#b19777] relative' />
                         </div>
                         <h1 className='font-bold pt-6'>
-                            Free Shipping
+                            Costomis size Mattress
                         </h1>
                         <p className='font-light pt-3 text-sm text-center'>Nullam sed ultricies erat, nec euismod metus.</p>
                     </div>
@@ -24,7 +24,7 @@ export default function Services() {
                             <SiAdguard className='text-4xl text-[#b19777]' />
                         </div>
                         <h1 className='font-bold pt-6'>
-                            5 Years Guarantee
+                            7 Years Guarantee
                         </h1>
                         <p className='font-light pt-3 text-sm text-center'>Vestibulum vitae diam sit amet massa imperdiet ornare.</p>
                     </div>
@@ -44,7 +44,7 @@ export default function Services() {
                             <BsCreditCard className='text-4xl text-[#b19777]' />
                         </div>
                         <h1 className='font-bold pt-6'>
-                            Online Payments
+                            All Payments option accepted
                         </h1>
                         <p className='font-light pt-3 text-sm text-center'>Integer ex diam, ornare eget eleifend a lorem.</p>
                     </div>
@@ -59,10 +59,10 @@ export default function Services() {
                     </div>
                     <div className='flex flex-col justify-center items-center group'>
                         <div className="group-hover:translate-y-0 duration-300 translate-y-2 mb-2">
-                            <BiMessageCheck className='text-4xl text-[#b19777]' />
+                           <img src="icons/paper-wrap.png" alt="" srcset="" className="w-10" />
                         </div>
                         <h1 className='font-bold pt-6'>
-                            Good Support
+                            Mattress Roll Packing
                         </h1>
                         <p className='font-light pt-3 text-sm text-center'>Duis eu nisl sed quam iaculis varius at vitae justo.</p>
                     </div>

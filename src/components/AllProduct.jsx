@@ -60,7 +60,7 @@ export default function ProductList() {
                                     <h1 className='text-lg font-semibold text-[#b19777] text-center pb-5'>{item.name}</h1>
                                     <p className='text-center text-sm font-light text-slate-700'>{item.desc}</p>
                                     <div className='w-full flex justify-center items-end pt-5'>
-                                        <Link href={`/Product/ProductDetails/${item.id}`}>
+                                        <Link href={`/Product/ProductDetails`}>
                                             <button
                                                 className='btn1 font-semibold text-[11px] hover:text-white border border-black z-10 group text-sm py-1 my-2 sm:py-2 xl:py-3 '>
                                                 View More

@@ -8,12 +8,72 @@ import Link from 'next/link'
 
 export default function ProductDetails() {
 
-    const [custom, setcustom] = React.useState(false)
+    const [selectsize, setselectsize] = React.useState("Regular")
 
-    const handleChange = () => {
-        setcustom(true)
+    const HandleSize = e => {
+        setselectsize(e.target.value)
     };
 
+    const SingleSizes = [
+        {
+            name: "Centimeter",
+            size1: "91.50 x 183 x 20.32"
+        },
+        {
+            name: "Inch",
+            size1: "36 x 72 x 8"
+        },
+        {
+            name: "Feet",
+            size1: "3 x 6 x 0.67"
+        },
+
+    ]
+    const DoubleSizes = [
+        {
+            name: "Centimeter",
+            size1: "122 x 183 x 25.40"
+        },
+        {
+            name: "Inch",
+            size1: "48 x 72 x 10"
+        },
+        {
+            name: "Feet",
+            size1: "4 x 6 x 0.67"
+        },
+
+    ]
+    const KingSizes = [
+        {
+            name: "Inch",
+            size1: "72 x 78 x 12"
+        },
+        {
+            name: "Inch",
+            size1: "72 x 84 x 12"
+        },
+
+    ]
+    const QueenSizes = [
+        {
+            name: "Centimeter",
+            size1: "152.4 x 183 x 28",
+            size2: "152.4 x 200 x 28"
+        },
+        {
+            name: "Inch",
+            size1: "60 x 78 x 12",
+            size2: "60 x 72 x 10"
+        },
+        {
+            name: "Feet",
+            size1: "5 x 6.5 x 0.67",
+            size2: "5 x 6 x 0.67",
+        },
+
+
+    ]
 
     return (
         <>
@@ -24,88 +84,170 @@ export default function ProductDetails() {
                         <Image src={mattrest} alt="fess manager logo" className='rounded-lg ' />
                     </div>
                     <div className='lg:pr-20'>
-                        <h1 className='text-[#b19777] font-semibold text-4xl'>Pocket Spring Mattress</h1>
-                        <p className='font-light py-4 text-sm'>
+                        <h1 className='text-black font-semibold text-4xl'>Pocket Spring Mattress</h1>
+                        <p className='font-light text-slate-500 py-4 text-sm'>
                             Pocket spring mattresses offer numerous benefits, making them a popular choice for many individuals. These mattresses are designed to provide exceptional support and comfort by using individual pocketed springs that respond independently to the body's weight and shape, promoting proper spinal alignment and reducing pressure points.</p>
-                        <div>
-                            <h1 className='text-[#b19777] text-lg'>Features</h1>
-                            <ul className='text-[14px] font-light text-slate-600 space-y-1 '>
-                                <li className=''>Knitted jacquared layers</li>
+                        <div className='py-4 ml-4'>
+                            <ul className='text-[14px] text-slate-600 space-y-1 list-disc '>
+                                <li className=''>Hard cotton felt layers</li>
                                 <li className=''>High Density foam</li>
-                                <li className=''>7 Years Warranty</li>
+                                <li className=''>Medium firm for all sleeping positions</li>
+                                <li className=''>Maximum Durability: 7 Year Warranty</li>
                             </ul>
                         </div>
                         <div>
-                            <div className='flex items-center space-x-14 py-4'>
-                                <div className='flex flex-col w-full'>
-                                    <label htmlFor="" className='text-[14px] text-[#b19777]'>Size</label>
-                                    <select name="" id="" className='py-[2px] text-sm w-1/2 mt-2 border-slate-400 rounded-sm text-slate-500'>
-                                        <option value="Regular">Regular</option>
-                                        <option value="Single">Single</option>
-                                        <option value="Double">Double</option>
-                                        <option value="King">King</option>
-                                        <option value="Queen">Queen</option>
-                                    </select>
+                            <div className='flex flex-col w-full items-start pt-4'>
+                                <div className='flex flex-col w-1/3'>
+                                    <label htmlFor="" className='text-[14px] text-[#b19777] font-semibold'>Category</label>
+                                    <div className='flex items-center space-x-5 mt-2'>
+                                        <button value="Regular"
+                                            onClick={HandleSize}
+                                            className={`${selectsize == "Regular" ? "border-[#b19777] bg-[#b19777]  font-semibold text-white" : "font-light"} border px-5 py-[5px] text-sm rounded-full hover:border-[#b19777] duration-300 font-light`}>
+                                            Regular
+                                        </button>
+                                        <button value="Single"
+                                            onClick={HandleSize}
+                                            className={`${selectsize == "Single" ? "border-[#b19777] bg-[#b19777]  font-semibold text-white" : "font-light"} border px-5 py-[5px] text-sm rounded-full hover:border-[#b19777] duration-300 font-light`}>
+                                            Single
+                                        </button>
+                                        <button value="Double"
+                                            onClick={HandleSize}
+                                            className={`${selectsize == "Double" ? "border-[#b19777] bg-[#b19777] font-semibold  text-white" : "font-light"} border px-5 py-[5px] text-sm rounded-full hover:border-[#b19777] duration-300 font-light`}>
+                                            Double
+                                        </button>
+                                        <button value="King"
+                                            onClick={HandleSize}
+                                            className={`${selectsize == "King" ? "border-[#b19777] bg-[#b19777]  font-semibold text-white" : "font-light"} border px-5 py-[5px] text-sm rounded-full hover:border-[#b19777] duration-300 font-light`}>
+                                            King
+                                        </button>
+                                        <button value="Queen"
+                                            onClick={HandleSize}
+                                            className={`${selectsize == "Queen" ? "border-[#b19777] bg-[#b19777] font-semibold  text-white" : "font-light"} border px-5 py-[5px] text-sm rounded-full hover:border-[#b19777] duration-300 font-light`}>
+                                            Queen
+                                        </button>
+                                    </div>
                                 </div>
+                                {
+                                    selectsize == "Regular" ?
+                                        <div className='flex flex-col mt-4'>
+                                            <h1 className='text-[14px] text-[#b19777] font-semibold'>Inch </h1>
+                                            <div className='flex items-start flex-wrap '>
+                                                <div className='border rounded-md px-2 py-[3px] text-sm'>
+                                                    72 x 72 x 10
+                                                </div>
+                                            </div>
+                                        </div>
+                                        :
+                                        selectsize == "Single" ?
+                                            <div className='flex flex-col mt-4'>
+                                                <div className='flex items-start flex-wrap gap-3 mt-1'>
+                                                    {
+                                                        SingleSizes.map((size, item) => {
+                                                            return (
+                                                                <div className='flex flex-col '>
+                                                                    <h1 className='text-[14px] text-[#b19777] font-semibold mb-1'>{size.name}</h1>
+                                                                    <div className='border rounded-md px-2 py-[3px] text-sm'>
+                                                                        {size.size1}
+                                                                    </div>
+                                                                </div>
+                                                            )
+                                                        })
+                                                    }
+                                                </div>
+                                            </div>
+                                            :
+                                            selectsize == "Double" ?
+                                                <div className='flex flex-col mt-4'>
+                                                    <div className='flex items-start flex-wrap gap-3 mt-1'>
+                                                        {
+                                                            DoubleSizes.map((size, item) => {
+                                                                return (
+                                                                    <div className='flex flex-col '>
+                                                                        <h1 className='text-[14px] text-[#b19777] font-semibold mb-1'>{size.name}</h1>
+                                                                        <div className='border rounded-md px-2 py-[3px] text-sm'>
+                                                                            {size.size1}
+                                                                        </div>
+                                                                    </div>
+                                                                )
+                                                            })
+                                                        }
+                                                    </div>
+                                                </div>
+                                                :
+                                                selectsize == "King" ?
+                                                    <div className='flex flex-col mt-4'>
+                                                        <div className='flex items-start flex-wrap gap-3 mt-1'>
+                                                            {
+                                                                KingSizes.map((size, item) => {
+                                                                    return (
+                                                                        <div className='flex flex-col '>
+                                                                            <h1 className='text-[14px] text-[#b19777] font-semibold mb-1'>{size.name}</h1>
+                                                                            <div className='border rounded-md px-2 py-[3px] text-sm'>
+                                                                                {size.size1}
+                                                                            </div>
+                                                                        </div>
+                                                                    )
+                                                                })
+                                                            }
+                                                        </div>
+                                                    </div>
+
+                                                    :
+                                                    selectsize == "Queen" ?
+                                                        <div className='flex flex-col mt-4'>
+                                                            <div className='flex items-start flex-wrap gap-3 mt-1'>
+                                                                {
+                                                                    QueenSizes.map((size, item) => {
+                                                                        return (
+                                                                            <div className='flex flex-col space-y-2'>
+                                                                                <h1 className='text-[14px] text-[#b19777] font-semibold mb-1'>{size.name}</h1>
+                                                                                <div className='border rounded-md px-2 py-[3px] text-sm'>
+                                                                                    {size.size1}
+                                                                                </div>
+                                                                                {
+                                                                                    size.size2 ?
+                                                                                        <div className='border rounded-md px-2 py-[3px] text-sm'>
+                                                                                            {size.size2}
+                                                                                        </div>
+                                                                                        :
+                                                                                        null
+                                                                                }
+                                                                            </div>
+                                                                        )
+                                                                    })
+                                                                }
+                                                            </div>
+                                                        </div>
+                                                        :
+                                                        null
+                                }
                             </div>
-                            <div className='flex items-center py-3 space-x-2 '>
+
+                            <div className='flex items-center py-7 space-x-2  '>
                                 <div className=''>
-                                    <Link href="/ContactUs">
+                                    <Link href="/Quotation">
                                         <input type="checkbox"
                                             value="checked"
                                             className='cursor-pointer rounded-sm text-xs h-[13px] focus:outline-none w-[13px]'
-                                            onChange={handleChange}
                                         />
                                     </Link>
                                 </div>
                                 <div>
-                                    <h1 className='font-semibold text-sm uppercase text-[#b19777]'>Custom size</h1>
-                                </div>
-                            </div>
-                            <div className={` ${custom == false ? "hidden" : "flex"} items-center space-x-14 py-4`}>
-                                <div className='flex flex-col w-full'>
-                                    <label htmlFor="" className='text-[14px] text-[#b19777] font-light'>Width</label>
-                                    <select name="" id="" className='py-[2px] text-sm w-full mt-2 border-slate-400 rounded-sm text-slate-500'>
-                                        <option value="Regular">Regular</option>
-                                        <option value="Single">Single</option>
-                                        <option value="Double">Double</option>
-                                        <option value="King">King</option>
-                                        <option value="Queen">Queen</option>
-                                    </select>
-                                </div>
-                                <div className='flex flex-col w-full'>
-                                    <label htmlFor="" className='text-[14px] text-[#b19777] font-light'>Length</label>
-                                    <select name="" id="" className='py-[2px] text-sm w-full mt-2 border-slate-400 rounded-sm text-slate-500'>
-                                        <option value="Regular">Regular</option>
-                                        <option value="Single">Single</option>
-                                        <option value="Double">Double</option>
-                                        <option value="King">King</option>
-                                        <option value="Queen">Queen</option>
-                                    </select>
-                                </div>
-                                <div className='flex-col flex w-full'>
-                                    <label htmlFor="" className='text-[14px] text-[#b19777] font-light'>Height</label>
-                                    <select name="" id="" className='py-[2px] text-sm w-full mt-2 border-slate-400 rounded-sm text-slate-500'>
-                                        <option value="Regular">Regular</option>
-                                        <option value="Single">Single</option>
-                                        <option value="Double">Double</option>
-                                        <option value="King">King</option>
-                                        <option value="Queen">Queen</option>
-                                    </select>
+                                    <h1 className='font-semibold text-sm uppercase text-[#b19777] mt-1'>Custom size</h1>
                                 </div>
                             </div>
                         </div>
-                        <div className='flex justify-center items-center space-x-5'>
+                        <div className='flex justify-center items-center space-x-5 '>
                             <div className='w-full'>
                                 <Link href="/ContactUs">
-                                    <button className='btn3 font-semibold text-[12px] text-white z-50 group w-full py-3 mt-5 '>
+                                    <button className='btn3 font-semibold text-[12px] text-white z-50 group w-full py-3 '>
                                         Connect with Us
                                     </button>
                                 </Link>
                             </div>
                             <div className='w-full'>
-                                <Link href="/ContactUs">
-                                    <button className='btn3 font-semibold text-[12px] text-white z-50 group w-full py-3 mt-5 '>
+                                <Link href="/Quotation">
+                                    <button className='btn3 font-semibold text-[12px] text-white z-50 group w-full py-3 '>
                                         Shop Now
                                     </button>
                                 </Link>

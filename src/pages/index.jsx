@@ -24,11 +24,11 @@ export default function Home() {
       <main>
         <Hero />
         <AllProduct/>
-        <Specifications />
         <SonaMattress />
+        <Specifications />
         <Mattressspecific />
         <Services />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Subscribe />
         <GoToTop />
       </main>

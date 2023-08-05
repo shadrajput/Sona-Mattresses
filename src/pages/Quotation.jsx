@@ -76,6 +76,12 @@ const initialValues = {
 
 export default function Quotation() {
   const [isLoading, setIsLoading] = useState(false)
+  const [selectsize, setselectsize] = useState("Regular")
+
+  const HandleSize = e => {
+    setselectsize(e.target.value)
+  };
+
 
   const { values, errors, handleBlur, touched, handleChange, handleSubmit, resetForm } = useFormik({
     initialValues: initialValues,
@@ -221,64 +227,89 @@ export default function Quotation() {
                 </div>
               </div>
               <div className="flex flex-col space-y-7 sm:flex-row sm:space-y-0 sm:space-x-6 w-full">
-                <div className='w-full flex flex-col'>
-                  <label htmlFor="" className=" text-slate-800">Size</label>
-                  <select name="" id="" className="rounded-md border-slate-200 mt-3 text-sm text-slate-500">
-                    <option value="">Select Size</option>
-                    <option value="">Single</option>
-                    <option value="">Double</option>
-                    <option value="">King</option>
-                    <option value="">Queen</option>
-                    <option value="">Regular</option>
-                  </select>
-                  {
-                    errors.size && touched.size
-                      ?
-                      <small className='mt-2 form-error text-red-600 text-xs font-semibold'>{errors.size}</small>
-                      :
-                      null
-                  }
-                </div>
                 <div className="w-full flex flex-col">
-                  <label htmlFor="" className="text-slate-800">Dimention <span className="text-xs font-semibold text-slate-500">( In Inch )</span></label>
-                  <div className="w-full flex flex-wrap justify-start gap-3 items-center mt-3">
-                   <div className=" border rounded-md px-2 py-[4px] cursor-pointer hover:border-[#ae9775] hover:shadow-md ">
-                      72 x 48 x 5
-                    </div>
-                    <div className=" border rounded-md px-2 py-[4px] cursor-pointer hover:border-[#ae9775] hover:shadow-md ">
-                      72 x 48 x 5
-                    </div>
-                    <div className=" border rounded-md px-2 py-[4px] cursor-pointer hover:border-[#ae9775] hover:shadow-md ">
-                      72 x 48 x 5
-                    </div>
-                    <div className=" border rounded-md px-2 py-[4px] cursor-pointer hover:border-[#ae9775] hover:shadow-md ">
-                      72 x 48 x 5
-                    </div>
-                    <div className=" border rounded-md px-2 py-[4px] cursor-pointer hover:border-[#ae9775] hover:shadow-md ">
-                      72 x 48 x 5
+                  <label htmlFor="" className="text-slate-800">Category</label>
+                  <div className='flex flex-col w-full items-start justify-between'>
+                    <div className='flex flex-col w-full '>
+                      <div className='flex items-center space-x-5 mt-2'>
+                        <button value="Regular"
+                          onClick={HandleSize}
+                          className={`${selectsize == "Regular" ? "border-[#b19777] bg-[#b19777]  font-semibold text-white" : "font-light"} border px-5 py-[5px] text-sm rounded-full hover:border-[#b19777] duration-300 font-light`}>
+                          Regular
+                        </button>
+                        <button value="Single"
+                          onClick={HandleSize}
+                          className={`${selectsize == "Single" ? "border-[#b19777] bg-[#b19777]  font-semibold text-white" : "font-light"} border px-5 py-[5px] text-sm rounded-full hover:border-[#b19777] duration-300 font-light`}>
+                          Single
+                        </button>
+                        <button value="Double"
+                          onClick={HandleSize}
+                          className={`${selectsize == "Double" ? "border-[#b19777] bg-[#b19777] font-semibold  text-white" : "font-light"} border px-5 py-[5px] text-sm rounded-full hover:border-[#b19777] duration-300 font-light`}>
+                          Double
+                        </button>
+                        <button value="King"
+                          onClick={HandleSize}
+                          className={`${selectsize == "King" ? "border-[#b19777] bg-[#b19777]  font-semibold text-white" : "font-light"} border px-5 py-[5px] text-sm rounded-full hover:border-[#b19777] duration-300 font-light`}>
+                          King
+                        </button>
+                        <button value="Queen"
+                          onClick={HandleSize}
+                          className={`${selectsize == "Queen" ? "border-[#b19777] bg-[#b19777] font-semibold  text-white" : "font-light"} border px-5 py-[5px] text-sm rounded-full hover:border-[#b19777] duration-300 font-light`}>
+                          Queen
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="w-full flex flex-col">
-                <Input
-                  label="Quantity"
-                  id="quantity"
-                  name="quantity"
-                  type="text"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.quantity}
-                  autoComplete="quantity"
-                  required
-                />
-                {
-                  errors.quantity && touched.quantity
-                    ?
-                    <small className='mt-2 form-error text-red-600 text-xs font-semibold'>{errors.quantity}</small>
-                    :
-                    null
-                }
+              <div className="flex flex-col justify-start space-y-7 sm:flex-row sm:space-y-0 sm:space-x-6 w-full">
+                <div className="w-full">
+                  <div className='flex flex-col w-full'>
+                    <label htmlFor="" className="text-slate-900 text-[14px] mb-4">Size in Inch</label>
+                    <div className='flex items-start flex-wrap '>
+                      <input type="text"
+                        defaultValue={
+                          selectsize == "Regular" ?
+                            "72 x 72 x 10"
+                            :
+                            selectsize == "Single" ?
+                              "36 x 72 x 8"
+                              :
+                              selectsize == "Double" ?
+                                "48 x 72 x 10"
+                                :
+                                selectsize == "King" ?
+                                  "72 x 78 x 12  ,  72 x 78 x 12"
+                                  :
+                                  selectsize == "Queen" ?
+                                    "60 x 78 x 12  ,  60 x 72 x 10"
+                                    :
+                                    ""
+                        }
+                        className="w-full rounded-md border-slate-200 text-sm" />
+                    </div>
+                  </div>
+                </div>
+                <div className="w-5/6 flex flex-col">
+                  <Input
+                    label="Quantity"
+                    id="quantity"
+                    name="quantity"
+                    type="text"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.quantity}
+                    autoComplete="quantity"
+                    required
+                  />
+                  {
+                    errors.quantity && touched.quantity
+                      ?
+                      <small className='mt-2 form-error text-red-600 text-xs font-semibold'>{errors.quantity}</small>
+                      :
+                      null
+                  }
+                </div>
               </div>
               <div className="pt-1">
                 <button

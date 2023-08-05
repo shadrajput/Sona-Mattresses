@@ -7,57 +7,57 @@ import { useFormik } from 'formik';
 import * as Yup from "yup";
 
 const quotationFormSchema = Yup.object({
-    first_name: Yup.string()
+  first_name: Yup.string()
     .test('trim', 'Must not contain leading or trailing spaces', (value) => {
       if (value) {
-        return value.trim() === value; 
+        return value.trim() === value;
       }
       return true;
     })
     .min(2, "First name must be atleast 2 characters long")
     .max(25, "First name shouldn't be more than 25 characters").matches(/^[a-zA-Z ]+$/, "Please enter only characters").required("Please enter your first name"),
 
-    last_name: Yup.string()
+  last_name: Yup.string()
     .test('trim', 'Must not contain leading or trailing spaces', (value) => {
       if (value) {
-        return value.trim() === value; 
+        return value.trim() === value;
       }
       return true;
     })
     .min(2, "Last name must be atleast 2 characters long")
     .max(25, "Last name shouldn't be more than 25 characters").matches(/^[a-zA-Z ]+$/, "Please enter only characters").required("Please enter your last name"),
 
-    email: Yup.string().email("Please enter valid email")
+  email: Yup.string().email("Please enter valid email")
     .test('trim', 'Must not contain leading or trailing spaces', (value) => {
       if (value) {
-        return value.trim() === value; 
+        return value.trim() === value;
       }
       return true;
     })
     .required("Please enter your email"),
 
-    phone: Yup.string()
+  phone: Yup.string()
     .test('trim', 'Must not contain leading or trailing spaces', (value) => {
       if (value) {
-        return value.trim() === value; 
+        return value.trim() === value;
       }
       return true;
     })
     .min(10, "Please enter mobile no.").max(10, "Please enter valid mobile no.").matches(/^[0-9]+$/, "Please enter only numbers").required("Please enter your phone number"),
 
-    size: Yup.string()
+  size: Yup.string()
     .test('trim', 'Must not contain leading or trailing spaces', (value) => {
       if (value) {
-        return value.trim() === value; 
+        return value.trim() === value;
       }
       return true;
     })
     .required("Please enter size"),
 
-    quantity: Yup.string()
+  quantity: Yup.string()
     .test('trim', 'Must not contain leading or trailing spaces', (value) => {
       if (value) {
-        return value.trim() === value; 
+        return value.trim() === value;
       }
       return true;
     })
@@ -66,49 +66,55 @@ const quotationFormSchema = Yup.object({
 });
 
 const initialValues = {
-    first_name: "",
-    last_name: "",
-    email: "",
-    phone: "",
-    size: "",
-    quantity: "",
+  first_name: "",
+  last_name: "",
+  email: "",
+  phone: "",
+  size: "",
+  quantity: "",
 };
 
 export default function Quotation() {
   const [isLoading, setIsLoading] = useState(false)
+  const [selectsize, setselectsize] = useState("Regular")
 
-   const { values, errors, handleBlur, touched, handleChange, handleSubmit, resetForm } = useFormik({
-        initialValues: initialValues,
-        validationSchema: quotationFormSchema,
-        async onSubmit(data) {
-          console.log(data)
-          try {
-            setIsLoading(true)
-            fetch('/api/quotation', {
-              method: 'POST',
-              headers: {
-                'Accept': 'application/json, text/plain, */*',
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify(data)
-            }).then((res) => {
-              setIsLoading(false)
-              if(res.status == 200){
-                resetForm();
-                toast.success('Thanks for reaching us')
-              }
-              else{
-                toast.error('Failed to send email')
-              }
-            })
-            
-          } catch (error) {
-            toast.error(error.message)
-            setIsLoading(false)
+  const HandleSize = e => {
+    setselectsize(e.target.value)
+  };
+
+
+  const { values, errors, handleBlur, touched, handleChange, handleSubmit, resetForm } = useFormik({
+    initialValues: initialValues,
+    validationSchema: quotationFormSchema,
+    async onSubmit(data) {
+      console.log(data)
+      try {
+        setIsLoading(true)
+        fetch('/api/quotation', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json, text/plain, */*',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        }).then((res) => {
+          setIsLoading(false)
+          if (res.status == 200) {
+            resetForm();
+            toast.success('Thanks for reaching us')
           }
-        }
-    })
-  
+          else {
+            toast.error('Failed to send email')
+          }
+        })
+
+      } catch (error) {
+        toast.error(error.message)
+        setIsLoading(false)
+      }
+    }
+  })
+
   return (
     <>
       <Header />
@@ -132,7 +138,7 @@ export default function Quotation() {
             </p>
           </div>
         </div>
-        <div className="py-20 flex justify-center items-center w-full pb-20 ">
+        <div className="pt-10 flex justify-center items-center w-full pb-20 ">
           <div className="mt-6 w-full sm:w-4/5 md:w-3/5 xl:w-2/4">
             <form action="#" method="" className="space-y-7" onSubmit={handleSubmit}>
               <div className="flex flex-col space-y-7 sm:flex-row sm:space-y-0 sm:space-x-6 w-full
@@ -151,9 +157,9 @@ export default function Quotation() {
                   />
                   {
                     errors.first_name && touched.first_name
-                    ?
+                      ?
                       <small className='mt-2 form-error text-red-600 text-xs font-semibold'>{errors.first_name}</small>
-                    :
+                      :
                       null
                   }
                 </div>
@@ -171,9 +177,9 @@ export default function Quotation() {
                   />
                   {
                     errors.last_name && touched.last_name
-                    ?
+                      ?
                       <small className='mt-2 form-error text-red-600 text-xs font-semibold'>{errors.last_name}</small>
-                    :
+                      :
                       null
                   }
                 </div>
@@ -193,9 +199,9 @@ export default function Quotation() {
                   />
                   {
                     errors.email && touched.email
-                    ?
+                      ?
                       <small className='mt-2 form-error text-red-600 text-xs font-semibold'>{errors.email}</small>
-                    :
+                      :
                       null
                   }
                 </div>
@@ -213,35 +219,78 @@ export default function Quotation() {
                   />
                   {
                     errors.phone && touched.phone
-                    ?
+                      ?
                       <small className='mt-2 form-error text-red-600 text-xs font-semibold'>{errors.phone}</small>
-                    :
+                      :
                       null
                   }
                 </div>
               </div>
               <div className="flex flex-col space-y-7 sm:flex-row sm:space-y-0 sm:space-x-6 w-full">
-                <div className='w-full flex flex-col'>
-                  <Input
-                    label="Size"
-                    id="size"
-                    name="size"
-                    type="text"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    value={values.size}
-                    autoComplete="size"
-                    required
-                  />
-                  {
-                    errors.size && touched.size
-                    ?
-                      <small className='mt-2 form-error text-red-600 text-xs font-semibold'>{errors.size}</small>
-                    :
-                      null
-                  }
-                </div>
                 <div className="w-full flex flex-col">
+                  <label htmlFor="" className="text-slate-800">Category</label>
+                  <div className='flex flex-col w-full items-start justify-between'>
+                    <div className='flex flex-col w-full '>
+                      <div className='flex items-center space-x-5 mt-2'>
+                        <button value="Regular"
+                          onClick={HandleSize}
+                          className={`${selectsize == "Regular" ? "border-[#b19777] bg-[#b19777]  font-semibold text-white" : "font-light"} border px-5 py-[5px] text-sm rounded-full hover:border-[#b19777] duration-300 font-light`}>
+                          Regular
+                        </button>
+                        <button value="Single"
+                          onClick={HandleSize}
+                          className={`${selectsize == "Single" ? "border-[#b19777] bg-[#b19777]  font-semibold text-white" : "font-light"} border px-5 py-[5px] text-sm rounded-full hover:border-[#b19777] duration-300 font-light`}>
+                          Single
+                        </button>
+                        <button value="Double"
+                          onClick={HandleSize}
+                          className={`${selectsize == "Double" ? "border-[#b19777] bg-[#b19777] font-semibold  text-white" : "font-light"} border px-5 py-[5px] text-sm rounded-full hover:border-[#b19777] duration-300 font-light`}>
+                          Double
+                        </button>
+                        <button value="King"
+                          onClick={HandleSize}
+                          className={`${selectsize == "King" ? "border-[#b19777] bg-[#b19777]  font-semibold text-white" : "font-light"} border px-5 py-[5px] text-sm rounded-full hover:border-[#b19777] duration-300 font-light`}>
+                          King
+                        </button>
+                        <button value="Queen"
+                          onClick={HandleSize}
+                          className={`${selectsize == "Queen" ? "border-[#b19777] bg-[#b19777] font-semibold  text-white" : "font-light"} border px-5 py-[5px] text-sm rounded-full hover:border-[#b19777] duration-300 font-light`}>
+                          Queen
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col justify-start space-y-7 sm:flex-row sm:space-y-0 sm:space-x-6 w-full">
+                <div className="w-full">
+                  <div className='flex flex-col w-full'>
+                    <label htmlFor="" className="text-slate-900 text-[14px] mb-4">Size in Inch</label>
+                    <div className='flex items-start flex-wrap '>
+                      <input type="text"
+                        defaultValue={
+                          selectsize == "Regular" ?
+                            "72 x 72 x 10"
+                            :
+                            selectsize == "Single" ?
+                              "36 x 72 x 8"
+                              :
+                              selectsize == "Double" ?
+                                "48 x 72 x 10"
+                                :
+                                selectsize == "King" ?
+                                  "72 x 78 x 12  ,  72 x 78 x 12"
+                                  :
+                                  selectsize == "Queen" ?
+                                    "60 x 78 x 12  ,  60 x 72 x 10"
+                                    :
+                                    ""
+                        }
+                        className="w-full rounded-md border-slate-200 text-sm" />
+                    </div>
+                  </div>
+                </div>
+                <div className="w-5/6 flex flex-col">
                   <Input
                     label="Quantity"
                     id="quantity"
@@ -255,9 +304,9 @@ export default function Quotation() {
                   />
                   {
                     errors.quantity && touched.quantity
-                    ?
+                      ?
                       <small className='mt-2 form-error text-red-600 text-xs font-semibold'>{errors.quantity}</small>
-                    :
+                      :
                       null
                   }
                 </div>
@@ -267,13 +316,13 @@ export default function Quotation() {
                   type="submit"
                   value="Send"
                   disabled={isLoading}
-                  className={` ${isLoading ? 'opacity-60' : ''} w-full bg-[#b19777] text-white py-3 hover:bg-black hover:text-white`}
+                  className={` ${isLoading ? 'opacity-60' : ''} btn3 px-3 py-3 mt-5 text-sm text-white font-semibold z-50 w-full`}
                 >
                   {
                     isLoading
-                    ?
+                      ?
                       'Loading...'
-                    :
+                      :
                       <>Submit <span aria-hidden="true">&rarr;</span></>
                   }
                 </button>

@@ -87,7 +87,7 @@ export default function Quotation() {
     initialValues: initialValues,
     validationSchema: quotationFormSchema,
     async onSubmit(data) {
-      console.log(data)
+      Object.assign(data, {category: selectsize})
       try {
         setIsLoading(true)
         fetch('/api/quotation', {
@@ -132,9 +132,7 @@ export default function Quotation() {
               Connect With Us?
             </h2>
             <p className="mt-4 md:text-lg tracking-tight text-center text-slate-700">
-              Our software is so simple that people can’t help but fall in love
-              with it. Simplicity is easy when you just skip tons of
-              mission-critical features.
+              Elevate Your Sleep Experience with Our Premium Mattresses. Discover Comfort Like Never Before and Wake Up Refreshed Every Morning.
             </p>
           </div>
         </div>
@@ -265,29 +263,24 @@ export default function Quotation() {
               <div className="flex flex-col justify-start space-y-7 sm:flex-row sm:space-y-0 sm:space-x-6 w-full">
                 <div className="w-full">
                   <div className='flex flex-col w-full'>
-                    <label htmlFor="" className="text-slate-900 text-[14px] mb-4">Size in Inch</label>
+                    <label htmlFor="" className="text-slate-900 text-[14px] mb-4">Size (Inches)</label>
                     <div className='flex items-start flex-wrap '>
-                      <input type="text"
-                        defaultValue={
-                          selectsize == "Regular" ?
-                            "72 x 72 x 10"
-                            :
-                            selectsize == "Single" ?
-                              "36 x 72 x 8"
-                              :
-                              selectsize == "Double" ?
-                                "48 x 72 x 10"
-                                :
-                                selectsize == "King" ?
-                                  "72 x 78 x 12  ,  72 x 78 x 12"
-                                  :
-                                  selectsize == "Queen" ?
-                                    "60 x 78 x 12  ,  60 x 72 x 10"
-                                    :
-                                    ""
-                        }
+                      <input 
+                        type="text"
+                        name="size"
+                        placeholder="e.g 72 x 72 x 10"
+                        value={values.size}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
                         className="w-full rounded-md border-slate-200 text-sm" />
                     </div>
+                    {
+                      errors.size && touched.size
+                        ?
+                        <small className='mt-2 form-error text-red-600 text-xs font-semibold'>{errors.size}</small>
+                        :
+                        null
+                    }
                   </div>
                 </div>
                 <div className="w-5/6 flex flex-col">

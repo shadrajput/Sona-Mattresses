@@ -110,7 +110,7 @@ export default function ContactUs() {
     <>
       <Header />
       <section
-        id="testimonials"
+        id="contact"
         aria-labelledby="testimonials-title"
         className="bg-slate-50 pb-10 pt-28">
         <div className="w-full flex justify-center items-center ">
@@ -249,7 +249,7 @@ export default function ContactUs() {
                   type="submit"
                   value="Send"
                   disabled={isLoading}
-                  className={`${isLoading ? 'opacity-60': null} w-full bg-[#b19777] text-white py-3 duration-300 hover:bg-black hover:text-white`}
+                  className={`${isLoading ? 'opacity-60': null} btn3 px-3 py-3 mt-5 w-full text-sm text-white font-semibold z-50`}
                 >
                   {
                     isLoading 

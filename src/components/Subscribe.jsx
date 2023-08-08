@@ -12,7 +12,8 @@ export default function Subscribe() {
         setEmail(value);
     }
 
-    const handleSubscribe = () => {
+    const handleSubscribe = (e) => {
+        e.preventDefault();
         if (email == '') return;
 
         const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;

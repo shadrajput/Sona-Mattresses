@@ -17,9 +17,9 @@ export function Footer() {
         <Image src={myLogo} alt="fess manager logo" className='w-full h-full ' />
         <div className="h-full w-full bg-black/40 absolute ">
         </div>
-        <div className="grid grid-rows-1 lg:w-[500px] xl:w-full xl:grid-cols-3 gap-20 absolute top-12 sm:top-20 xl:px-20 ">
+        <div className="grid grid-rows-1 lg:w-[500px] xl:w-full xl:grid-cols-4 gap-20 absolute top-12 sm:top-20 xl:px-20 ">
           <div className="space-y-6 xl:px-12">
-            <div className='w-full flex justify-center items-center'>
+            <div className='w-full flex justify-start items-center'>
               <div className="w-52">
                 <Image src={Logo} alt="fess manager logo" className='' />
               </div>
@@ -33,7 +33,7 @@ export function Footer() {
                 +91 8401527048
               </h1>
             </div>
-            <div className="flex items-center justify-center space-x-5 pt-5">
+            <div className="flex items-center justify-start space-x-5 pt-5">
               <a href="https://www.instagram.com/sonamattresses/">
                 <AiOutlineInstagram className="text-2xl cursor-pointer text-[#b19777] hover:text-white" />
               </a>
@@ -68,6 +68,54 @@ export function Footer() {
                 <BiChevronRight className="text-[#b19777] font-bold" />
                 <h1>
                   Product
+                </h1>
+              </li>
+            </nav>
+          </div>
+          <div className="hidden xl:block">
+            <h1 className="text-[25px] font-semibold text-[#b19777]" >Mattress</h1>
+            <div className="bg-[#61543f3b] h-[1px] text-[#181818] relative">
+
+            </div>
+            <div className="bg-[#b19777] h-[3px] w-32 absolute">
+
+            </div>
+
+            <nav className="pt-12 space-y-5 ">
+              <li className="font-semibold flex items-center space-x-3 cursor-pointer hover:text-[#ae9775] duration-300 text-white">
+                <BiChevronRight className="text-[#b19777] font-bold" />
+                <h1>
+                  Pocket Spring Mattress
+                </h1>
+              </li>
+              <li className="font-semibold flex items-center space-x-3 cursor-pointer  hover:text-[#ae9775] duration-300 text-white">
+                <BiChevronRight className="text-[#b19777] font-bold" />
+                <h1>
+                  PU Foam Mattress
+                </h1>
+              </li>
+              <li className="font-semibold flex items-center space-x-3 cursor-pointer hover:text-[#ae9775] duration-300 text-white">
+                <BiChevronRight className="text-[#b19777] font-bold" />
+                <h1>
+                  PU & Super Soft Mattress
+                </h1>
+              </li>
+              <li className="font-semibold flex items-center space-x-3 cursor-pointer hover:text-[#ae9775] duration-300 text-white">
+                <BiChevronRight className="text-[#b19777] font-bold" />
+                <h1>
+                  Bonded Mattress
+                </h1>
+              </li>
+              <li className="font-semibold flex items-center space-x-3 cursor-pointer hover:text-[#ae9775] duration-300 text-white">
+                <BiChevronRight className="text-[#b19777] font-bold" />
+                <h1>
+                  Bonde Latex Mattress
+                </h1>
+              </li>
+              <li className="font-semibold flex items-center space-x-3 cursor-pointer hover:text-[#ae9775] duration-300 text-white">
+                <BiChevronRight className="text-[#b19777] font-bold" />
+                <h1>
+                 HR Soft Memory Foam
                 </h1>
               </li>
             </nav>

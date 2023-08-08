@@ -9,8 +9,7 @@ import Mattressspecific from '@/components/Mattressspecific'
 import Subscribe from '@/components/Subscribe'
 import Testimonials from '@/components/Testimonials'
 import GoToTop from '@/components/GoToTop'
-import { ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import AllProduct from '@/components/AllProduct'
 
 export default function Home() {
   return (
@@ -23,24 +22,13 @@ export default function Home() {
       </Head>
       <Header />
       <main>
-        <ToastContainer
-          position="top-right"
-          className="z-[999999]"
-          autoClose={1000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-        />
         <Hero />
-        <Specifications />
+        <AllProduct/>
         <SonaMattress />
+        <Specifications />AiFillSetting
         <Mattressspecific />
         <Services />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Subscribe />
         <GoToTop />
       </main>

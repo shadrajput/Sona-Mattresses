@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion"
 export default function Mattressspecific() {
     return (
         <div className="h-full w-full relative">
-            <Image src={image} alt="fess manager logo" className='' />
+            <Image src={image} alt="image" className='' />
             <div className="absolute top-5 2xl:top-[30%] xl:left-[10%] xl:w-[550px] left-7 right-24 sm:right-52 md:right-60 md:top-10 lg:left-16 lg:top-24">
                 <motion.p
                     initial={{ opacity: 0 }}

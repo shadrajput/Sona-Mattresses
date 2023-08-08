@@ -8,6 +8,9 @@ export default function (req, res) {
     subject: `Message From Your Website`,
     html: `
       <div>
+        <p style="font-size: 16px; font-style: italic;">
+          Customer is requesting for quotation
+        </p>
         <div>
           <h3>Name: ${req.body.first_name} ${req.body.last_name}</h3>
         </div>
@@ -16,6 +19,9 @@ export default function (req, res) {
         </p>
         <p style="font-size: 16px;">
           Mobile: ${req.body.phone}
+        </p>
+        <p style="font-size: 16px;">
+          Category: ${req.body.category}
         </p>
         <p style="font-size: 16px;">
           Size: ${req.body.size}

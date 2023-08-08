@@ -9,8 +9,8 @@ import Mattressspecific from '@/components/Mattressspecific'
 import Subscribe from '@/components/Subscribe'
 import Testimonials from '@/components/Testimonials'
 import GoToTop from '@/components/GoToTop'
-import { ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 export default function Home() {
   return (
@@ -18,8 +18,9 @@ export default function Home() {
       <Head>
         <title>Sona Mattresses</title>
         <meta
-          name="Mattress"
-          content="Best mattress manufacturer in Ahmedabad" />
+          name="Sona Mattress"
+          content="Best mattress manufacturer in Ahmedabad"
+        />
       </Head>
       <Header />
       <main>

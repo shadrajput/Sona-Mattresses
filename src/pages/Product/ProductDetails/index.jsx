@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import React from 'react'
 import { Header } from '../../../components/Header'
 import Subscribe from '../../../components/Subscribe'

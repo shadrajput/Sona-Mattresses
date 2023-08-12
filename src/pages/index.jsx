@@ -24,9 +24,9 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <AllProduct/>
+        <AllProduct />
         <SonaMattress />
-        <Specifications />AiFillSetting
+        <Specifications />
         <Mattressspecific />
         <Services />
         {/* <Testimonials /> */}

@@ -1,10 +1,11 @@
 import React from 'react'
-import { Header } from '../../../components/Header'
-import Subscribe from '../../../components/Subscribe'
-import { Footer } from '../../../components/Footer'
+
 import { BsArrowRight } from 'react-icons/bs'
 import Link from 'next/link'
-import { AllProduct } from '../../../components/AllProduct'
+import { Header } from '@/components/Header'
+import AllProduct from '@/components/AllProduct'
+import Subscribe from '@/components/Subscribe'
+import { Footer } from '@/components/Footer'
 
 export default function ProductList() {
   return (

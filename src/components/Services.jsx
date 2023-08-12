@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { AiFillSetting } from "react-icons/ai"
 import { SiAdguard } from "react-icons/si"
 import { AiOutlinePercentage } from "react-icons/ai"
@@ -59,7 +60,7 @@ export default function Services() {
                     </div>
                     <div className='flex flex-col justify-center items-center group'>
                         <div className="group-hover:translate-y-0 duration-300 translate-y-2 mb-2">
-                            <img src="icons/paper-wrap.png" alt="" srcset="" className="w-10" />
+                            <img src="icons/paper-wrap.png" alt="sd"  className="w-10" />
                         </div>
                         <h1 className='font-bold pt-6'>
                             Mattress Roll Packing

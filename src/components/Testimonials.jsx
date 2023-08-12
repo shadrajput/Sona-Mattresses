@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { AiFillStar } from "react-icons/ai"
+import { AiFillStar } from 'react-icons/ai'
 
 import { Container } from '@/components/Container'
 import avatarImage1 from '@/images/avatars/avatar-1.png'
@@ -80,24 +80,28 @@ export default function Testimonials() {
       <section
         id="testimonials"
         aria-labelledby="testimonials-title"
-        className="bg-slate-50 py-10 px-10">
-        <div className="w-full flex justify-center items-center ">
-          <div className='max-w-3xl'>
-            <p className='uppercase font-semibold text-[#b19777] text-center'> | testimonials</p>
+        className="bg-slate-50 py-10 px-10"
+      >
+        <div className="flex w-full items-center justify-center ">
+          <div className="max-w-3xl">
+            <p className="text-center font-semibold uppercase text-[#b19777]">
+              {' '}
+              | testimonials
+            </p>
             <h2
               id="testimonials-title"
-              className="font-display text-3xl font-semibold tracking-tight text-center text-slate-900 sm:text-4xl"
+              className="text-center font-display text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl"
             >
               what people says?
             </h2>
-            <p className="mt-4 text-lg tracking-tight text-center text-slate-700">
+            <p className="mt-4 text-center text-lg tracking-tight text-slate-700">
               Our software is so simple that people can’t help but fall in love
               with it. Simplicity is easy when you just skip tons of
               mission-critical features.
             </p>
           </div>
         </div>
-        <div className='xl:px-24 xl:pb-20'>
+        <div className="xl:px-24 xl:pb-20">
           <ul className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:gap-8 lg:mt-20 lg:max-w-none lg:grid-cols-3">
             {testimonials.map((column, columnIndex) => (
               <li key={columnIndex}>
@@ -105,13 +109,12 @@ export default function Testimonials() {
                   {column.map((testimonial, testimonialIndex) => (
                     <li key={testimonialIndex}>
                       <figure className="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
-
-                        <div className='py-4'>
-                          <AiFillStar className='text-yellow-400 text-lg' />
+                        <div className="py-4">
+                          <AiFillStar className="text-lg text-yellow-400" />
                         </div>
                         <blockquote className="relative">
                           <p className="text-lg tracking-tight text-slate-900">
-                            "{testimonial.content}"
+                            {testimonial.content}
                           </p>
                         </blockquote>
                         <figcaption className="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
@@ -119,7 +122,7 @@ export default function Testimonials() {
                             <div className="font-display text-base text-slate-900">
                               {testimonial.author.name}
                             </div>
-                            <div className="mt-1 text-sm text-[#b19777] font-semibold">
+                            <div className="mt-1 text-sm font-semibold text-[#b19777]">
                               {testimonial.author.role}
                             </div>
                           </div>

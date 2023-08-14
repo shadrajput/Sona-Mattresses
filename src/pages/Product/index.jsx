@@ -24,7 +24,7 @@ export default function ProductList() {
             >
               All Products
             </h2>
-            <p className="mt-4 text-center text-lg tracking-tight text-slate-700">
+            <p className="mt-4 px-2 text-center text-lg tracking-tight text-slate-700">
               Our All Product is simple that people can’t help but fall in love
               with it. Simplicity is easy when you just skip tons of
               mission-critical features.

@@ -44,16 +44,16 @@ export default function AllProduct() {
 
   return (
     <>
-      <div className="flex flex-wrap items-start justify-center gap-14 py-14 px-32">
+      <div className="flex flex-wrap items-start justify-center gap-14 py-2 px-8  lg:py-14 lg:px-32">
         {Product.map((item, index) => {
           console.log(item)
           return (
             <div
               key={index}
-              className="flex w-[30%] cursor-pointer flex-col py-10 px-10 duration-300 hover:-translate-y-5 hover:shadow-xl"
+              className="flex cursor-pointer flex-col py-10 duration-300 hover:-translate-y-5 hover:shadow-xl md:px-10   lg:w-[30%]"
             >
               <div className="">
-                <img src={item.img} alt="" />
+                <img src={item.img} alt={item.name} />
               </div>
               <div className="items-cnter flex flex-col justify-center pt-10">
                 <h1 className="pb-5 text-center text-lg font-semibold text-[#b19777]">

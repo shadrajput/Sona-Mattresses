@@ -24,7 +24,9 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+       
         <AllProduct />
+
         <SonaMattress />
         <Specifications />
         <Mattressspecific />

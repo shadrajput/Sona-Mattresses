@@ -1,15 +1,20 @@
 /* eslint-disable react/jsx-key */
 import React from 'react'
-import { Header } from '../../../components/Header'
-import Subscribe from '../../../components/Subscribe'
-import { Footer } from '../../../components/Footer'
 import Image from 'next/image'
-import mattrest from '../../../../public/images/mat_05.jpg'
+import mattrest from '../../../public/images/mat_05.jpg'
 import Link from 'next/link'
+import { Header } from '@/components/Header'
+import Subscribe from '@/components/Subscribe'
+import { Footer } from '@/components/Footer'
+import { useRouter } from 'next/router'
+import AllProduct from '@/components/AllProduct'
 
 export default function ProductDetails() {
   const [selectsize, setselectsize] = React.useState('Regular')
+  const router = useRouter()
+  const { productId } = router.query
 
+  console.log('Product ID', productId)
   const HandleSize = (e) => {
     setselectsize(e.target.value)
   }
@@ -22,7 +27,7 @@ export default function ProductDetails() {
     {
       name: 'Inch',
       size1: '36 x 72 x 8',
-    },
+    }, 
     {
       name: 'Feet',
       size1: '3 x 6 x 0.67',
@@ -71,22 +76,22 @@ export default function ProductDetails() {
   ]
 
   return (
-    <>
+    <div className=" ">
       <Header />
-      <div className="flex items-center justify-center pt-16">
-        <div className="lg::gap-20 grid grid-rows-1 gap-10 px-10 pt-10 md:grid-cols-2 md:px-20 md:pt-20 ">
-          <div className="w-full">
+      <div className="flex space-x-4 px-12 py-24">
+        <div className=" px-6 lg:flex lg:space-x-8">
+          <div className="lg:w-1/2  ">
             <Image
               src={mattrest}
               alt="fess manager logo"
-              className="rounded-lg "
+              className=" w-full rounded-lg"
             />
           </div>
-          <div className="lg:pr-20">
-            <h1 className="text-4xl font-semibold text-black">
+          <div className="dede lg:w-1/2">
+            <h1 className="text-2xl font-semibold text-black md:text-4xl">
               Pocket Spring Mattress
             </h1>
-            <p className="py-4 text-sm font-light text-slate-500">
+            <p className="w-full py-4 text-sm font-light text-slate-500">
               Pocket spring mattresses offer numerous benefits, making them a
               popular choice for many individuals. These mattresses are designed
               to provide exceptional support and comfort by using individual
@@ -108,14 +113,14 @@ export default function ProductDetails() {
             </div>
             <div>
               <div className="flex w-full flex-col items-start pt-4">
-                <div className="flex w-1/3 flex-col">
+                <div className="flex flex-col ">
                   <label
                     htmlFor=""
                     className="text-[14px] font-semibold text-[#b19777]"
                   >
                     Category
                   </label>
-                  <div className="mt-2 flex items-center space-x-5">
+                  <div className="mt-2 flex  flex-wrap items-center space-y-3 space-x-5 ">
                     <button
                       value="Regular"
                       onClick={HandleSize}
@@ -296,57 +301,63 @@ export default function ProductDetails() {
           </div>
         </div>
       </div>
-      <div className="flex w-full flex-col items-center justify-center px-10 lg:px-40 lg:pt-20 ">
-        <div>
-          <h1 className="text-center font-semibold">Description </h1>
-          <div className=" flex items-center justify-center py-2">
-            <div className="h-[2px] w-24 bg-[#b19777]"></div>
+      <div className="w-full">
+        <div className="w-full  px-4 text-center">
+          <div className="">
+            <h1 className="text-center font-semibold">Description </h1>
+            <div className=" flex items-center justify-center py-2">
+              <div className="h-[2px] w-24 bg-[#b19777]"></div>
+            </div>
+          </div>
+          <div className="w-full">
+            <p className="  py-4 text-sm font-light">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+              est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+              velit, sed quia non numquam eius modi tempora incidunt ut labore
+              et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
+              veniam, quis nostrum exercitationem ullam corporis suscipit
+              laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem
+              vel eum iure reprehenderit qui in ea voluptate velit esse quam
+              nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
+              voluptas nulla pariatur?
+            </p>
           </div>
         </div>
-        <p className="py-2 text-center text-sm font-light">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-          ab illo inventore veritatis et quasi architecto beatae vitae dicta
-          sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
-          qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
-          dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
-          quia non numquam eius modi tempora incidunt ut labore et dolore magnam
-          aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
-          exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex
-          ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in
-          ea voluptate velit esse quam nihil molestiae consequatur, vel illum
-          qui dolorem eum fugiat quo voluptas nulla pariatur?
-        </p>
+        {/* <div className=" py-10 px-10 lg:px-40 lg:py-20">
+          <h1 className="text-center text-4xl font-semibold">Images </h1>
+          <div className="grid grid-rows-1 gap-20 py-10 sm:grid-cols-3">
+            <div>
+              <Image
+                src={mattrest}
+                alt="fess manager logo"
+                className="rounded-lg "
+              />
+            </div>
+            <div>
+              <Image
+                src={mattrest}
+                alt="fess manager logo"
+                className="rounded-lg "
+              />
+            </div>
+            <div>
+              <Image
+                src={mattrest}
+                alt="fess manager logo"
+                className="rounded-lg "
+              />
+            </div>
+          </div>
+        </div> */}
+        <AllProduct />
+        <Subscribe />
+        <Footer />
       </div>
-      <div className=" py-10 px-10 lg:px-40 lg:py-20">
-        <h1 className="text-center text-4xl font-semibold">Images </h1>
-        <div className="grid grid-rows-1 gap-20 py-10 sm:grid-cols-3">
-          <div>
-            <Image
-              src={mattrest}
-              alt="fess manager logo"
-              className="rounded-lg "
-            />
-          </div>
-          <div>
-            <Image
-              src={mattrest}
-              alt="fess manager logo"
-              className="rounded-lg "
-            />
-          </div>
-          <div>
-            <Image
-              src={mattrest}
-              alt="fess manager logo"
-              className="rounded-lg "
-            />
-          </div>
-        </div>
-      </div>
-      <Subscribe />
-      <Footer />
-    </>
+    </div>
   )
 }

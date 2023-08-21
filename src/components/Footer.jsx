@@ -46,7 +46,7 @@ export function Footer() {
                 </li>
                 <li className="flex cursor-pointer items-center space-x-3 font-semibold  text-white duration-300 hover:text-[#ae9775]">
                   <BiChevronRight className="font-bold text-[#b19777]" />
-                  <Link href={`/ContactUsv`}>
+                  <Link href={`/ContactUs`}>
                     <h1>Contact Us</h1>
                   </Link>
                 </li>
@@ -91,7 +91,7 @@ export function Footer() {
               </li>
               <li className="flex cursor-pointer items-center space-x-3 font-semibold  text-white duration-300 hover:text-[#ae9775]">
                 <BiChevronRight className="font-bold text-[#b19777]" />
-                <Link href={`/ContactUsv`}>
+                <Link href={`/ContactUs`}>
                   <h1>Contact Us</h1>
                 </Link>
               </li>

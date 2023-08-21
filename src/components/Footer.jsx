@@ -79,15 +79,21 @@ export function Footer() {
             <nav className="space-y-5 pt-12 ">
               <li className="flex cursor-pointer items-center space-x-3 font-semibold text-white duration-300 hover:text-[#ae9775]">
                 <BiChevronRight className="font-bold text-[#b19777]" />
-                <h1>AboutUs</h1>
+                <Link href={`/AboutUs`}>
+                  <h1>About Us</h1>
+                </Link>
               </li>
               <li className="flex cursor-pointer items-center space-x-3 font-semibold  text-white duration-300 hover:text-[#ae9775]">
                 <BiChevronRight className="font-bold text-[#b19777]" />
-                <h1>ContactUs</h1>
+                <Link href={`/ContactUsv`}>
+                  <h1>Contact Us</h1>
+                </Link>
               </li>
               <li className="flex cursor-pointer items-center space-x-3 font-semibold text-white duration-300 hover:text-[#ae9775]">
                 <BiChevronRight className="font-bold text-[#b19777]" />
-                <h1>Product</h1>
+                <Link href={`/Product`}>
+                  <h1>Product</h1>
+                </Link>
               </li>
               <li className="flex cursor-pointer items-center space-x-3 font-semibold text-white duration-300 hover:text-[#ae9775]">
                 <BiChevronRight className="font-bold text-[#b19777]" />

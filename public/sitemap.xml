@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Home Page -->
+  <url>
+    <loc>https://www.sonamattresses.com/</loc>
+    <priority>1.00</priority>
+            <changefreq>daily</changefreq>
+
+    
+  </url>
+
+  <!-- Other Pages -->
+  <url>
+    <loc>https://www.sonamattresses.com/AboutUs</loc>
+    <priority>0.80</priority>
+            <changefreq>daily</changefreq>
+
+  </url>
+   <url>
+    <loc>https://www.sonamattresses.com/Quotation</loc>
+    <priority>0.80</priority>
+            <changefreq>daily</changefreq>
+
+  </url>
+  <url>
+    <loc>https://www.sonamattresses.com/Product</loc>
+    <priority>1.00</priority>
+            <changefreq>daily</changefreq>
+
+  </url>
+  <url>
+    <loc>https://www.sonamattresses.com/ContactUs</loc>
+    <priority>0.80</priority>
+            <changefreq>daily</changefreq>
+
+  </url>
+
+  <!-- Dynamic Pages (replace with your actual dynamic pages) -->
+  <url>
+    <loc>https://www.sonamattresses.com/Product/1</loc>
+        <priority>1.00</priority>
+                <changefreq>daily</changefreq>
+
+
+  </url>
+  <url>
+    <loc>https://www.sonamattresses.com/Product/2</loc>
+    <priority>1.00</priority>
+            <changefreq>daily</changefreq>
+
+  </url>
+  <url>
+    <loc>https://www.sonamattresses.com/Product/3</loc>
+    <priority>1.00</priority>
+            <changefreq>daily</changefreq>
+
+  </url>
+   <url>
+    <loc>https://www.sonamattresses.com/Product/4</loc>
+    <priority>1.00</priority>
+            <changefreq>daily</changefreq>
+
+  </url>
+   <url>
+    <loc>https://www.sonamattresses.com/Product/5</loc>
+    <priority>1.00</priority>
+            <changefreq>daily</changefreq>
+
+  </url>
+   <url>
+    <loc>https://www.sonamattresses.com/Product/6</loc>
+    <priority>1.00</priority>
+            <changefreq>daily</changefreq>
+
+  </url>
+  
+  
+  
+  
+
+
+  <!-- Add more pages as needed -->
+
+</urlset>

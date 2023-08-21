@@ -75,7 +75,7 @@ export function Hero() {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="font-bold text-[#b19777]  xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[55px]"
+                    className="font-bold leading-3 text-[#b19777]  xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[55px]"
                   >
                     {item.heading1}
                   </motion.h1>
@@ -84,7 +84,7 @@ export function Hero() {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: 0 }}
                     transition={{ duration: 0.5, delay: 0.5 }}
-                    className="pt-3 font-bold text-black xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[55px]"
+                    className=" font-bold leading-tight text-black xs:text-xl sm:text-2xl md:pt-3 md:text-3xl lg:text-4xl xl:text-[55px]"
                   >
                     {item.heading2}
                   </motion.h1>

@@ -24,7 +24,7 @@ export default function Home() {
         <Hero />
 
         <div>
-          <h1 className="pt-8 text-center text-xl font-bold opacity-50 lg:text-3xl">
+          <h1 className="px-3 pt-8 text-center text-xl font-bold opacity-50 lg:text-3xl">
             {' '}
             We Provide Diffrent Type of Mattress{' '}
           </h1>

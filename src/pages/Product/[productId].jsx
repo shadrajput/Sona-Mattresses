@@ -1,12 +1,15 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
 import React from 'react'
-import Image from 'next/image'
-import mattrest from '../../../public/images/mat_05.jpg'
+import Head from 'next/head'
+
 import Link from 'next/link'
 import { Header } from '@/components/Header'
 import Subscribe from '@/components/Subscribe'
 import { Footer } from '@/components/Footer'
 import { useRouter } from 'next/router'
+import Specifications from '@/components/Specifications'
+import { product } from '../api/product'
 import AllProduct from '@/components/AllProduct'
 
 export default function ProductDetails() {
@@ -14,105 +17,62 @@ export default function ProductDetails() {
   const router = useRouter()
   const { productId } = router.query
 
-  console.log('Product ID', productId)
+  const foundProduct = product.find((item) => item.id == productId)
+
   const HandleSize = (e) => {
     setselectsize(e.target.value)
   }
 
-  const SingleSizes = [
-    {
-      name: 'Centimeter',
-      size1: '91.50 x 183 x 20.32',
-    },
-    {
-      name: 'Inch',
-      size1: '36 x 72 x 8',
-    }, 
-    {
-      name: 'Feet',
-      size1: '3 x 6 x 0.67',
-    },
-  ]
-  const DoubleSizes = [
-    {
-      name: 'Centimeter',
-      size1: '122 x 183 x 25.40',
-    },
-    {
-      name: 'Inch',
-      size1: '48 x 72 x 10',
-    },
-    {
-      name: 'Feet',
-      size1: '4 x 6 x 0.67',
-    },
-  ]
-  const KingSizes = [
-    {
-      name: 'Inch',
-      size1: '72 x 78 x 12',
-    },
-    {
-      name: 'Inch',
-      size1: '72 x 84 x 12',
-    },
-  ]
-  const QueenSizes = [
-    {
-      name: 'Centimeter',
-      size1: '152.4 x 183 x 28',
-      size2: '152.4 x 200 x 28',
-    },
-    {
-      name: 'Inch',
-      size1: '60 x 78 x 12',
-      size2: '60 x 72 x 10',
-    },
-    {
-      name: 'Feet',
-      size1: '5 x 6.5 x 0.67',
-      size2: '5 x 6 x 0.67',
-    },
-  ]
+  if (!foundProduct) {
+    return (
+      <div className="flex h-screen flex-wrap items-start justify-center gap-14 py-2 px-8  lg:py-14 lg:px-32">
+        <Header />
+        <div className=" flex  h-full items-center  text-3xl">
+          Page not found.....
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className=" ">
+      <Head>
+        <title>{foundProduct?.title}</title>
+        <meta name="Sona Mattress" content={foundProduct?.summary} />
+      </Head>
       <Header />
-      <div className="flex space-x-4 px-12 py-24">
+      <div className="flex space-x-4  py-24 px-2 lg:px-12">
         <div className=" px-6 lg:flex lg:space-x-8">
-          <div className="lg:w-1/2  ">
-            <Image
-              src={mattrest}
-              alt="fess manager logo"
-              className=" w-full rounded-lg"
+          <div className="relative lg:w-1/2">
+            <img
+              src={foundProduct.img}
+              alt={foundProduct.title}
+              layout="fill"
+              objectFit="contain" // You can adjust this property as needed
+              objectPosition="center center" // You can adjust this property as needed
             />
           </div>
+
           <div className="dede lg:w-1/2">
             <h1 className="text-2xl font-semibold text-black md:text-4xl">
-              Pocket Spring Mattress
+              {foundProduct.title}
             </h1>
             <p className="w-full py-4 text-sm font-light text-slate-500">
-              Pocket spring mattresses offer numerous benefits, making them a
-              popular choice for many individuals. These mattresses are designed
-              to provide exceptional support and comfort by using individual
-              pocketed springs that respond independently to the bodys weight
-              and shape, promoting proper spinal alignment and reducing pressure
-              points.
+              {foundProduct.summary}
             </p>
             <div className="ml-4 py-4">
               <ul className="list-disc space-y-1 text-[14px] text-slate-600 ">
-                <li className="" key="sd">
-                  Hard cotton felt layers
-                </li>
-                <li className="" key="sd">
-                  High Density foam
-                </li>
-                <li className="">Medium firm for all sleeping positions</li>
-                <li className="">Maximum Durability: 7 Year Warranty</li>
+                {/* {foundProduct?.specification?.map((s) => {
+                  return (
+                    <li className="" key={s}>
+                      {s}
+                    </li>
+                  )
+                })} */}
               </ul>
             </div>
             <div>
-              <div className="flex w-full flex-col items-start pt-4">
+              {/* <div className="flex w-full flex-col items-start pt-4">
                 <div className="flex flex-col ">
                   <label
                     htmlFor=""
@@ -263,8 +223,57 @@ export default function ProductDetails() {
                     </div>
                   </div>
                 ) : null}
+              </div> */}
+
+              {/* start  */}
+              <div className="flex w-full flex-col items-start pt-4">
+                <div className="flex flex-col ">
+                  <label
+                    htmlFor=""
+                    className="text-[14px] font-semibold text-[#b19777]"
+                  >
+                    Category
+                  </label>
+                  <div className="mt-2 flex flex-wrap items-center space-y-3 space-x-5 md:space-y-0">
+                    {Object.keys(foundProduct.size).map((category, index) => (
+                      <button
+                        key={index}
+                        value={category}
+                        onClick={HandleSize}
+                        className={`${
+                          selectsize === category
+                            ? 'border-[#b19777] bg-[#b19777]  font-semibold text-white'
+                            : 'font-light'
+                        } rounded-full border px-5 py-[5px] text-sm font-light duration-300 hover:border-[#b19777]`}
+                      >
+                        {category}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                {/* Display selected category sizes */}
+                {selectsize && foundProduct.size[selectsize] && (
+                  <div className="mt-4 flex flex-col">
+                    <h1 className="text-[14px] font-semibold text-[#b19777]">
+                      Size{' '}
+                    </h1>
+                    <div className="flex flex-wrap items-start  space-x-2">
+                      {Object.entries(foundProduct.size[selectsize]).map(
+                        ([key, value], index) => (
+                          <div
+                            className="rounded-md border px-2 py-[3px] text-sm"
+                            key={index}
+                          >
+                            {key}: {value}
+                          </div>
+                        )
+                      )}
+                    </div>
+                  </div>
+                )}
               </div>
 
+              {/* end */}
               <div className="flex items-center space-x-2 py-7  ">
                 <div className="">
                   <Link href="/Quotation">
@@ -285,14 +294,14 @@ export default function ProductDetails() {
             <div className="flex items-center justify-center space-x-5 ">
               <div className="w-full">
                 <Link href="/ContactUs">
-                  <button className="btn3 group z-50 w-full py-3 text-[12px] font-semibold text-white ">
+                  <button className="btn3 group  w-full py-3 text-[12px] font-semibold text-white ">
                     Connect with Us
                   </button>
                 </Link>
               </div>
               <div className="w-full">
                 <Link href="/Quotation">
-                  <button className="btn3 group z-50 w-full py-3 text-[12px] font-semibold text-white ">
+                  <button className="btn3 group  w-full py-3 text-[12px] font-semibold text-white ">
                     Shop Now
                   </button>
                 </Link>
@@ -310,51 +319,16 @@ export default function ProductDetails() {
             </div>
           </div>
           <div className="w-full">
-            <p className="  py-4 text-sm font-light">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-              velit, sed quia non numquam eius modi tempora incidunt ut labore
-              et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
-              veniam, quis nostrum exercitationem ullam corporis suscipit
-              laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem
-              vel eum iure reprehenderit qui in ea voluptate velit esse quam
-              nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
-              voluptas nulla pariatur?
-            </p>
+            <p className="  py-4 text-sm font-light">{foundProduct?.desc}</p>
           </div>
         </div>
-        {/* <div className=" py-10 px-10 lg:px-40 lg:py-20">
-          <h1 className="text-center text-4xl font-semibold">Images </h1>
-          <div className="grid grid-rows-1 gap-20 py-10 sm:grid-cols-3">
-            <div>
-              <Image
-                src={mattrest}
-                alt="fess manager logo"
-                className="rounded-lg "
-              />
-            </div>
-            <div>
-              <Image
-                src={mattrest}
-                alt="fess manager logo"
-                className="rounded-lg "
-              />
-            </div>
-            <div>
-              <Image
-                src={mattrest}
-                alt="fess manager logo"
-                className="rounded-lg "
-              />
-            </div>
-          </div>
-        </div> */}
-        <AllProduct />
+        <Specifications />
+        <div className="py-12">
+          <h1 className="text-center font-display text-2xl  tracking-tight text-slate-900 sm:text-xl">
+            Recommended for you...
+          </h1>
+          <AllProduct props={3} />
+        </div>
         <Subscribe />
         <Footer />
       </div>

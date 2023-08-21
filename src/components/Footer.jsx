@@ -8,38 +8,59 @@ import { CgMail } from 'react-icons/cg'
 import { MdLocationPin } from 'react-icons/md'
 import { AiOutlineInstagram } from 'react-icons/ai'
 import { AiOutlineFacebook } from 'react-icons/ai'
+import { product } from '@/pages/api/product'
 
 export function Footer() {
+  console.log('footer', product)
   return (
     <>
-      <div className="relative flex h-[450px] items-center justify-center bg-[#181818] py-10 xl:h-[500px] xl:px-40">
+      <div className="relative flex h-[500px] items-center justify-center  bg-[#181818] py-10 xl:h-[500px] xl:px-40">
         <Image
           src={myLogo}
           alt="fess manager logo"
           className="h-full w-full "
         />
         <div className="absolute h-full w-full bg-black/40 "></div>
-        <div className="absolute top-12 grid grid-rows-1 gap-20 sm:top-20 lg:w-[500px] xl:w-full xl:grid-cols-4 xl:px-20 ">
-          <div className="space-y-6 xl:px-12">
-            <div className="flex w-full items-center justify-start">
+        <div className="absolute grid  grid-rows-1 gap-20 xs:top-8 sm:top-12 md:top-10 lg:left-0 xl:top-16 xl:w-full xl:grid-cols-4 xl:px-20 ">
+          <div className=" xl:space-y-5 ">
+            <div className="hidden w-full items-center justify-start xl:flex">
               <div className="w-52">
                 <Image src={Logo} alt="fess manager logo" className="" />
               </div>
             </div>
-            <p className="text-center text-gray-400 lg:text-start">
-              {' '}
-              We craft best and high quality mattress for you , We build for you
-              and We build for your comfort
-            </p>
-            <div className="flex w-full items-center justify-center space-x-5 lg:items-start xl:hidden">
-              <div>
-                <FiPhoneCall className="text-2xl font-bold text-[#b19777]" />
-              </div>
-              <h1 className="text-2xl font-semibold text-white lg:text-start">
-                +91 8401527048
-              </h1>
+            <div className="w-full">
+              <p className="w-full text-center text-2xl font-bold text-white xs:px-10 md:text-3xl xl:px-0 xl:text-start xl:text-xl xl:font-semibold xl:text-slate-200">
+                Unapologetic. Unhinged. Unleashed. Welcome to the revolution.
+              </p>
             </div>
-            <div className="flex items-center justify-start space-x-5 pt-5">
+            <div className="pt-12 pb-10 xs:pl-5 md:pt-10 lg:pb-7 xl:hidden ">
+              <h1 className="font-semibold text-white xs:pl-2 xs:pb-4 md:text-lg">
+                Footer Menu
+              </h1>
+              <nav className="space-y-3 ">
+                <li className="flex cursor-pointer items-center space-x-3 text-[13px] text-white duration-300 hover:text-[#ae9775] xs:text-gray-300 md:text-sm">
+                  <BiChevronRight className="font-bold text-[#b19777]" />
+                  <h1>AboutUs</h1>
+                </li>
+                <li className="flex cursor-pointer items-center space-x-3 text-[13px] text-white duration-300  hover:text-[#ae9775] xs:text-gray-300 md:text-sm">
+                  <BiChevronRight className="font-bold text-[#b19777]" />
+                  <h1>ContactUs</h1>
+                </li>
+                <li className="flex cursor-pointer items-center space-x-3 text-[13px] text-white duration-300 hover:text-[#ae9775] xs:text-gray-300 md:text-sm">
+                  <BiChevronRight className="font-bold text-[#b19777]" />
+                  <h1>Product</h1>
+                </li>
+                <li className="flex cursor-pointer items-center space-x-3 text-[13px] text-white duration-300 hover:text-[#ae9775] xs:text-gray-300 md:text-sm">
+                  <BiChevronRight className="font-bold text-[#b19777]" />
+                  <h1>Shipping Policy</h1>
+                </li>
+                <li className="flex cursor-pointer items-center space-x-3 text-[13px] text-white duration-300 hover:text-[#ae9775] xs:text-gray-300 md:text-sm">
+                  <BiChevronRight className="font-bold text-[#b19777]" />
+                  <h1>Refund Policy</h1>
+                </li>
+              </nav>
+            </div>
+            <div className="flex items-center justify-start space-x-5  xs:pl-5 xl:pl-0">
               <a href="https://www.instagram.com/sonamattresses/">
                 <AiOutlineInstagram className="cursor-pointer text-2xl text-[#b19777] hover:text-white" />
               </a>
@@ -68,6 +89,14 @@ export function Footer() {
                 <BiChevronRight className="font-bold text-[#b19777]" />
                 <h1>Product</h1>
               </li>
+              <li className="flex cursor-pointer items-center space-x-3 font-semibold text-white duration-300 hover:text-[#ae9775]">
+                <BiChevronRight className="font-bold text-[#b19777]" />
+                <h1>Shipping Policy</h1>
+              </li>
+              <li className="flex cursor-pointer items-center space-x-3 font-semibold text-white duration-300 hover:text-[#ae9775]">
+                <BiChevronRight className="font-bold text-[#b19777]" />
+                <h1>Refund Policy</h1>
+              </li>
             </nav>
           </div>
           <div className="hidden xl:block">
@@ -78,30 +107,16 @@ export function Footer() {
             <div className="absolute h-[3px] w-32 bg-[#b19777]"></div>
 
             <nav className="space-y-5 pt-12 ">
-              <li className="flex cursor-pointer items-center space-x-3 font-semibold text-white duration-300 hover:text-[#ae9775]">
-                <BiChevronRight className="font-bold text-[#b19777]" />
-                <h1>Pocket Spring Mattress</h1>
-              </li>
-              <li className="flex cursor-pointer items-center space-x-3 font-semibold  text-white duration-300 hover:text-[#ae9775]">
-                <BiChevronRight className="font-bold text-[#b19777]" />
-                <h1>PU Foam Mattress</h1>
-              </li>
-              <li className="flex cursor-pointer items-center space-x-3 font-semibold text-white duration-300 hover:text-[#ae9775]">
-                <BiChevronRight className="font-bold text-[#b19777]" />
-                <h1>PU & Super Soft Mattress</h1>
-              </li>
-              <li className="flex cursor-pointer items-center space-x-3 font-semibold text-white duration-300 hover:text-[#ae9775]">
-                <BiChevronRight className="font-bold text-[#b19777]" />
-                <h1>Bonded Mattress</h1>
-              </li>
-              <li className="flex cursor-pointer items-center space-x-3 font-semibold text-white duration-300 hover:text-[#ae9775]">
-                <BiChevronRight className="font-bold text-[#b19777]" />
-                <h1>Bonde Latex Mattress</h1>
-              </li>
-              <li className="flex cursor-pointer items-center space-x-3 font-semibold text-white duration-300 hover:text-[#ae9775]">
-                <BiChevronRight className="font-bold text-[#b19777]" />
-                <h1>HR Soft Memory Foam</h1>
-              </li>
+              {product.map((p) => {
+                return (
+                  <Link key={p.id} href={`/Product/${p.id}`}>
+                    <li className="flex cursor-pointer items-center space-x-3 font-semibold text-white duration-300 hover:text-[#ae9775]">
+                      <BiChevronRight className="font-bold text-[#b19777]" />
+                      <h1>{p.title}</h1>
+                    </li>
+                  </Link>
+                )
+              })}
             </nav>
           </div>
           <div className="hidden xl:block">
@@ -135,6 +150,11 @@ export function Footer() {
               </li>
             </nav>
           </div>
+        </div>
+        <div className="absolute bottom-5 text-center xs:text-start ">
+          <p className="text-sm text-slate-300/50 xs:text-xs">
+            © 2023, SONAMATTRESSES. Powered by SonaMattresses
+          </p>
         </div>
       </div>
     </>

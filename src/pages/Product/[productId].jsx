@@ -257,7 +257,7 @@ export default function ProductDetails() {
                     <h1 className="text-[14px] font-semibold text-[#b19777]">
                       Size{' '}
                     </h1>
-                    <div className="flex flex-wrap items-start  space-x-2">
+                    <div className="flex flex-wrap  space-y-2  space-x-2">
                       {Object.entries(foundProduct.size[selectsize]).map(
                         ([key, value], index) => (
                           <div

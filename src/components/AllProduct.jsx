@@ -31,7 +31,7 @@ export default function AllProduct({ props }) {
             <>
               <div
                 key={index}
-                className="  flex cursor-pointer flex-col px-2 duration-300 hover:-translate-y-5 hover:shadow-xl md:px-10  lg:py-10   "
+                className="  flex cursor-pointer flex-col px-2 py-4 duration-300 hover:-translate-y-5 hover:shadow-xl  md:px-10 lg:py-10   "
               >
                 <div className="">
                   <img src={item.img} alt={item.title} />

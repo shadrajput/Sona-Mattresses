@@ -249,7 +249,7 @@ export default function Quotation() {
                   </label>
                   <div className="flex w-full flex-col items-start justify-between">
                     <div className="flex w-full flex-col flex-wrap ">
-                      <div className="mt-2 flex flex-wrap items-center space-y-2 space-x-5">
+                      <div className="grid grid-cols-2    gap-5 xs:grid-cols-3 lg:grid-cols-4">
                         <button
                           value="Regular"
                           onClick={HandleSize}

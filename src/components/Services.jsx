@@ -62,7 +62,7 @@ export default function Services() {
           </div>
           <div className="group flex flex-col items-center justify-center">
             <div className="mb-2 translate-y-2 duration-300 group-hover:translate-y-0">
-              <img src="icons/paper-wrap.png" alt="sd" className="w-10" />
+              <img src="/icons/paper-wrap.png" alt="sd" className="w-10" />
             </div>
             <h1 className="pt-6 font-bold">Mattress Roll Packing</h1>
             <p className="pt-3 text-center text-sm font-light">

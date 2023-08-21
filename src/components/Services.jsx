@@ -5,7 +5,6 @@ import { AiOutlinePercentage } from 'react-icons/ai'
 import { BsCreditCard } from 'react-icons/bs'
 import { TbCertificate } from 'react-icons/tb'
 import { BiMessageCheck } from 'react-icons/bi'
-import sd from '@public/icons/paper-wrap.png'
 export default function Services() {
   return (
     <div className="bg-white xl:px-32 xl:py-4">
@@ -62,7 +61,7 @@ export default function Services() {
           </div>
           <div className="group flex flex-col items-center justify-center">
             <div className="mb-2 translate-y-2 duration-300 group-hover:translate-y-0">
-              <img src={sd} alt="sd" className="w-10" />
+              <img src="/Icons/paper-wrap.png" alt="sd" className="w-10" />
             </div>
             <h1 className="pt-6 font-bold">Mattress Roll Packing</h1>
             <p className="pt-3 text-center text-sm font-light">

@@ -234,7 +234,7 @@ export default function ProductDetails() {
                   >
                     Category
                   </label>
-                  <div className="mt-2 flex flex-wrap items-center space-y-3 space-x-5 md:space-y-0">
+                  <div className="mt-2 grid grid-cols-2    gap-5 xs:grid-cols-3 lg:grid-cols-4">
                     {Object.keys(foundProduct.size).map((category, index) => (
                       <button
                         key={index}
@@ -257,7 +257,7 @@ export default function ProductDetails() {
                     <h1 className="text-[14px] font-semibold text-[#b19777]">
                       Size{' '}
                     </h1>
-                    <div className="flex flex-wrap  space-y-2  space-x-2">
+                    <div className="mt-3 grid grid-cols-1    gap-5 xs:grid-cols-2 lg:grid-cols-3">
                       {Object.entries(foundProduct.size[selectsize]).map(
                         ([key, value], index) => (
                           <div

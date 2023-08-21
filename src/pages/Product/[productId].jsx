@@ -261,7 +261,7 @@ export default function ProductDetails() {
                       {Object.entries(foundProduct.size[selectsize]).map(
                         ([key, value], index) => (
                           <div
-                            className="rounded-md border px-2 py-[3px] text-sm"
+                            className="overflow-hidden truncate rounded-md border px-2 py-[3px] text-sm"
                             key={index}
                           >
                             {key}: {value}

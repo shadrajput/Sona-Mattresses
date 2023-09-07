@@ -72,7 +72,7 @@ export function Header(props) {
           <div
             className={` ${
               menu
-                ? 'top-16 opacity-100 sm:top-[60px]'
+                ? 'top-12 opacity-100 sm:top-[40px]'
                 : 'top-[-500px] opacity-0 md:opacity-100'
             } absolute w-full 
           bg-black pt-5 duration-500 md:static md:mr-16 md:flex md:items-center md:bg-transparent md:pt-0 lg:mr-16`}

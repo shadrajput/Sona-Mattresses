@@ -26,7 +26,7 @@ export default function AllProduct({ props }) {
       </Head>
       <div className=" grid   grid-cols-1 gap-14  py-2 px-8  md:grid-cols-2 lg:grid-cols-3  lg:py-10   lg:px-32">
         {product?.map((item, index) => {
-          if (props > index) return
+          if (props <= index) return
           return (
             <>
               <div

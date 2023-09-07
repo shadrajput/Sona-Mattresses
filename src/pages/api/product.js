@@ -37,11 +37,16 @@ export const product = [
       Regular: {
         Inch: '72x72x10',
       },
+      King: {
+        CM: ' 152.4x 198.12x10.16 ',
+        Inch: '60x72x6',
+        FT: '5x6',
+      },
     },
   },
   {
     id: 2,
-    title: 'PU Foam Mattress',
+    title: 'Foam Mattress',
     img: '/images/pufoam.jpg',
     summary:
       'Experience ultimate comfort with our PU Foam Mattress - perfect for all sleepers, budget-friendly, and designed for uninterrupted, rejuvenating rest.',

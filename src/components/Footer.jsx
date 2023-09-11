@@ -32,7 +32,10 @@ export function Footer() {
               <p className="w-full text-center text-2xl font-bold text-white xs:px-10 md:text-3xl xl:px-0 xl:text-start xl:text-xl xl:font-semibold xl:text-slate-200">
                 Unapologetic. Unhinged. Unleashed. Welcome to the revolution.
               </p>
-              <p className="py-2 text-white"> Call Now : +91 8401527048</p>
+              <p className="py-2 text-center  font-bold text-white md:text-left">
+                {' '}
+                Call Now : +91 8401527048
+              </p>
             </div>
             <div className="pt-12 pb-10 xs:pl-5 md:pt-10 lg:pb-7 xl:hidden ">
               <h1 className="font-semibold text-white xs:pl-2 xs:pb-4 md:text-lg">

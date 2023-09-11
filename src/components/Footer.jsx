@@ -32,7 +32,7 @@ export function Footer() {
               <p className="w-full text-center text-2xl font-bold text-white xs:px-10 md:text-3xl xl:px-0 xl:text-start xl:text-xl xl:font-semibold xl:text-slate-200">
                 Unapologetic. Unhinged. Unleashed. Welcome to the revolution.
               </p>
-              <p className="py-2 text-center  font-bold text-white md:text-left">
+              <p className="py-2 text-center font-bold text-[#b19777] md:text-left">
                 {' '}
                 Call Now : +91 8401527048
               </p>

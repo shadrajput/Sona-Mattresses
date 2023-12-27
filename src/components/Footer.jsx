@@ -200,7 +200,7 @@ export function Footer() {
           </div>
         </div>
         <div className="text-center xs:text-start absolute bottom-5 ">
-          <p className="text-slate-300/50 xs:text-xs text-sm">© 2023, SONAMATTRESSES. Powered by SonaMattresses</p>
+          <p className="text-slate-300/50 xs:text-xs text-sm">© 2023 <span className="font-bold">SONAMATTRESSES</span> | Developed By Wellbenix</p>
         </div>
       </div>
     </>

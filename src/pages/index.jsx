@@ -25,7 +25,7 @@ export default function Home() {
         <Hero />
         <AllProduct/>
         <SonaMattress />
-        <Specifications />AiFillSetting
+        <Specifications />
         <Mattressspecific />
         <Services />
         {/* <Testimonials /> */}
